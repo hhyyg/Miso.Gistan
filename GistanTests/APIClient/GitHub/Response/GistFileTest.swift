@@ -40,16 +40,17 @@ class GistFileTest: XCTestCase {
 """
         
         //do
-        let result = try! GistItem(json: convertToDictionary(text: rawJson))
+        let result = try! JSONDecoder().decode(GistItem.self, from: convertToJSON(text: rawJson))
         
-        //assert
+        //asset
         XCTAssertEqual(result.htmlUrl, "https://gist.github.com/9e18f2f16650d89aa37da10b06670d1e")
         XCTAssertEqual(result.files.count, 1)
         XCTAssertNotNil(result.files["C# 6 exception filter.cs"])
     }
     
-    func convertToDictionary(text: String) -> JSON {
-        return try! JSON(try! JSONSerialization.jsonObject(with: text.data(using: .utf8)!, options: []) as! [String: Any])
+    func convertToJSON(text: String) -> Data {
+        let json = try! JSONSerialization.jsonObject(with: text.data(using: .utf8)!, options: []) as! [String: Any]
+        return try! JSONSerialization.data(withJSONObject: json, options: [])
     }
     
     func testPerformanceExample() {

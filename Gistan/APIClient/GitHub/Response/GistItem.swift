@@ -5,15 +5,13 @@
 //  Created by Hiroka Yago on 2017/09/30.
 //  Copyright © 2017 miso. All rights reserved.
 //
-struct GistItem : JSONDecodable {
+struct GistItem : Codable {
     let files: [String: GistFile]
     let htmlUrl: String
-    
-    init(json: JSON) throws {
-        files = try (json.get(with: "files") as [String: Any])
-            .mapValues { try GistFile(json: JSON($0)) }
-        
-        htmlUrl = try json.get(with: "html_url")
+    private enum CodingKeys: String, CodingKey {
+        case
+        files,
+        htmlUrl = "html_url"
     }
 }
 

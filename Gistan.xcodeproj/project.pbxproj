@@ -17,7 +17,6 @@
 		24A0C12B1F7F640F005F0FEC /* GistanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C12A1F7F640F005F0FEC /* GistanUITests.swift */; };
 		24A0C13A1F7F66C8005F0FEC /* MyGistsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1391F7F66C8005F0FEC /* MyGistsTableViewController.swift */; };
 		24A0C1781F7F6A65005F0FEC /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1771F7F6A65005F0FEC /* TabBarController.swift */; };
-		24A0C18A1F7F6DF2005F0FEC /* JSONDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1821F7F6D64005F0FEC /* JSONDecodable.swift */; };
 		24A0C18B1F7F6DF5005F0FEC /* JSONDecodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1831F7F6D64005F0FEC /* JSONDecodeError.swift */; };
 		24A0C18C1F7F6DF9005F0FEC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C17F1F7F6D0D005F0FEC /* Result.swift */; };
 		24A0C18D1F7F6DFB005F0FEC /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C17D1F7F6CF8005F0FEC /* HTTPMethod.swift */; };
@@ -76,7 +75,6 @@
 		24A0C17E1F7F6D00005F0FEC /* GitHubRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRequest.swift; sourceTree = "<group>"; };
 		24A0C17F1F7F6D0D005F0FEC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		24A0C1801F7F6D21005F0FEC /* GitHubClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubClientError.swift; sourceTree = "<group>"; };
-		24A0C1821F7F6D64005F0FEC /* JSONDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
 		24A0C1831F7F6D64005F0FEC /* JSONDecodeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecodeError.swift; sourceTree = "<group>"; };
 		24A0C1871F7F6DA3005F0FEC /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		24A0C1881F7F6DA3005F0FEC /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 		24A0C1071F7F640F005F0FEC /* Gistan */ = {
 			isa = PBXGroup;
 			children = (
-				24A0C1C91F7F7B67005F0FEC /* New Group */,
 				24A0C1811F7F6D4D005F0FEC /* Core */,
 				24A0C17B1F7F6CB9005F0FEC /* APIClient */,
 				24A0C1381F7F668F005F0FEC /* Controller */,
@@ -206,7 +203,6 @@
 		24A0C1811F7F6D4D005F0FEC /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				24A0C1821F7F6D64005F0FEC /* JSONDecodable.swift */,
 				24A0C1831F7F6D64005F0FEC /* JSONDecodeError.swift */,
 				24A0C1CA1F7F7CC0005F0FEC /* JSON.swift */,
 			);
@@ -224,13 +220,6 @@
 				24A0C19B1F7F7081005F0FEC /* GistFile.swift */,
 			);
 			path = Response;
-			sourceTree = "<group>";
-		};
-		24A0C1C91F7F7B67005F0FEC /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		24A0C1CC1F7F80D7005F0FEC /* APIClient */ = {
@@ -401,7 +390,6 @@
 				24A0C19A1F7F6FD7005F0FEC /* GistItem.swift in Sources */,
 				24A0C1961F7F6E34005F0FEC /* GitHubAPIError.swift in Sources */,
 				24A0C1921F7F6E0B005F0FEC /* GitHubRequest.swift in Sources */,
-				24A0C18A1F7F6DF2005F0FEC /* JSONDecodable.swift in Sources */,
 				24A0C1941F7F6E0B005F0FEC /* GitHubAPI.swift in Sources */,
 				24A0C18E1F7F6DFE005F0FEC /* Response.swift in Sources */,
 				24A0C1781F7F6A65005F0FEC /* TabBarController.swift in Sources */,

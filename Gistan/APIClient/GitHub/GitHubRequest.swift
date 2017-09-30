@@ -1,7 +1,7 @@
 import Foundation
 
 protocol GitHubRequest {
-    associatedtype Response: JSONDecodable
+    associatedtype Response: Codable
     
     var baseURL: URL { get }
     var path: String { get }
@@ -40,15 +40,14 @@ extension GitHubRequest {
     
     func response(from data: Data, urlResponse: URLResponse) throws -> Response {
         // 取得したデータをJSONに変換
-        let json = try JSONSerialization.jsonObject(
-            with: data, options: [])
         
         if case (200..<300)? = (urlResponse as? HTTPURLResponse)?.statusCode {
             // JSONからモデルをインスタンス化
-            return try Response(json: JSON(json))
+            return try JSONDecoder().decode(Response.self, from: data)
         } else {
             // JSONからAPIエラーをインスタンス化
-            throw try GitHubAPIError(json: JSON(json))
+            // TODO: エラー型に直す
+            throw try JSONDecoder().decode(GitHubAPIError.self, from: data)
         }
     }
 }

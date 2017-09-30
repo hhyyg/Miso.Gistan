@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Gists : JSONDecodable {
+struct Gists : Codable {
+    
     
     init(json: JSON) throws {
         
