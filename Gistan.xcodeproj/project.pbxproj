@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24A0C1091F7F640F005F0FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1081F7F640F005F0FEC /* AppDelegate.swift */; };
+		24A0C10B1F7F640F005F0FEC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C10A1F7F640F005F0FEC /* FirstViewController.swift */; };
+		24A0C10D1F7F640F005F0FEC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C10C1F7F640F005F0FEC /* SecondViewController.swift */; };
+		24A0C1101F7F640F005F0FEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A0C10E1F7F640F005F0FEC /* Main.storyboard */; };
+		24A0C1121F7F640F005F0FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A0C1111F7F640F005F0FEC /* Assets.xcassets */; };
+		24A0C1151F7F640F005F0FEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A0C1131F7F640F005F0FEC /* LaunchScreen.storyboard */; };
+		24A0C1201F7F640F005F0FEC /* GistanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C11F1F7F640F005F0FEC /* GistanTests.swift */; };
+		24A0C12B1F7F640F005F0FEC /* GistanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C12A1F7F640F005F0FEC /* GistanUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24A0C11C1F7F640F005F0FEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24A0C0FD1F7F640F005F0FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24A0C1041F7F640F005F0FEC;
+			remoteInfo = Gistan;
+		};
+		24A0C1271F7F640F005F0FEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24A0C0FD1F7F640F005F0FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24A0C1041F7F640F005F0FEC;
+			remoteInfo = Gistan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		24A0C1051F7F640F005F0FEC /* Gistan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gistan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		24A0C1081F7F640F005F0FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		24A0C10A1F7F640F005F0FEC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		24A0C10C1F7F640F005F0FEC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		24A0C10F1F7F640F005F0FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		24A0C1111F7F640F005F0FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		24A0C1141F7F640F005F0FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		24A0C1161F7F640F005F0FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24A0C11B1F7F640F005F0FEC /* GistanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GistanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24A0C11F1F7F640F005F0FEC /* GistanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistanTests.swift; sourceTree = "<group>"; };
+		24A0C1211F7F640F005F0FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24A0C1261F7F640F005F0FEC /* GistanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GistanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		24A0C12A1F7F640F005F0FEC /* GistanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistanUITests.swift; sourceTree = "<group>"; };
+		24A0C12C1F7F640F005F0FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24A0C1021F7F640F005F0FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24A0C1181F7F640F005F0FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24A0C1231F7F640F005F0FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24A0C0FC1F7F640F005F0FEC = {
+			isa = PBXGroup;
+			children = (
+				24A0C1071F7F640F005F0FEC /* Gistan */,
+				24A0C11E1F7F640F005F0FEC /* GistanTests */,
+				24A0C1291F7F640F005F0FEC /* GistanUITests */,
+				24A0C1061F7F640F005F0FEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		24A0C1061F7F640F005F0FEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24A0C1051F7F640F005F0FEC /* Gistan.app */,
+				24A0C11B1F7F640F005F0FEC /* GistanTests.xctest */,
+				24A0C1261F7F640F005F0FEC /* GistanUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24A0C1071F7F640F005F0FEC /* Gistan */ = {
+			isa = PBXGroup;
+			children = (
+				24A0C1081F7F640F005F0FEC /* AppDelegate.swift */,
+				24A0C10A1F7F640F005F0FEC /* FirstViewController.swift */,
+				24A0C10C1F7F640F005F0FEC /* SecondViewController.swift */,
+				24A0C10E1F7F640F005F0FEC /* Main.storyboard */,
+				24A0C1111F7F640F005F0FEC /* Assets.xcassets */,
+				24A0C1131F7F640F005F0FEC /* LaunchScreen.storyboard */,
+				24A0C1161F7F640F005F0FEC /* Info.plist */,
+			);
+			path = Gistan;
+			sourceTree = "<group>";
+		};
+		24A0C11E1F7F640F005F0FEC /* GistanTests */ = {
+			isa = PBXGroup;
+			children = (
+				24A0C11F1F7F640F005F0FEC /* GistanTests.swift */,
+				24A0C1211F7F640F005F0FEC /* Info.plist */,
+			);
+			path = GistanTests;
+			sourceTree = "<group>";
+		};
+		24A0C1291F7F640F005F0FEC /* GistanUITests */ = {
+			isa = PBXGroup;
+			children = (
+				24A0C12A1F7F640F005F0FEC /* GistanUITests.swift */,
+				24A0C12C1F7F640F005F0FEC /* Info.plist */,
+			);
+			path = GistanUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		24A0C1041F7F640F005F0FEC /* Gistan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24A0C12F1F7F640F005F0FEC /* Build configuration list for PBXNativeTarget "Gistan" */;
+			buildPhases = (
+				24A0C1011F7F640F005F0FEC /* Sources */,
+				24A0C1021F7F640F005F0FEC /* Frameworks */,
+				24A0C1031F7F640F005F0FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gistan;
+			productName = Gistan;
+			productReference = 24A0C1051F7F640F005F0FEC /* Gistan.app */;
+			productType = "com.apple.product-type.application";
+		};
+		24A0C11A1F7F640F005F0FEC /* GistanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24A0C1321F7F640F005F0FEC /* Build configuration list for PBXNativeTarget "GistanTests" */;
+			buildPhases = (
+				24A0C1171F7F640F005F0FEC /* Sources */,
+				24A0C1181F7F640F005F0FEC /* Frameworks */,
+				24A0C1191F7F640F005F0FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24A0C11D1F7F640F005F0FEC /* PBXTargetDependency */,
+			);
+			name = GistanTests;
+			productName = GistanTests;
+			productReference = 24A0C11B1F7F640F005F0FEC /* GistanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		24A0C1251F7F640F005F0FEC /* GistanUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24A0C1351F7F640F005F0FEC /* Build configuration list for PBXNativeTarget "GistanUITests" */;
+			buildPhases = (
+				24A0C1221F7F640F005F0FEC /* Sources */,
+				24A0C1231F7F640F005F0FEC /* Frameworks */,
+				24A0C1241F7F640F005F0FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24A0C1281F7F640F005F0FEC /* PBXTargetDependency */,
+			);
+			name = GistanUITests;
+			productName = GistanUITests;
+			productReference = 24A0C1261F7F640F005F0FEC /* GistanUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		24A0C0FD1F7F640F005F0FEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = miso;
+				TargetAttributes = {
+					24A0C1041F7F640F005F0FEC = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					24A0C11A1F7F640F005F0FEC = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 24A0C1041F7F640F005F0FEC;
+					};
+					24A0C1251F7F640F005F0FEC = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 24A0C1041F7F640F005F0FEC;
+					};
+				};
+			};
+			buildConfigurationList = 24A0C1001F7F640F005F0FEC /* Build configuration list for PBXProject "Gistan" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 24A0C0FC1F7F640F005F0FEC;
+			productRefGroup = 24A0C1061F7F640F005F0FEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				24A0C1041F7F640F005F0FEC /* Gistan */,
+				24A0C11A1F7F640F005F0FEC /* GistanTests */,
+				24A0C1251F7F640F005F0FEC /* GistanUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24A0C1031F7F640F005F0FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24A0C1151F7F640F005F0FEC /* LaunchScreen.storyboard in Resources */,
+				24A0C1121F7F640F005F0FEC /* Assets.xcassets in Resources */,
+				24A0C1101F7F640F005F0FEC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24A0C1191F7F640F005F0FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24A0C1241F7F640F005F0FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24A0C1011F7F640F005F0FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24A0C10D1F7F640F005F0FEC /* SecondViewController.swift in Sources */,
+				24A0C1091F7F640F005F0FEC /* AppDelegate.swift in Sources */,
+				24A0C10B1F7F640F005F0FEC /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24A0C1171F7F640F005F0FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24A0C1201F7F640F005F0FEC /* GistanTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24A0C1221F7F640F005F0FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24A0C12B1F7F640F005F0FEC /* GistanUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24A0C11D1F7F640F005F0FEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24A0C1041F7F640F005F0FEC /* Gistan */;
+			targetProxy = 24A0C11C1F7F640F005F0FEC /* PBXContainerItemProxy */;
+		};
+		24A0C1281F7F640F005F0FEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24A0C1041F7F640F005F0FEC /* Gistan */;
+			targetProxy = 24A0C1271F7F640F005F0FEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		24A0C10E1F7F640F005F0FEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24A0C10F1F7F640F005F0FEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		24A0C1131F7F640F005F0FEC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24A0C1141F7F640F005F0FEC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		24A0C12D1F7F640F005F0FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		24A0C12E1F7F640F005F0FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		24A0C1301F7F640F005F0FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Gistan/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Gistan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		24A0C1311F7F640F005F0FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Gistan/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.Gistan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		24A0C1331F7F640F005F0FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GistanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GistanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gistan.app/Gistan";
+			};
+			name = Debug;
+		};
+		24A0C1341F7F640F005F0FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GistanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GistanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gistan.app/Gistan";
+			};
+			name = Release;
+		};
+		24A0C1361F7F640F005F0FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GistanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GistanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Gistan;
+			};
+			name = Debug;
+		};
+		24A0C1371F7F640F005F0FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GistanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GistanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Gistan;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24A0C1001F7F640F005F0FEC /* Build configuration list for PBXProject "Gistan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24A0C12D1F7F640F005F0FEC /* Debug */,
+				24A0C12E1F7F640F005F0FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24A0C12F1F7F640F005F0FEC /* Build configuration list for PBXNativeTarget "Gistan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24A0C1301F7F640F005F0FEC /* Debug */,
+				24A0C1311F7F640F005F0FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24A0C1321F7F640F005F0FEC /* Build configuration list for PBXNativeTarget "GistanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24A0C1331F7F640F005F0FEC /* Debug */,
+				24A0C1341F7F640F005F0FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24A0C1351F7F640F005F0FEC /* Build configuration list for PBXNativeTarget "GistanUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24A0C1361F7F640F005F0FEC /* Debug */,
+				24A0C1371F7F640F005F0FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 24A0C0FD1F7F640F005F0FEC /* Project object */;
+}
