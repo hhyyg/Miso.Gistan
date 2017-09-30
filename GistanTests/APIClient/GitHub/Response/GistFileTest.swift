@@ -48,8 +48,8 @@ class GistFileTest: XCTestCase {
         XCTAssertNotNil(result.files["C# 6 exception filter.cs"])
     }
     
-    func convertToDictionary(text: String) -> [String: Any] {
-        return try! JSONSerialization.jsonObject(with: text.data(using: .utf8)!, options: []) as! [String: Any]
+    func convertToDictionary(text: String) -> JSON {
+        return try! JSON(try! JSONSerialization.jsonObject(with: text.data(using: .utf8)!, options: []) as! [String: Any])
     }
     
     func testPerformanceExample() {
