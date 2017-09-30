@@ -13,17 +13,17 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let tab1: UITabBarItem = self.tabBar.items![0]
-        tab1.title = "Your gists"
-
-        let tab2: UITabBarItem = self.tabBar.items![1]
-        tab2.title = "Follows"
-
+        setupTabBar()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    private func setupTabBar() {
+        let items = tabBar.items!
+
+        let gistsTab = items[0]
+        gistsTab.title = "Your gists"
+
+        let followTab = items[1]
+        followTab.title = "Follows"
     }
 
     /*
