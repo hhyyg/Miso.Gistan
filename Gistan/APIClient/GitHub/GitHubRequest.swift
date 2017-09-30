@@ -46,7 +46,6 @@ extension GitHubRequest {
             return try JSONDecoder().decode(Response.self, from: data)
         } else {
             // JSONからAPIエラーをインスタンス化
-            // TODO: エラー型に直す
             throw try JSONDecoder().decode(GitHubAPIError.self, from: data)
         }
     }
