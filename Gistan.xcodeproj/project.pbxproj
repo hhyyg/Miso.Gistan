@@ -32,6 +32,8 @@
 		24A0C1981F7F6F6B005F0FEC /* Gists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1971F7F6F6B005F0FEC /* Gists.swift */; };
 		24A0C19A1F7F6FD7005F0FEC /* GistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1991F7F6FD7005F0FEC /* GistItem.swift */; };
 		24A0C19C1F7F7081005F0FEC /* GistFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C19B1F7F7081005F0FEC /* GistFile.swift */; };
+		24A0C1CB1F7F7CC0005F0FEC /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1CA1F7F7CC0005F0FEC /* JSON.swift */; };
+		24A0C1D01F7F811D005F0FEC /* GistFileTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1CF1F7F811D005F0FEC /* GistFileTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		24A0C1971F7F6F6B005F0FEC /* Gists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gists.swift; sourceTree = "<group>"; };
 		24A0C1991F7F6FD7005F0FEC /* GistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistItem.swift; sourceTree = "<group>"; };
 		24A0C19B1F7F7081005F0FEC /* GistFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistFile.swift; sourceTree = "<group>"; };
+		24A0C1CA1F7F7CC0005F0FEC /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		24A0C1CF1F7F811D005F0FEC /* GistFileTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistFileTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 		24A0C1071F7F640F005F0FEC /* Gistan */ = {
 			isa = PBXGroup;
 			children = (
+				24A0C1C91F7F7B67005F0FEC /* New Group */,
 				24A0C1811F7F6D4D005F0FEC /* Core */,
 				24A0C17B1F7F6CB9005F0FEC /* APIClient */,
 				24A0C1381F7F668F005F0FEC /* Controller */,
@@ -151,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				24A0C11F1F7F640F005F0FEC /* GistanTests.swift */,
+				24A0C1CC1F7F80D7005F0FEC /* APIClient */,
 				24A0C1211F7F640F005F0FEC /* Info.plist */,
 			);
 			path = GistanTests;
@@ -202,6 +208,7 @@
 			children = (
 				24A0C1821F7F6D64005F0FEC /* JSONDecodable.swift */,
 				24A0C1831F7F6D64005F0FEC /* JSONDecodeError.swift */,
+				24A0C1CA1F7F7CC0005F0FEC /* JSON.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -215,6 +222,37 @@
 				24A0C1971F7F6F6B005F0FEC /* Gists.swift */,
 				24A0C1991F7F6FD7005F0FEC /* GistItem.swift */,
 				24A0C19B1F7F7081005F0FEC /* GistFile.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		24A0C1C91F7F7B67005F0FEC /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		24A0C1CC1F7F80D7005F0FEC /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				24A0C1CD1F7F80E4005F0FEC /* GitHub */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		24A0C1CD1F7F80E4005F0FEC /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				24A0C1CE1F7F80EA005F0FEC /* Response */,
+			);
+			path = GitHub;
+			sourceTree = "<group>";
+		};
+		24A0C1CE1F7F80EA005F0FEC /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				24A0C1CF1F7F811D005F0FEC /* GistFileTest.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -368,6 +406,7 @@
 				24A0C18E1F7F6DFE005F0FEC /* Response.swift in Sources */,
 				24A0C1781F7F6A65005F0FEC /* TabBarController.swift in Sources */,
 				24A0C18F1F7F6E00005F0FEC /* SearchResponse.swift in Sources */,
+				24A0C1CB1F7F7CC0005F0FEC /* JSON.swift in Sources */,
 				24A0C18D1F7F6DFB005F0FEC /* HTTPMethod.swift in Sources */,
 				24A0C1901F7F6E02005F0FEC /* User.swift in Sources */,
 				24A0C10B1F7F640F005F0FEC /* FirstViewController.swift in Sources */,
@@ -380,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24A0C1D01F7F811D005F0FEC /* GistFileTest.swift in Sources */,
 				24A0C1201F7F640F005F0FEC /* GistanTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
