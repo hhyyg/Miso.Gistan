@@ -9,16 +9,14 @@ struct GistFile : JSONDecodable {
     let filename: String
     let type: String
     let language: String
-    let raw_url: String
+    let rawUrl: String
     let size: Int
         
-    init(json: Any) throws {
-        let dict = try JSON(json)
-        
-        self.filename = try dict.get(with: "filename")
-        self.type = try dict.get(with: "type")
-        self.language = try dict.get(with: "language")
-        self.raw_url = try dict.get(with: "raw_url")
-        self.size = try dict.get(with: "size")
+    init(json: JSON) throws {
+        self.filename = try json.get(with: "filename")
+        self.type = try json.get(with: "type")
+        self.language = try json.get(with: "language")
+        self.rawUrl = try json.get(with: "raw_url")
+        self.size = try json.get(with: "size")
     }
 }

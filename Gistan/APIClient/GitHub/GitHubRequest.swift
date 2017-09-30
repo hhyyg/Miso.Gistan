@@ -45,10 +45,10 @@ extension GitHubRequest {
         
         if case (200..<300)? = (urlResponse as? HTTPURLResponse)?.statusCode {
             // JSONからモデルをインスタンス化
-            return try Response(json: json)
+            return try Response(json: JSON(json))
         } else {
             // JSONからAPIエラーをインスタンス化
-            throw try GitHubAPIError(json: json)
+            throw try GitHubAPIError(json: JSON(json))
         }
     }
 }

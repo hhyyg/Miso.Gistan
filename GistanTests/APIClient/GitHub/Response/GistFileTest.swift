@@ -43,7 +43,7 @@ class GistFileTest: XCTestCase {
         let result = try! GistItem(json: convertToDictionary(text: rawJson))
         
         //assert
-        XCTAssertEqual(result.html_url, "https://gist.github.com/9e18f2f16650d89aa37da10b06670d1e")
+        XCTAssertEqual(result.htmlUrl, "https://gist.github.com/9e18f2f16650d89aa37da10b06670d1e")
         XCTAssertEqual(result.files.count, 1)
         XCTAssertNotNil(result.files["C# 6 exception filter.cs"])
     }

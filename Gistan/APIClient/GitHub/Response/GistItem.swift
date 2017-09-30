@@ -7,15 +7,13 @@
 //
 struct GistItem : JSONDecodable {
     let files: [String: GistFile]
-    let html_url: String
+    let htmlUrl: String
     
-    init(json: Any) throws {
-        let dic = try JSON(json)
+    init(json: JSON) throws {
+        files = try (json.get(with: "files") as [String: Any])
+            .mapValues { try GistFile(json: JSON($0)) }
         
-        files = try (dic.get(with: "files") as [String: Any])
-            .mapValues { try GistFile(json: $0) }
-        
-        html_url = try dic.get(with: "html_url")
+        htmlUrl = try json.get(with: "html_url")
     }
 }
 
