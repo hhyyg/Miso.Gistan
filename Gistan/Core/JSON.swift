@@ -7,7 +7,7 @@
 //
 struct JSON {
     let dict: [String: Any]
-    
+
     init(_ json: Any) throws {
         guard let dictionary = json as? [String : Any] else {
             throw JSONDecodeError.invalidFormat(json: json)

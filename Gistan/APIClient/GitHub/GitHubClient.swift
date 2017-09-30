@@ -1,4 +1,3 @@
-
 import Foundation
 
 class GitHubClient {
@@ -7,11 +6,11 @@ class GitHubClient {
         let session = URLSession(configuration: configuration)
         return session
     }()
-    
-    func send<Request : GitHubRequest>(
+
+    func send<Request: GitHubRequest>(
         request: Request,
         completion: @escaping (Result<Request.Response, GitHubClientError>) -> Void) {
-        
+
         let urlRequest = request.buildURLRequest()
         let task = session.dataTask(with: urlRequest) { data, response, error in
             switch (data, response, error) {
@@ -30,7 +29,7 @@ class GitHubClient {
                 fatalError("invalid response combination \(String(describing: data)), \(String(describing: response)), \(String(describing: error)).")
             }
         }
-        
+
         task.resume()
     }
 }

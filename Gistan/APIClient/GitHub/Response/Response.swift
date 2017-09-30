@@ -1,4 +1,4 @@
-struct Repository : Codable {
+struct Repository: Codable {
     let id: Int
     let name: String
     let fullName: String
