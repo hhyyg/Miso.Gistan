@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class FollowingsGistsTableTableViewController: UITableViewController {
 
@@ -44,7 +45,10 @@ class FollowingsGistsTableTableViewController: UITableViewController {
                 switch result {
                 case let .success(response):
                     self.gistItems.append(contentsOf: response)
-                    //TODO: 毎回reload
+                    //TODO: 毎回並び替えしない
+                    self.gistItems.sort(by: { $0.createdAt > $1.createdAt })
+
+                    //TODO: 毎回reloadしなくてよいようにする
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
@@ -69,9 +73,16 @@ class FollowingsGistsTableTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GistItemCell", for: indexPath)
 
         let gistItem = gistItems[indexPath.row]
-        cell.textLabel?.text = gistItem.getFirstFileName()
+        cell.textLabel?.text = "\(gistItem.owner.login) / \(gistItem.getFirstFileName())"
         cell.detailTextLabel?.text = "\(gistItem.getCreatedAtText()) \(gistItem.description)"
 
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let gistItem = gistItems[indexPath.row]
+
+        let safariViewController = SFSafariViewController(url: URL(string: gistItem.htmlUrl)!)
+        self.showDetailViewController(safariViewController, sender: nil)
     }
 }
