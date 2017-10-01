@@ -58,7 +58,7 @@ class MyGistsTableViewController: UITableViewController {
 
         let gistItem = gistItems[indexPath.row]
         cell.textLabel?.text = gistItem.getFirstFileName()
-        cell.detailTextLabel?.text = gistItem.description
+        cell.detailTextLabel?.text = "\(gistItem.getCreatedAtText()) \(gistItem.description)"
 
         return cell
     }

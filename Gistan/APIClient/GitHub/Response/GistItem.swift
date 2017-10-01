@@ -25,4 +25,12 @@ struct GistItem: Codable {
     func getFirstFileName() -> String {
         return Array(files)[0].key
     }
+
+    /// createdAtのテキストを取得します
+    func getCreatedAtText() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "M/d"
+        formatter.locale = Locale.current
+        return formatter.string(from: self.createdAt)
+    }
 }
