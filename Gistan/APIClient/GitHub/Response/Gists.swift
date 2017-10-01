@@ -9,7 +9,6 @@
 import Foundation
 
 struct Gists: Codable {
-
     init(json: JSON) throws {
 
     }

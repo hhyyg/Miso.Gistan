@@ -8,7 +8,7 @@
 struct GistFile: Codable {
     let filename: String
     let type: String
-    let language: String
+    let language: String?
     let rawUrl: String
     let size: Int
 
