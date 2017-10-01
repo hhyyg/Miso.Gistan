@@ -59,6 +59,7 @@ class MyGistsTableViewController: UITableViewController {
         let gistItem = gistItems[indexPath.row]
         cell.textLabel?.text = gistItem.getFirstFileName()
         cell.detailTextLabel?.text = "\(gistItem.getCreatedAtText()) \(gistItem.description)"
+        cell.imageView?.image = UIImage(data: try! Data(contentsOf: URL(string: gistItem.owner.avatarUrl)!))
 
         return cell
     }

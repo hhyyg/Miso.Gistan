@@ -75,6 +75,7 @@ class FollowingsGistsTableTableViewController: UITableViewController {
         let gistItem = gistItems[indexPath.row]
         cell.textLabel?.text = "\(gistItem.owner.login) / \(gistItem.getFirstFileName())"
         cell.detailTextLabel?.text = "\(gistItem.getCreatedAtText()) \(gistItem.description)"
+        cell.imageView?.image = UIImage(data: try! Data(contentsOf: URL(string: gistItem.owner.avatarUrl)!))
 
         return cell
     }
