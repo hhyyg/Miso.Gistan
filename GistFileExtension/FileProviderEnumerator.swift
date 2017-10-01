@@ -9,9 +9,9 @@
 import FileProvider
 
 class FileProviderEnumerator: NSObject, NSFileProviderEnumerator {
-    
+
     var enumeratedItemIdentifier: NSFileProviderItemIdentifier
-    
+
     init(enumeratedItemIdentifier: NSFileProviderItemIdentifier) {
         self.enumeratedItemIdentifier = enumeratedItemIdentifier
         super.init()
@@ -35,7 +35,7 @@ class FileProviderEnumerator: NSObject, NSFileProviderEnumerator {
          - inform the observer that you are finished with this page
          */
     }
-    
+
     func enumerateChanges(for observer: NSFileProviderChangeObserver, from anchor: NSFileProviderSyncAnchor) {
         /* TODO:
          - query the server for updates since the passed-in sync anchor
