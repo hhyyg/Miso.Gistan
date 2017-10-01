@@ -7,6 +7,8 @@
 //
 
 final class GitHubAPI {
+
+    /// Userのgistを取得
     struct GetUsersGists: GitHubRequest {
         typealias Response = [GistItem]
 
@@ -18,6 +20,25 @@ final class GitHubAPI {
 
         var path: String {
             return "users/\(userName)/gists"
+        }
+
+        var parameters: Any? {
+            return nil
+        }
+    }
+
+    /// Userのフォローしている人を取得
+    struct GetUsersFollowing: GitHubRequest {
+        typealias Response = [User]
+
+        let userName: String
+
+        var method: HTTPMethod {
+            return .get
+        }
+
+        var path: String {
+            return "users/\(userName)/following"
         }
 
         var parameters: Any? {

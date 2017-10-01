@@ -12,13 +12,15 @@ struct GistItem: Codable {
     let htmlUrl: String
     let description: String
     let createdAt: Date
+    let owner: User
 
     private enum CodingKeys: String, CodingKey {
         case
         files,
         htmlUrl = "html_url",
         description,
-        createdAt = "created_at"
+        createdAt = "created_at",
+        owner
     }
 
     /// 最初のファイルの名前を取得します

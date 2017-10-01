@@ -23,7 +23,8 @@ class TabBarController: UITabBarController {
         gistsTab.title = "Your gists"
 
         let followTab = items[1]
-        followTab.title = "Follows"
+        followTab.title = "Followings' gists"
+
     }
 
     /*
