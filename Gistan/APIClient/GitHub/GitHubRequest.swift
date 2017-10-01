@@ -41,12 +41,14 @@ extension GitHubRequest {
     func response(from data: Data, urlResponse: URLResponse) throws -> Response {
         // 取得したデータをJSONに変換
 
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
         if case (200..<300)? = (urlResponse as? HTTPURLResponse)?.statusCode {
             // JSONからモデルをインスタンス化
-            return try JSONDecoder().decode(Response.self, from: data)
+            return try decoder.decode(Response.self, from: data)
         } else {
             // JSONからAPIエラーをインスタンス化
-            throw try JSONDecoder().decode(GitHubAPIError.self, from: data)
+            throw try decoder.decode(GitHubAPIError.self, from: data)
         }
     }
 }

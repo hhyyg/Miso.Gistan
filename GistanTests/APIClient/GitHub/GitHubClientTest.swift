@@ -34,7 +34,8 @@ class GitHubClientTest: XCTestCase {
             case let .success(response):
                 XCTAssertNotNil(response[0])
                 print(response[0].htmlUrl)
-            case let .failure(_):
+            case let .failure(error):
+                print(error)
                 XCTAssert(false)
             }
             finished = true
