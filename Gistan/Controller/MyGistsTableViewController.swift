@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class MyGistsTableViewController: UITableViewController {
 
@@ -60,6 +61,13 @@ class MyGistsTableViewController: UITableViewController {
         cell.detailTextLabel?.text = gistItem.description
 
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let gistItem = gistItems[indexPath.row]
+
+        let safariViewController = SFSafariViewController(url: URL(string: gistItem.htmlUrl)!)
+        self.showDetailViewController(safariViewController, sender: nil)
     }
 
     // Override to support conditional editing of the table view.
