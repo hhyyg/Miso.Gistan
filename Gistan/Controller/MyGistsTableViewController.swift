@@ -10,14 +10,31 @@ import UIKit
 
 class MyGistsTableViewController: UITableViewController {
 
+    private var gistItems: [GistItem] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        load(userName: "hhyyg")
+    }
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    func load(userName: String) {
+        let client = GitHubClient()
+        let request = GitHubAPI.GetUsersGists(userName: userName)
+
+        client.send(request: request) { result in
+            switch result {
+            case let .success(response):
+                self.gistItems = response
+
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+
+            case .failure(_):
+                assertionFailure()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,32 +45,28 @@ class MyGistsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return gistItems.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GistItemCell", for: indexPath)
 
-        // Configure the cell...
+        let gistItem = gistItems[indexPath.row]
+        cell.textLabel?.text = gistItem.getFirstFileName()
+        cell.detailTextLabel?.text = gistItem.description
 
         return cell
     }
-    */
 
-    /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
-        return true
+        return false
     }
-    */
 
     /*
     // Override to support editing the table view.
