@@ -37,20 +37,22 @@ class FollowingsGistsTableTableViewController: UITableViewController {
     }
     // FollowsのGistsを読み込む
     func loadFollowingUsersGists(client: GitHubClient) {
+
+        var loadedUserCount = 0
+
         for user in followingUsers {
-
             let request = GitHubAPI.GetUsersGists(userName: user.login)
-
             client.send(request: request) { result in
                 switch result {
                 case let .success(response):
                     self.gistItems.append(contentsOf: response)
-                    //TODO: 毎回並び替えしない
-                    self.gistItems.sort(by: { $0.createdAt > $1.createdAt })
+                    loadedUserCount += 1
 
-                    //TODO: 毎回reloadしなくてよいようにする
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
+                    if loadedUserCount == self.followingUsers.count {
+                        self.gistItems.sort(by: { $0.createdAt > $1.createdAt })
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
                     }
                 case .failure(_):
                     assertionFailure()
