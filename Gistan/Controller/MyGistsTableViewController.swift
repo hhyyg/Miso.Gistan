@@ -16,6 +16,13 @@ class MyGistsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let nib = UINib(nibName: "GistItemCell", bundle: nil)
+        self.tableView?.register(nib, forCellReuseIdentifier: "ItemCell")
+
+        //セルの高さを自動調整にする
+        self.tableView.estimatedRowHeight = 30
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+
         load(userName: "hhyyg")
     }
 
@@ -54,13 +61,13 @@ class MyGistsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GistItemCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! GistItemTableViewCell
 
         let gistItem = gistItems[indexPath.row]
-        cell.textLabel?.text = gistItem.getFirstFileName()
-        cell.detailTextLabel?.text = "\(gistItem.getCreatedAtText()) \(gistItem.description)"
+        cell.titleLabel?.text = gistItem.getFirstFileName()
+        cell.descriptionLabel?.text = "\(gistItem.getCreatedAtText()) \(gistItem.description)"
         //TODO:画像読み込み最適化
-        cell.imageView?.image = UIImage(data: try! Data(contentsOf: URL(string: gistItem.owner.avatarUrl)!))
+        cell.iconImageView?.image = UIImage(data: try! Data(contentsOf: URL(string: gistItem.owner.avatarUrl)!))
 
         return cell
     }

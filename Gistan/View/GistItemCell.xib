@@ -25,6 +25,12 @@
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="fdn-eA-cto"/>
                             <constraint firstAttribute="width" constant="50" id="fiH-eW-O3V"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hhyyg / sample.cs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pcv-BC-TaD">
                         <rect key="frame" x="66" y="8" width="301" height="21"/>

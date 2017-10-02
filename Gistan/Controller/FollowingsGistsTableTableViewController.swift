@@ -14,16 +14,13 @@ class FollowingsGistsTableTableViewController: UITableViewController {
     private var followingUsers: [User] = []
     private var gistItems: [GistItem] = []
 
-    private var stubCell: GistItemTableViewCell?
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let nib = UINib(nibName: "GistItemCell", bundle: nil)
         self.tableView?.register(nib, forCellReuseIdentifier: "ItemCell")
 
-        //stubCell = self.tableView!.dequeueReusableCell(withIdentifier: "ItemCell") as? GistItemTableViewCell
-
+        //セルの高さを自動調整にする
         self.tableView.estimatedRowHeight = 30
         self.tableView.rowHeight = UITableViewAutomaticDimension
 
@@ -87,26 +84,11 @@ class FollowingsGistsTableTableViewController: UITableViewController {
         let gistItem = gistItems[indexPath.row]
         cell.titleLabel?.text = "\(gistItem.owner.login) / \(gistItem.getFirstFileName())"
         cell.descriptionLabel?.text = "\(gistItem.getCreatedAtText()) \(gistItem.description)"
+        //TODO:画像読み込み最適化
         cell.iconImageView?.image = UIImage(data: try! Data(contentsOf: URL(string: gistItem.owner.avatarUrl)!))
 
         return cell
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-
-        stubCell!.frame = self.tableView!.bounds
-
-        let gistItem = gistItems[indexPath.row]
-        stubCell!.titleLabel?.text = "\(gistItem.owner.login) / \(gistItem.getFirstFileName())"
-        stubCell!.descriptionLabel?.text = "\(gistItem.getCreatedAtText()) \(gistItem.description)"
-        stubCell!.iconImageView?.image = UIImage(data: try! Data(contentsOf: URL(string: gistItem.owner.avatarUrl)!))
-
-        stubCell!.setNeedsLayout()
-        stubCell!.layoutIfNeeded()
-        let height = stubCell!.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
-        return height
-    }*/
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let gistItem = gistItems[indexPath.row]
