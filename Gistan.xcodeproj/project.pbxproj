@@ -31,6 +31,8 @@
 		247AF7381F80E046009A401C /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1CA1F7F7CC0005F0FEC /* JSON.swift */; };
 		247AF73B1F825057009A401C /* GistItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247AF73A1F825057009A401C /* GistItemCell.xib */; };
 		247AF73D1F825189009A401C /* GistItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF73C1F825189009A401C /* GistItemTableViewCell.swift */; };
+		247AF7441F82705C009A401C /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247AF7431F82705C009A401C /* Nuke.framework */; };
+		247AF7471F8271F9009A401C /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247AF7431F82705C009A401C /* Nuke.framework */; };
 		24A0C1091F7F640F005F0FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1081F7F640F005F0FEC /* AppDelegate.swift */; };
 		24A0C10B1F7F640F005F0FEC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C10A1F7F640F005F0FEC /* FirstViewController.swift */; };
 		24A0C10D1F7F640F005F0FEC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C10C1F7F640F005F0FEC /* SecondViewController.swift */; };
@@ -117,6 +119,9 @@
 		247AF71F1F80DB4C009A401C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		247AF73A1F825057009A401C /* GistItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GistItemCell.xib; sourceTree = "<group>"; };
 		247AF73C1F825189009A401C /* GistItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistItemTableViewCell.swift; sourceTree = "<group>"; };
+		247AF73F1F827036009A401C /* Checkouts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Checkouts; path = Carthage/Checkouts; sourceTree = "<group>"; };
+		247AF7411F827040009A401C /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = "<group>"; };
+		247AF7431F82705C009A401C /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
 		24A0C1051F7F640F005F0FEC /* Gistan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gistan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A0C1081F7F640F005F0FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24A0C10A1F7F640F005F0FEC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				247AF7441F82705C009A401C /* Nuke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				247AF7471F8271F9009A401C /* Nuke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +224,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		247AF73E1F827035009A401C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				247AF7431F82705C009A401C /* Nuke.framework */,
+				247AF7411F827040009A401C /* Carthage */,
+				247AF73F1F827036009A401C /* Checkouts */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		24A0C0FC1F7F640F005F0FEC = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +243,7 @@
 				247AF70B1F80DB4B009A401C /* GistFileExtension */,
 				247AF7191F80DB4C009A401C /* GistFileExtensionUI */,
 				24A0C1061F7F640F005F0FEC /* Products */,
+				247AF73E1F827035009A401C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -401,6 +419,7 @@
 				24A0C1021F7F640F005F0FEC /* Frameworks */,
 				24A0C1031F7F640F005F0FEC /* Resources */,
 				247AF7221F80DB4C009A401C /* Embed App Extensions */,
+				247AF7461F82707B009A401C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -562,6 +581,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		247AF7461F82707B009A401C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Nuke.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -730,6 +763,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2X2UZ7AEE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GistFileExtensionUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miso.Gistan.GistFileExtensionUI;
@@ -745,6 +782,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2X2UZ7AEE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GistFileExtensionUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miso.Gistan.GistFileExtensionUI;
@@ -869,6 +910,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2X2UZ7AEE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Gistan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miso.Gistan;
@@ -885,6 +930,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2X2UZ7AEE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Gistan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miso.Gistan;

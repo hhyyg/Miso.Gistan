@@ -8,6 +8,7 @@
 
 import UIKit
 import SafariServices
+import Nuke
 
 class MyGistsTableViewController: UITableViewController {
 
@@ -63,11 +64,12 @@ class MyGistsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! GistItemTableViewCell
 
+        //TODO:value set
         let gistItem = gistItems[indexPath.row]
         cell.titleLabel?.text = gistItem.getFirstFileName()
         cell.descriptionLabel?.text = "\(gistItem.getCreatedAtText()) \(gistItem.description)"
-        //TODO:画像読み込み最適化
-        cell.iconImageView?.image = UIImage(data: try! Data(contentsOf: URL(string: gistItem.owner.avatarUrl)!))
+        cell.iconImageView?.image = nil
+        Nuke.loadImage(with: URL(string: gistItem.owner.avatarUrl)!, into: cell.iconImageView!)
 
         return cell
     }
