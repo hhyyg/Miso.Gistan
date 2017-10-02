@@ -30,9 +30,6 @@ struct GistItem: Codable {
 
     /// createdAtのテキストを取得します
     func getCreatedAtText() -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "M/d"
-        formatter.locale = Locale.current
-        return formatter.string(from: self.createdAt)
+        return DateFormatter.createdAt.string(from: createdAt)
     }
 }
