@@ -14,8 +14,18 @@ class FollowingsGistsTableTableViewController: UITableViewController {
     private var followingUsers: [User] = []
     private var gistItems: [GistItem] = []
 
+    private var stubCell: GistItemTableViewCell?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let nib = UINib(nibName: "GistItemCell", bundle: nil)
+        self.tableView?.register(nib, forCellReuseIdentifier: "ItemCell")
+
+        //stubCell = self.tableView!.dequeueReusableCell(withIdentifier: "ItemCell") as? GistItemTableViewCell
+
+        self.tableView.estimatedRowHeight = 30
+        self.tableView.rowHeight = UITableViewAutomaticDimension
 
         load(userName: "hhyyg")
     }
@@ -72,15 +82,31 @@ class FollowingsGistsTableTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GistItemCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! GistItemTableViewCell
 
         let gistItem = gistItems[indexPath.row]
-        cell.textLabel?.text = "\(gistItem.owner.login) / \(gistItem.getFirstFileName())"
-        cell.detailTextLabel?.text = "\(gistItem.getCreatedAtText()) \(gistItem.description)"
-        cell.imageView?.image = UIImage(data: try! Data(contentsOf: URL(string: gistItem.owner.avatarUrl)!))
+        cell.titleLabel?.text = "\(gistItem.owner.login) / \(gistItem.getFirstFileName())"
+        cell.descriptionLabel?.text = "\(gistItem.getCreatedAtText()) \(gistItem.description)"
+        cell.iconImageView?.image = UIImage(data: try! Data(contentsOf: URL(string: gistItem.owner.avatarUrl)!))
 
         return cell
     }
+
+    /*
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+
+        stubCell!.frame = self.tableView!.bounds
+
+        let gistItem = gistItems[indexPath.row]
+        stubCell!.titleLabel?.text = "\(gistItem.owner.login) / \(gistItem.getFirstFileName())"
+        stubCell!.descriptionLabel?.text = "\(gistItem.getCreatedAtText()) \(gistItem.description)"
+        stubCell!.iconImageView?.image = UIImage(data: try! Data(contentsOf: URL(string: gistItem.owner.avatarUrl)!))
+
+        stubCell!.setNeedsLayout()
+        stubCell!.layoutIfNeeded()
+        let height = stubCell!.contentView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+        return height
+    }*/
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let gistItem = gistItems[indexPath.row]

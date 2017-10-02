@@ -29,6 +29,8 @@
 		247AF7361F80E02B009A401C /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C17D1F7F6CF8005F0FEC /* HTTPMethod.swift */; };
 		247AF7371F80E046009A401C /* JSONDecodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1831F7F6D64005F0FEC /* JSONDecodeError.swift */; };
 		247AF7381F80E046009A401C /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1CA1F7F7CC0005F0FEC /* JSON.swift */; };
+		247AF73B1F825057009A401C /* GistItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247AF73A1F825057009A401C /* GistItemCell.xib */; };
+		247AF73D1F825189009A401C /* GistItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF73C1F825189009A401C /* GistItemTableViewCell.swift */; };
 		24A0C1091F7F640F005F0FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1081F7F640F005F0FEC /* AppDelegate.swift */; };
 		24A0C10B1F7F640F005F0FEC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C10A1F7F640F005F0FEC /* FirstViewController.swift */; };
 		24A0C10D1F7F640F005F0FEC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C10C1F7F640F005F0FEC /* SecondViewController.swift */; };
@@ -113,6 +115,8 @@
 		247AF71A1F80DB4C009A401C /* DocumentActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentActionViewController.swift; sourceTree = "<group>"; };
 		247AF71D1F80DB4C009A401C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		247AF71F1F80DB4C009A401C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		247AF73A1F825057009A401C /* GistItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GistItemCell.xib; sourceTree = "<group>"; };
+		247AF73C1F825189009A401C /* GistItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistItemTableViewCell.swift; sourceTree = "<group>"; };
 		24A0C1051F7F640F005F0FEC /* Gistan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gistan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A0C1081F7F640F005F0FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24A0C10A1F7F640F005F0FEC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +208,15 @@
 			path = GistFileExtensionUI;
 			sourceTree = "<group>";
 		};
+		247AF7391F824F9A009A401C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				247AF73A1F825057009A401C /* GistItemCell.xib */,
+				247AF73C1F825189009A401C /* GistItemTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		24A0C0FC1F7F640F005F0FEC = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +244,7 @@
 		24A0C1071F7F640F005F0FEC /* Gistan */ = {
 			isa = PBXGroup;
 			children = (
+				247AF7391F824F9A009A401C /* View */,
 				24A0C1811F7F6D4D005F0FEC /* Core */,
 				24A0C17B1F7F6CB9005F0FEC /* APIClient */,
 				24A0C1381F7F668F005F0FEC /* Controller */,
@@ -514,6 +528,7 @@
 				24A0C1151F7F640F005F0FEC /* LaunchScreen.storyboard in Resources */,
 				24A0C1121F7F640F005F0FEC /* Assets.xcassets in Resources */,
 				24A0C1101F7F640F005F0FEC /* Main.storyboard in Resources */,
+				247AF73B1F825057009A401C /* GistItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +600,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				247AF73D1F825189009A401C /* GistItemTableViewCell.swift in Sources */,
 				24A0C19C1F7F7081005F0FEC /* GistFile.swift in Sources */,
 				24A0C1931F7F6E0B005F0FEC /* GitHubClient.swift in Sources */,
 				24A0C13A1F7F66C8005F0FEC /* MyGistsTableViewController.swift in Sources */,
