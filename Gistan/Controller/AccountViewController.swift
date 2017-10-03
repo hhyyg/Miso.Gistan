@@ -39,8 +39,7 @@ class AccountViewController: UIViewController {
                 }
             case let .failure(error):
                 //TODO: 見つからない場合
-                print(error)
-                print("not found")
+                logger.error("not found(error: \(error)")
             }
         }
     }
@@ -48,6 +47,7 @@ class AccountViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.view.endEditing(true)
+        logger.debug("viewWillDisappear")
     }
 
     /*
