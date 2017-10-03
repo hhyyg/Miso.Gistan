@@ -10,21 +10,31 @@ import UIKit
 import SafariServices
 import Nuke
 
-class MyGistsTableViewController: UITableViewController {
+class MyGistsTableViewController: UITableViewController, AccountViewControllerDelegate {
 
     private var gistItems: [GistItem] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //アカウント設定に遷移
+        let accountVC = self.storyboard?.instantiateViewController(withIdentifier: "AccountPage") as! AccountViewController
+        accountVC.delegate = self
+        accountVC.modalTransitionStyle = .coverVertical
+
+        present(accountVC, animated: true, completion: nil)
+
+        //CustomCellの設定
         let nib = UINib(nibName: "GistItemCell", bundle: nil)
         self.tableView?.register(nib, forCellReuseIdentifier: "ItemCell")
 
         //セルの高さを自動調整にする
         self.tableView.estimatedRowHeight = 30
         self.tableView.rowHeight = UITableViewAutomaticDimension
+    }
 
-        load(userName: "hhyyg")
+    func didDismissViewController(accountViewController: AccountViewController, userName: String) {
+        load(userName: userName)
     }
 
     func load(userName: String) {

@@ -35,6 +35,7 @@
 		247AF7471F8271F9009A401C /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247AF7431F82705C009A401C /* Nuke.framework */; };
 		247AF7491F827997009A401C /* DateFormatter.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF7481F827997009A401C /* DateFormatter.extension.swift */; };
 		247AF74A1F8279CF009A401C /* DateFormatter.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF7481F827997009A401C /* DateFormatter.extension.swift */; };
+		247AF74E1F83B8A9009A401C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF74D1F83B8A9009A401C /* AccountViewController.swift */; };
 		24A0C1091F7F640F005F0FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1081F7F640F005F0FEC /* AppDelegate.swift */; };
 		24A0C10B1F7F640F005F0FEC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C10A1F7F640F005F0FEC /* FirstViewController.swift */; };
 		24A0C10D1F7F640F005F0FEC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C10C1F7F640F005F0FEC /* SecondViewController.swift */; };
@@ -125,6 +126,7 @@
 		247AF7411F827040009A401C /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = "<group>"; };
 		247AF7431F82705C009A401C /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
 		247AF7481F827997009A401C /* DateFormatter.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.extension.swift; sourceTree = "<group>"; };
+		247AF74D1F83B8A9009A401C /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		24A0C1051F7F640F005F0FEC /* Gistan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gistan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A0C1081F7F640F005F0FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24A0C10A1F7F640F005F0FEC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				24A0C1391F7F66C8005F0FEC /* MyGistsTableViewController.swift */,
 				24A0C1771F7F6A65005F0FEC /* TabBarController.swift */,
 				2438392F1F80C62E00621D85 /* FollowingsGistsTableTableViewController.swift */,
+				247AF74D1F83B8A9009A401C /* AccountViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -640,6 +643,7 @@
 			files = (
 				247AF73D1F825189009A401C /* GistItemTableViewCell.swift in Sources */,
 				24A0C19C1F7F7081005F0FEC /* GistFile.swift in Sources */,
+				247AF74E1F83B8A9009A401C /* AccountViewController.swift in Sources */,
 				24A0C1931F7F6E0B005F0FEC /* GitHubClient.swift in Sources */,
 				24A0C13A1F7F66C8005F0FEC /* MyGistsTableViewController.swift in Sources */,
 				24A0C10D1F7F640F005F0FEC /* SecondViewController.swift in Sources */,
