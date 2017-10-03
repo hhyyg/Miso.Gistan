@@ -8,9 +8,9 @@
 
 import UIKit
 
-class AccountViewController: UIViewController, UITextFieldDelegate {
+class AccountViewController: UIViewController {
 
-    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak private var userNameTextField: UITextField!
     weak var delegate: AccountViewControllerDelegate!
 
     override func viewDidLoad() {
@@ -26,16 +26,6 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-
-        guard let userName = userNameTextField!.text, !userName.isEmpty else {
-            //TODO:入力してほしい感じ
-            return false
-        }
-        existUser(userName: userName)
-        return false
-    }
-
     func existUser(userName: String) {
         let client = GitHubClient()
         let request = GitHubAPI.GetUser(userName: userName)
@@ -44,9 +34,8 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
             switch result {
             case .success(_):
                 DispatchQueue.main.async {
-                    self.delegate.didDismissViewController(accountViewController: self, userName: userName)
+                    self.delegate.accountViewControllerDidDismiss(accountViewController: self, userName: userName)
                     self.dismiss(animated: true, completion: nil)
-                    //TODO: キーボードを閉じてないのにdismiss
                 }
             case let .failure(error):
                 //TODO: 見つからない場合
@@ -54,6 +43,11 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
                 print("not found")
             }
         }
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.view.endEditing(true)
     }
 
     /*
@@ -69,5 +63,16 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
 }
 
 protocol AccountViewControllerDelegate: class {
-    func didDismissViewController(accountViewController: AccountViewController, userName: String)
+    func accountViewControllerDidDismiss(accountViewController: AccountViewController, userName: String)
+}
+
+extension AccountViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        guard let userName = userNameTextField!.text, !userName.isEmpty else {
+            //TODO:入力してほしい感じ
+            return false
+        }
+        existUser(userName: userName)
+        return false
+    }
 }

@@ -33,7 +33,7 @@ class MyGistsTableViewController: UITableViewController, AccountViewControllerDe
         self.tableView.rowHeight = UITableViewAutomaticDimension
     }
 
-    func didDismissViewController(accountViewController: AccountViewController, userName: String) {
+    func accountViewControllerDidDismiss(accountViewController: AccountViewController, userName: String) {
         load(userName: userName)
     }
 
