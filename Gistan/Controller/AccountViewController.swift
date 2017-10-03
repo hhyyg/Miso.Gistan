@@ -32,10 +32,28 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
             //TODO:入力してほしい感じ
             return false
         }
-        self.delegate.didDismissViewController(accountViewController: self, userName: userName)
-        self.dismiss(animated: true, completion: nil)
+        existUser(userName: userName)
+        return false
+    }
 
-        return true
+    func existUser(userName: String) {
+        let client = GitHubClient()
+        let request = GitHubAPI.GetUser(userName: userName)
+
+        client.send(request: request) { result in
+            switch result {
+            case .success(_):
+                DispatchQueue.main.async {
+                    self.delegate.didDismissViewController(accountViewController: self, userName: userName)
+                    self.dismiss(animated: true, completion: nil)
+                    //TODO: キーボードを閉じてないのにdismiss
+                }
+            case let .failure(error):
+                //TODO: 見つからない場合
+                print(error)
+                print("not found")
+            }
+        }
     }
 
     /*

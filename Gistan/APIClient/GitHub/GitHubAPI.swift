@@ -45,4 +45,25 @@ final class GitHubAPI {
             return nil
         }
     }
+
+    /// get user info
+    struct GetUser: GitHubRequest {
+        typealias Response = User
+
+        let userName: String
+
+        var method: HTTPMethod {
+            return .get
+        }
+
+        var path: String {
+            return "users/\(userName)"
+        }
+
+        var parameters: Any? {
+            return nil
+        }
+
+    }
+
 }
