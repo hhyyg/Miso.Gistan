@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OAuthSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        try! loadSettings()
         return true
+    }
+
+    func loadSettings() throws {
+        //load settings.plist
+        let settingURL: URL = URL(fileURLWithPath: Bundle.main.path(forResource: "settings", ofType: "plist")!)
+        let data = try Data(contentsOf: settingURL)
+        let decoder = PropertyListDecoder()
+        SettingsContainer.settings = try decoder.decode(Settings.self, from: data)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -41,4 +52,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+}
+
+extension AppDelegate {
+
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        if (url.host == "oauth-callback") {
+            OAuthSwift.handle(url: url)
+        }
+        return true
+    }
 }

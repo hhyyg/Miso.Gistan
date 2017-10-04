@@ -1,6 +1,16 @@
 import Foundation
 
 class GitHubClient {
+
+    var token: String?
+
+    init() {
+    }
+
+    init(token: String?) {
+        self.token = token
+    }
+
     private let session: URLSession = {
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration)

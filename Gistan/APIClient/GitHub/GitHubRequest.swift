@@ -34,6 +34,8 @@ extension GitHubRequest {
         var urlRequest = URLRequest(url: url)
         urlRequest.url = components?.url
         urlRequest.httpMethod = method.rawValue
+        //TODO:token
+        urlRequest.addValue("token 463d26e31bff3062edda2a992d81e9fc710384be", forHTTPHeaderField: "Authorization")
 
         return urlRequest
     }

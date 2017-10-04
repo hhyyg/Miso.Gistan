@@ -7,7 +7,6 @@
 //
 
 final class GitHubAPI {
-
     /// Userのgistを取得
     struct GetUsersGists: GitHubRequest {
         typealias Response = [GistItem]

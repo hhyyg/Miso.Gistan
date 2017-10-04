@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import OAuthSwift
 
 class AccountViewController: UIViewController {
 
@@ -19,6 +20,34 @@ class AccountViewController: UIViewController {
         userNameTextField!.delegate = self
         userNameTextField!.becomeFirstResponder()
         // Do any additional setup after loading the view.
+    }
+
+    @IBAction func authorizeGitHub(_ sender: Any) {
+
+        // create an instance and retain it
+        let oauthswift = OAuth2Swift(
+            consumerKey:    SettingsContainer.settings.githubClientId,
+            consumerSecret: SettingsContainer.settings.githubSecretKey,
+            authorizeUrl: "https://github.com/login/oauth/authorize",
+            accessTokenUrl: "https://github.com/login/oauth/access_token",
+            responseType: "token",
+            contentType: "application/json"
+        )
+
+        oauthswift.authorizeURLHandler = SafariURLHandler(viewController: self, oauthSwift: oauthswift)
+
+        oauthswift.authorize(
+            withCallbackURL: URL(string: "gistan://oauth-callback")!,
+            scope: "public", state:"me",
+            success: { credential, _, _ in
+                logger.debug(credential.oauthToken)
+
+            },
+            failure: { error in
+                logger.error(error.localizedDescription)
+            }
+        )
+
     }
 
     override func didReceiveMemoryWarning() {
