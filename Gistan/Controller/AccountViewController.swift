@@ -41,13 +41,12 @@ class AccountViewController: UIViewController {
             scope: "public", state:"me",
             success: { credential, _, _ in
                 logger.debug(credential.oauthToken)
-
+                UserDefaults.standard.set(credential.oauthToken, forKey: "oauthToken")//TODO:key
             },
             failure: { error in
                 logger.error(error.localizedDescription)
             }
         )
-
     }
 
     override func didReceiveMemoryWarning() {
