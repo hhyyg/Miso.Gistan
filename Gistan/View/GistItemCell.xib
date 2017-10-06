@@ -48,10 +48,7 @@
                 <constraints>
                     <constraint firstItem="Pcv-BC-TaD" firstAttribute="trailing" secondItem="Tvc-1V-v9d" secondAttribute="trailingMargin" id="0D7-Nj-tnn"/>
                     <constraint firstAttribute="bottomMargin" secondItem="OaE-46-jyr" secondAttribute="bottom" id="0fY-Au-n5b"/>
-                    <constraint firstItem="ZWF-MW-1Mb" firstAttribute="top" secondItem="Tvc-1V-v9d" secondAttribute="topMargin" id="4E8-Fp-rLH"/>
-                    <constraint firstItem="ZWF-MW-1Mb" firstAttribute="leading" secondItem="Tvc-1V-v9d" secondAttribute="leadingMargin" id="6oA-f7-JNn"/>
                     <constraint firstItem="Pcv-BC-TaD" firstAttribute="top" secondItem="Tvc-1V-v9d" secondAttribute="topMargin" id="7SR-QB-twZ"/>
-                    <constraint firstItem="ZWF-MW-1Mb" firstAttribute="top" secondItem="Tvc-1V-v9d" secondAttribute="topMargin" id="9FJ-lN-Kbh"/>
                     <constraint firstItem="ZWF-MW-1Mb" firstAttribute="top" secondItem="Tvc-1V-v9d" secondAttribute="topMargin" id="AMj-Py-Gla"/>
                     <constraint firstItem="OaE-46-jyr" firstAttribute="top" secondItem="Pcv-BC-TaD" secondAttribute="bottom" constant="8" id="D5v-ya-yD0"/>
                     <constraint firstItem="ZWF-MW-1Mb" firstAttribute="leading" secondItem="Tvc-1V-v9d" secondAttribute="leadingMargin" id="IwB-Ws-rHg"/>
@@ -59,7 +56,6 @@
                     <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="ZWF-MW-1Mb" secondAttribute="bottom" id="PPf-zk-8Qn"/>
                     <constraint firstItem="Pcv-BC-TaD" firstAttribute="leading" secondItem="ZWF-MW-1Mb" secondAttribute="trailing" constant="8" id="PYR-S2-ZM6"/>
                     <constraint firstItem="OaE-46-jyr" firstAttribute="leading" secondItem="ZWF-MW-1Mb" secondAttribute="trailing" constant="8" id="Q7y-pl-Rtu"/>
-                    <constraint firstItem="ZWF-MW-1Mb" firstAttribute="leading" secondItem="Tvc-1V-v9d" secondAttribute="leadingMargin" id="pWd-NQ-K5N"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
