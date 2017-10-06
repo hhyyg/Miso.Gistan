@@ -10,7 +10,7 @@ import Foundation
 struct GistItem: Codable {
     let files: [String: GistFile]
     let htmlUrl: String
-    let description: String
+    let description: String?
     let createdAt: Date
     let owner: User
 

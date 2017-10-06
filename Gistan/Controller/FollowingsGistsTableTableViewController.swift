@@ -62,7 +62,8 @@ class FollowingsGistsTableTableViewController: UITableViewController {
                             self.tableView.reloadData()
                         }
                     }
-                case .failure(_):
+                case .failure(let error):
+                    logger.error(error)
                     assertionFailure()
                 }
             }
