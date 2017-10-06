@@ -43,6 +43,7 @@ class AccountViewController: UIViewController {
             success: { credential, _, _ in
                 logger.debug("get token: \(credential.oauthToken)")
                 KeychainService.SetKeychain(key: .oauthToken, value: credential.oauthToken)
+                self.getLoginUser()
             },
             failure: { error in
                 logger.error(error.localizedDescription)
@@ -55,6 +56,27 @@ class AccountViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func getLoginUser() {
+        let client = GitHubClient()
+        let request = GitHubAPI.GetMe()
+
+        client.send(request: request) { result in
+            switch result {
+            case let .success(userInfo):
+                //user名を保存
+                UserDefaults.standard.set(userInfo.login, forKey: UserDefaultService.Key.userName.rawValue)
+
+                DispatchQueue.main.async {
+                    self.delegate.accountViewControllerDidDismiss(accountViewController: self)
+                    self.dismiss(animated: true, completion: nil)
+                }
+            case let .failure(error):
+                //TODO: 見つからない場合
+                logger.error("not found(error: \(error)")
+            }
+        }
+    }
+
     func existUser(userName: String) {
         let client = GitHubClient()
         let request = GitHubAPI.GetUser(userName: userName)
@@ -63,7 +85,7 @@ class AccountViewController: UIViewController {
             switch result {
             case .success(_):
                 DispatchQueue.main.async {
-                    self.delegate.accountViewControllerDidDismiss(accountViewController: self, userName: userName)
+                    self.delegate.accountViewControllerDidDismiss(accountViewController: self)
                     self.dismiss(animated: true, completion: nil)
                 }
             case let .failure(error):
@@ -92,7 +114,7 @@ class AccountViewController: UIViewController {
 }
 
 protocol AccountViewControllerDelegate: class {
-    func accountViewControllerDidDismiss(accountViewController: AccountViewController, userName: String)
+    func accountViewControllerDidDismiss(accountViewController: AccountViewController)
 }
 
 extension AccountViewController: UITextFieldDelegate {

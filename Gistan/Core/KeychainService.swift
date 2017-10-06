@@ -10,7 +10,6 @@ import Foundation
 import KeychainAccess
 
 class KeychainService {
-
     enum Key: String {
         case oauthToken = "oauthtoken"
     }

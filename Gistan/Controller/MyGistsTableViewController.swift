@@ -10,7 +10,7 @@ import UIKit
 import SafariServices
 import Nuke
 
-class MyGistsTableViewController: UITableViewController, AccountViewControllerDelegate {
+class MyGistsTableViewController: UITableViewController {
 
     private var gistItems: [GistItem] = []
 
@@ -31,29 +31,6 @@ class MyGistsTableViewController: UITableViewController, AccountViewControllerDe
         //セルの高さを自動調整にする
         self.tableView.estimatedRowHeight = 30
         self.tableView.rowHeight = UITableViewAutomaticDimension
-    }
-
-    func accountViewControllerDidDismiss(accountViewController: AccountViewController, userName: String) {
-        load(userName: userName)
-    }
-
-    func load(userName: String) {
-        let client = GitHubClient()
-        let request = GitHubAPI.GetUsersGists(userName: userName)
-
-        client.send(request: request) { result in
-            switch result {
-            case let .success(response):
-                self.gistItems = response
-
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-
-            case .failure(_):
-                assertionFailure()
-            }
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -134,4 +111,32 @@ class MyGistsTableViewController: UITableViewController, AccountViewControllerDe
     }
     */
 
+}
+
+extension MyGistsTableViewController: AccountViewControllerDelegate {
+
+    func accountViewControllerDidDismiss(accountViewController: AccountViewController) {
+        load()
+    }
+
+    func load() {
+        let userName = UserDefaults.standard.string(forKey: UserDefaultService.Key.userName.rawValue)!
+
+        let client = GitHubClient()
+        let request = GitHubAPI.GetUsersGists(userName: userName)
+
+        client.send(request: request) { result in
+            switch result {
+            case let .success(response):
+                self.gistItems = response
+
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+
+            case .failure(_):
+                assertionFailure()
+            }
+        }
+    }
 }

@@ -62,7 +62,22 @@ final class GitHubAPI {
         var parameters: Any? {
             return nil
         }
+    }
 
+    struct GetMe: GitHubRequest {
+        typealias Response = User
+
+        var method: HTTPMethod {
+            return .get
+        }
+
+        var path: String {
+            return "user"
+        }
+
+        var parameters: Any? {
+            return nil
+        }
     }
 
 }
