@@ -18,12 +18,7 @@ class MyGistsTableViewController: UITableViewController {
         super.viewDidLoad()
 
         //アカウント設定に遷移
-        let accountVC = self.storyboard?.instantiateViewController(withIdentifier: "AccountPage") as! AccountViewController
-        accountVC.delegate = self
-        accountVC.modalTransitionStyle = .coverVertical
-
-        present(accountVC, animated: true, completion: nil)
-
+        goAccountViewController()
         //CustomCellの設定
         let nib = UINib(nibName: "GistItemCell", bundle: nil)
         self.tableView?.register(nib, forCellReuseIdentifier: "ItemCell")
@@ -31,6 +26,21 @@ class MyGistsTableViewController: UITableViewController {
         //セルの高さを自動調整にする
         self.tableView.estimatedRowHeight = 30
         self.tableView.rowHeight = UITableViewAutomaticDimension
+
+        let settingButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(setting))
+        self.navigationItem.setRightBarButton(settingButton, animated: true)
+    }
+
+    @objc func setting() {
+        goAccountViewController()
+    }
+
+    func goAccountViewController() {
+        let accountVC = self.storyboard?.instantiateViewController(withIdentifier: "AccountPage") as! AccountViewController
+        accountVC.delegate = self
+        accountVC.modalTransitionStyle = .coverVertical
+
+        present(accountVC, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
