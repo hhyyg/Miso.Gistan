@@ -10,7 +10,6 @@
 		2438392C1F80890300621D85 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438392B1F80890300621D85 /* GitHubAPI.swift */; };
 		2438392E1F808A8F00621D85 /* GitHubClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438392D1F808A8F00621D85 /* GitHubClientTest.swift */; };
 		243839301F80C62E00621D85 /* FollowingsGistsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438392F1F80C62E00621D85 /* FollowingsGistsTableTableViewController.swift */; };
-		245138C01F84FBD3006B4AA6 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245138BF1F84FBD3006B4AA6 /* OAuthSwift.framework */; };
 		245138C11F8501C8006B4AA6 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245138BF1F84FBD3006B4AA6 /* OAuthSwift.framework */; };
 		245138C21F8501C8006B4AA6 /* OAuthSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 245138BF1F84FBD3006B4AA6 /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		245138C51F850929006B4AA6 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 245138C41F850928006B4AA6 /* settings.plist */; };
@@ -42,6 +41,12 @@
 		247AF74A1F8279CF009A401C /* DateFormatter.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF7481F827997009A401C /* DateFormatter.extension.swift */; };
 		247AF74E1F83B8A9009A401C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF74D1F83B8A9009A401C /* AccountViewController.swift */; };
 		247AF7501F83D1D4009A401C /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF74F1F83D1D4009A401C /* Log.swift */; };
+		24951D9E1F879F1B006F566E /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24951D9D1F879F1B006F566E /* KeychainAccess.framework */; };
+		24951DA01F87A082006F566E /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24951D9F1F87A082006F566E /* KeychainService.swift */; };
+		24951DA11F87A12A006F566E /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24951D9D1F879F1B006F566E /* KeychainAccess.framework */; };
+		24951DA21F87A2A3006F566E /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24951D9F1F87A082006F566E /* KeychainService.swift */; };
+		24951DA31F87A304006F566E /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24951D9D1F879F1B006F566E /* KeychainAccess.framework */; };
+		24951DA41F87A304006F566E /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24951D9D1F879F1B006F566E /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		24A0C1091F7F640F005F0FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1081F7F640F005F0FEC /* AppDelegate.swift */; };
 		24A0C10B1F7F640F005F0FEC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C10A1F7F640F005F0FEC /* FirstViewController.swift */; };
 		24A0C10D1F7F640F005F0FEC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C10C1F7F640F005F0FEC /* SecondViewController.swift */; };
@@ -104,6 +109,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				24951DA41F87A304006F566E /* KeychainAccess.framework in Embed Frameworks */,
 				245138C21F8501C8006B4AA6 /* OAuthSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -148,6 +154,10 @@
 		247AF7481F827997009A401C /* DateFormatter.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.extension.swift; sourceTree = "<group>"; };
 		247AF74D1F83B8A9009A401C /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		247AF74F1F83D1D4009A401C /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		24951D9B1F879E0A006F566E /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		24951D9C1F879E0A006F566E /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		24951D9D1F879F1B006F566E /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		24951D9F1F87A082006F566E /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		24A0C1051F7F640F005F0FEC /* Gistan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gistan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A0C1081F7F640F005F0FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24A0C10A1F7F640F005F0FEC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -183,6 +193,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24951DA11F87A12A006F566E /* KeychainAccess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,8 +209,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				245138C01F84FBD3006B4AA6 /* OAuthSwift.framework in Frameworks */,
+				24951D9E1F879F1B006F566E /* KeychainAccess.framework in Frameworks */,
 				247AF7471F8271F9009A401C /* Nuke.framework in Frameworks */,
+				24951DA31F87A304006F566E /* KeychainAccess.framework in Frameworks */,
 				245138C11F8501C8006B4AA6 /* OAuthSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +275,7 @@
 		247AF73E1F827035009A401C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24951D9D1F879F1B006F566E /* KeychainAccess.framework */,
 				245138BF1F84FBD3006B4AA6 /* OAuthSwift.framework */,
 				247AF7431F82705C009A401C /* Nuke.framework */,
 				247AF7411F827040009A401C /* Carthage */,
@@ -274,6 +287,8 @@
 		24A0C0FC1F7F640F005F0FEC = {
 			isa = PBXGroup;
 			children = (
+				24951D9C1F879E0A006F566E /* Cartfile */,
+				24951D9B1F879E0A006F566E /* Cartfile.resolved */,
 				24A0C1071F7F640F005F0FEC /* Gistan */,
 				24A0C11E1F7F640F005F0FEC /* GistanTests */,
 				24A0C1291F7F640F005F0FEC /* GistanUITests */,
@@ -376,6 +391,7 @@
 				247AF7481F827997009A401C /* DateFormatter.extension.swift */,
 				247AF74F1F83D1D4009A401C /* Log.swift */,
 				245138C61F8509B0006B4AA6 /* Settings.swift */,
+				24951D9F1F87A082006F566E /* KeychainService.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -649,6 +665,7 @@
 			files = (
 				247AF72F1F80E015009A401C /* GistFile.swift in Sources */,
 				247AF7301F80E015009A401C /* GitHubAPIError.swift in Sources */,
+				24951DA21F87A2A3006F566E /* KeychainService.swift in Sources */,
 				247AF70D1F80DB4B009A401C /* FileProviderExtension.swift in Sources */,
 				247AF70F1F80DB4B009A401C /* FileProviderItem.swift in Sources */,
 				247AF7111F80DB4B009A401C /* FileProviderEnumerator.swift in Sources */,
@@ -683,6 +700,7 @@
 				247AF7501F83D1D4009A401C /* Log.swift in Sources */,
 				247AF74E1F83B8A9009A401C /* AccountViewController.swift in Sources */,
 				24A0C1931F7F6E0B005F0FEC /* GitHubClient.swift in Sources */,
+				24951DA01F87A082006F566E /* KeychainService.swift in Sources */,
 				24A0C13A1F7F66C8005F0FEC /* MyGistsTableViewController.swift in Sources */,
 				24A0C10D1F7F640F005F0FEC /* SecondViewController.swift in Sources */,
 				24A0C1091F7F640F005F0FEC /* AppDelegate.swift in Sources */,
@@ -781,6 +799,10 @@
 				CODE_SIGN_ENTITLEMENTS = GistFileExtension/GistFileExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2X2UZ7AEE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GistFileExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miso.Gistan.GistFileExtension;
@@ -797,6 +819,10 @@
 				CODE_SIGN_ENTITLEMENTS = GistFileExtension/GistFileExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2X2UZ7AEE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GistFileExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miso.Gistan.GistFileExtension;

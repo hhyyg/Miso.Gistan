@@ -8,6 +8,7 @@
 
 import UIKit
 import OAuthSwift
+import KeychainAccess
 
 class AccountViewController: UIViewController {
 
@@ -40,8 +41,8 @@ class AccountViewController: UIViewController {
             withCallbackURL: URL(string: "gistan://oauth-callback")!,
             scope: "public", state:"me",
             success: { credential, _, _ in
-                logger.debug(credential.oauthToken)
-                UserDefaults.standard.set(credential.oauthToken, forKey: "oauthToken")//TODO:key
+                logger.debug("get token: \(credential.oauthToken)")
+                KeychainService.SetKeychain(key: .oauthToken, value: credential.oauthToken)
             },
             failure: { error in
                 logger.error(error.localizedDescription)
