@@ -25,6 +25,9 @@ class TabBarController: UITabBarController {
         let followTab = items[1]
         followTab.title = "Followings' gists"
 
+        let searchTab = items[2]
+        searchTab.title = "Search User"
+
     }
 
     /*

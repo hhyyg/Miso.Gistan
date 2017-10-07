@@ -84,7 +84,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Tb-hL-q7j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="772" y="1188.7556221889056"/>
+            <point key="canvasLocation" x="22" y="1159"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="xXV-aD-XPu">
+            <objects>
+                <navigationController id="Saz-qc-dM7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="RZV-WW-Ltr"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pBg-1P-neY">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cit-5W-3Fb" kind="relationship" relationship="rootViewController" id="xbL-zP-mgU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zn8-PB-AmS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801" y="1215"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="CyU-V3-l8f">
+            <objects>
+                <tableViewController id="cit-5W-3Fb" customClass="SearchViewController" customModule="Gistan" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DqC-2z-Wxl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TestCell" id="ugi-tq-h1Y">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ugi-tq-h1Y" id="GoH-JO-bpf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cit-5W-3Fb" id="Azq-Tt-eEU"/>
+                            <outlet property="delegate" destination="cit-5W-3Fb" id="Dym-K6-HFY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Search" id="WWn-i0-ne5"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IIN-sI-AY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1637" y="1203"/>
         </scene>
         <!--Followings' gists-->
         <scene sceneID="Ebc-Cf-eWw">
@@ -127,6 +173,7 @@
                     <connections>
                         <segue destination="qXf-B4-aON" kind="relationship" relationship="viewControllers" id="WGo-jV-M01"/>
                         <segue destination="JHM-Us-BYr" kind="relationship" relationship="viewControllers" id="WNj-QH-TTL"/>
+                        <segue destination="Saz-qc-dM7" kind="relationship" relationship="viewControllers" id="AtQ-8B-51X"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
