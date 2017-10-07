@@ -5,9 +5,15 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ChalkboardSE.ttc">
+            <string>ChalkboardSE-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Item-->
         <scene sceneID="N55-ei-TBb">
@@ -34,16 +40,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbu-mT-bQ8">
-                                <rect key="frame" x="122" y="201" width="131" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="GitHub Authorize"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbu-mT-bQ8">
+                                <rect key="frame" x="80" y="276" width="215" height="38"/>
+                                <color key="backgroundColor" red="0.68627450980392157" green="0.41568627450980389" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                <state key="normal" title="GitHub Authorization"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="authorizeGitHub:" destination="Hfy-jy-lnH" eventType="touchUpInside" id="jfv-Oz-D8i"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="xYK-Td-HwU">
+                                <rect key="frame" x="112" y="64" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="GvB-ad-sls"/>
+                                    <constraint firstAttribute="width" secondItem="xYK-Td-HwU" secondAttribute="height" multiplier="1:1" id="f0u-sK-iH7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gistan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlG-GU-Q12">
+                                <rect key="frame" x="140.5" y="194" width="95.5" height="50"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xYK-Td-HwU" firstAttribute="centerX" secondItem="qiz-IH-05T" secondAttribute="centerX" id="GQ7-RW-1rT"/>
+                            <constraint firstItem="dlG-GU-Q12" firstAttribute="top" secondItem="xYK-Td-HwU" secondAttribute="bottom" constant="-20" id="doH-0N-VBR"/>
+                            <constraint firstItem="xYK-Td-HwU" firstAttribute="top" secondItem="9Yo-1X-Js8" secondAttribute="top" constant="44" id="eur-T4-mTO"/>
+                            <constraint firstItem="vbu-mT-bQ8" firstAttribute="centerX" secondItem="qiz-IH-05T" secondAttribute="centerX" id="hPP-CV-Ncx"/>
+                            <constraint firstItem="vbu-mT-bQ8" firstAttribute="top" secondItem="dlG-GU-Q12" secondAttribute="bottom" constant="32" id="r73-H0-glV"/>
+                            <constraint firstItem="dlG-GU-Q12" firstAttribute="centerX" secondItem="qiz-IH-05T" secondAttribute="centerX" id="yzL-Ms-fhe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9Yo-1X-Js8"/>
                     </view>
                 </viewController>
@@ -148,6 +183,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="icon" width="512" height="512"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>
