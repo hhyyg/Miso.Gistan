@@ -25,7 +25,7 @@ class AccountViewController: UIViewController {
         githubAuth.authorize(
             success: { credential, _, _ in
                 logger.debug("get token: \(credential.oauthToken)")
-                KeychainService.SetKeychain(key: .oauthToken, value: credential.oauthToken)
+                KeychainService.set(forKey: .oauthToken, value: credential.oauthToken)
                 self.getLoginUser()
             },
             failure: { error in
@@ -49,7 +49,7 @@ class AccountViewController: UIViewController {
             switch result {
             case let .success(userInfo):
                 //user名を保存
-                UserDefaults.standard.set(userInfo.login, forKey: UserDefaultService.Key.userName.rawValue)
+                UserDefaults.standard.set(userInfo.login, forKey: UserDefaultKey.userName.rawValue)
 
                 DispatchQueue.main.async {
                     self.delegate.accountViewControllerDidDismiss(accountViewController: self)

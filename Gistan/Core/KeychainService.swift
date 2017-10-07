@@ -11,17 +11,16 @@ import KeychainAccess
 
 class KeychainService {
     enum Key: String {
-        case oauthToken = "oauthtoken"
+        case oauthToken
     }
 
     private static var keychain = Keychain(service: Bundle.main.bundleIdentifier!)
 
-    static func GetKeychain(key: Key) -> String? {
-        let value = keychain[key.rawValue]
-        return value
+    static func get(forKey key: Key) -> String? {
+        return keychain[key.rawValue]
     }
 
-    static func SetKeychain(key: Key, value: String) {
+    static func set(forKey key: Key, value: String) {
         keychain[key.rawValue] = value
     }
 }

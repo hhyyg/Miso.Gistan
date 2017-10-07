@@ -36,7 +36,7 @@ extension GitHubRequest {
         urlRequest.url = components?.url
         urlRequest.httpMethod = method.rawValue
 
-        let token = KeychainService.GetKeychain(key: .oauthToken)!
+        let token = KeychainService.get(forKey: .oauthToken)!
         urlRequest.addValue("token \(token)", forHTTPHeaderField: "Authorization")
 
         return urlRequest

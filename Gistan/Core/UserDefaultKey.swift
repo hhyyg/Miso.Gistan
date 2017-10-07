@@ -8,8 +8,6 @@
 
 import Foundation
 
-class UserDefaultService {
-    enum Key: String {
-        case userName = "username"
-    }
+enum UserDefaultKey: String {
+	case userName
 }

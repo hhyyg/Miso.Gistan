@@ -20,7 +20,7 @@ class MyGistsTableViewController: UITableViewController {
         goAccountViewController()
         //CustomCellの設定
         let nib = UINib(nibName: "GistItemCell", bundle: nil)
-        self.tableView?.register(nib, forCellReuseIdentifier: "ItemCell")
+        self.tableView.register(nib, forCellReuseIdentifier: "ItemCell")
 
         //セルの高さを自動調整にする
         self.tableView.estimatedRowHeight = 30
@@ -125,7 +125,7 @@ extension MyGistsTableViewController: AccountViewControllerDelegate {
     }
 
     func load() {
-        let userName = UserDefaults.standard.string(forKey: UserDefaultService.Key.userName.rawValue)!
+        let userName = UserDefaults.standard.string(forKey: UserDefaultKey.userName.rawValue)!
 
         let client = GitHubClient()
         let request = GitHubAPI.GetUsersGists(userName: userName)
