@@ -15,11 +15,11 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Item-->
+        <!--Followings'-->
         <scene sceneID="N55-ei-TBb">
             <objects>
                 <navigationController id="JHM-Us-BYr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="second" id="3A3-tX-ccm"/>
+                    <tabBarItem key="tabBarItem" title="Followings'" image="second" id="3A3-tX-ccm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ig1-mq-prt">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -86,11 +86,11 @@
             </objects>
             <point key="canvasLocation" x="22" y="1159"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="xXV-aD-XPu">
             <objects>
                 <navigationController id="Saz-qc-dM7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="RZV-WW-Ltr"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="RZV-WW-Ltr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pBg-1P-neY">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -103,7 +103,7 @@
             </objects>
             <point key="canvasLocation" x="801" y="1215"/>
         </scene>
-        <!--Search-->
+        <!--User search-->
         <scene sceneID="CyU-V3-l8f">
             <objects>
                 <tableViewController id="cit-5W-3Fb" customClass="SearchViewController" customModule="Gistan" customModuleProvider="target" sceneMemberID="viewController">
@@ -126,7 +126,7 @@
                             <outlet property="delegate" destination="cit-5W-3Fb" id="Dym-K6-HFY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Search" id="WWn-i0-ne5"/>
+                    <navigationItem key="navigationItem" title="User search" id="WWn-i0-ne5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIN-sI-AY6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -180,11 +180,11 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Item-->
+        <!--Yours-->
         <scene sceneID="xVf-JO-c0E">
             <objects>
                 <navigationController id="qXf-B4-aON" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="first" id="8cL-k9-f5L"/>
+                    <tabBarItem key="tabBarItem" title="Yours" image="first" id="8cL-k9-f5L"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VUb-zz-hE7">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
