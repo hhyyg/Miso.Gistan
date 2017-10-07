@@ -18,6 +18,8 @@ class FollowingsGistsTableTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationController!.navigationBar.prefersLargeTitles = true
+
         let nib = UINib(nibName: "GistItemCell", bundle: nil)
         self.tableView?.register(nib, forCellReuseIdentifier: "ItemCell")
 

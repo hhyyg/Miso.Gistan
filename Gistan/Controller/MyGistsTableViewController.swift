@@ -15,6 +15,9 @@ class MyGistsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        navigationController!.navigationBar.prefersLargeTitles = true
+
         //CustomCellの設定
         let nib = UINib(nibName: "GistItemCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "ItemCell")
