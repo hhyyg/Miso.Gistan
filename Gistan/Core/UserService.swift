@@ -10,7 +10,14 @@ import Foundation
 
 class UserService {
 
-    func logged() -> Bool {
+    static func loggedIn() -> Bool {
+        if
+            let token = KeychainService.get(forKey: .oauthToken),
+            let userName = UserDefaults.standard.string(forKey: UserDefaultKey.userName.rawValue),
+            !token.isEmpty,
+            !userName.isEmpty {
+            return true
+        }
         return false
     }
 }

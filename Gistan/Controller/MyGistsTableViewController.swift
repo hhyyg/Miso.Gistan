@@ -15,36 +15,55 @@ class MyGistsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //アカウント設定に遷移
-        goAccountViewController()
         //CustomCellの設定
         let nib = UINib(nibName: "GistItemCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "ItemCell")
 
-        //セルの高さを自動調整にする
-        self.tableView.estimatedRowHeight = 30
-        self.tableView.rowHeight = UITableViewAutomaticDimension
-
-        let settingButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(setting))
+        let settingButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit,
+                                                             target: self,
+                                                             action: #selector(settingButtonDidTap(_:)))
         self.navigationItem.setRightBarButton(settingButton, animated: true)
+
+        //アカウント設定に遷移
+        if UserService.loggedIn() {
+            load()
+        } else {
+            goAccountViewController(modalTransitionStyle: .crossDissolve)
+        }
     }
 
-    @objc func setting() {
-        goAccountViewController()
+    func load() {
+        let userName = UserDefaults.standard.string(forKey: UserDefaultKey.userName.rawValue)!
+
+        let client = GitHubClient()
+        let request = GitHubAPI.GetUsersGists(userName: userName)
+
+        client.send(request: request) { result in
+            switch result {
+            case let .success(response):
+                self.gistItems = response
+
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+
+            case .failure(_):
+                assertionFailure()
+            }
+        }
     }
 
-    func goAccountViewController() {
-        let accountVC = self.storyboard?.instantiateViewController(withIdentifier: "AccountPage") as! AccountViewController
+    @objc
+    private func settingButtonDidTap(_ sender: UIBarButtonItem) {
+        goAccountViewController(modalTransitionStyle: .coverVertical)
+    }
+
+    func goAccountViewController(modalTransitionStyle: UIModalTransitionStyle) {
+        let accountVC = self.storyboard!.instantiateViewController(withIdentifier: "AccountPage") as! AccountViewController
         accountVC.delegate = self
-        accountVC.modalTransitionStyle = .coverVertical
+        accountVC.modalTransitionStyle = modalTransitionStyle
 
         present(accountVC, animated: true, completion: nil)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -122,26 +141,5 @@ extension MyGistsTableViewController: AccountViewControllerDelegate {
 
     func accountViewControllerDidDismiss(accountViewController: AccountViewController) {
         load()
-    }
-
-    func load() {
-        let userName = UserDefaults.standard.string(forKey: UserDefaultKey.userName.rawValue)!
-
-        let client = GitHubClient()
-        let request = GitHubAPI.GetUsersGists(userName: userName)
-
-        client.send(request: request) { result in
-            switch result {
-            case let .success(response):
-                self.gistItems = response
-
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-
-            case .failure(_):
-                assertionFailure()
-            }
-        }
     }
 }
