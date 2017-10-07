@@ -9,6 +9,7 @@
 import UIKit
 import OAuthSwift
 import KeychainAccess
+import SafariServices
 
 class AccountViewController: UIViewController {
 
@@ -20,21 +21,8 @@ class AccountViewController: UIViewController {
 
     @IBAction func authorizeGitHub(_ sender: Any) {
 
-        // create an instance and retain it
-        let oauthswift = OAuth2Swift(
-            consumerKey:    SettingsContainer.settings.githubClientId,
-            consumerSecret: SettingsContainer.settings.githubSecretKey,
-            authorizeUrl: "https://github.com/login/oauth/authorize",
-            accessTokenUrl: "https://github.com/login/oauth/access_token",
-            responseType: "token",
-            contentType: "application/json"
-        )
-
-        oauthswift.authorizeURLHandler = SafariURLHandler(viewController: self, oauthSwift: oauthswift)
-
-        oauthswift.authorize(
-            withCallbackURL: URL(string: "gistan://oauth-callback")!,
-            scope: "public", state:"me",
+        let githubAuth = GitHubAuthentication()
+        githubAuth.authorize(
             success: { credential, _, _ in
                 logger.debug("get token: \(credential.oauthToken)")
                 KeychainService.SetKeychain(key: .oauthToken, value: credential.oauthToken)
@@ -42,8 +30,10 @@ class AccountViewController: UIViewController {
             },
             failure: { error in
                 logger.error(error.localizedDescription)
+                assertionFailure()
             }
         )
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,6 +58,7 @@ class AccountViewController: UIViewController {
             case let .failure(error):
                 //TODO: 見つからない場合
                 logger.error("not found(error: \(error)")
+                assertionFailure()
             }
         }
     }

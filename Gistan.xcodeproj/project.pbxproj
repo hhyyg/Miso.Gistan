@@ -16,6 +16,9 @@
 		245138C71F8509B0006B4AA6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245138C61F8509B0006B4AA6 /* Settings.swift */; };
 		245F7B901F87A67E0040229D /* UserDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F7B8F1F87A67E0040229D /* UserDefaultService.swift */; };
 		245F7B911F87A67E0040229D /* UserDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F7B8F1F87A67E0040229D /* UserDefaultService.swift */; };
+		245F7B931F889E2D0040229D /* GitHubAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F7B921F889E2C0040229D /* GitHubAuthentication.swift */; };
+		245F7B941F889E980040229D /* GitHubAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F7B921F889E2C0040229D /* GitHubAuthentication.swift */; };
+		245F7B951F88A0470040229D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245138C61F8509B0006B4AA6 /* Settings.swift */; };
 		247AF70D1F80DB4B009A401C /* FileProviderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF70C1F80DB4B009A401C /* FileProviderExtension.swift */; };
 		247AF70F1F80DB4B009A401C /* FileProviderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF70E1F80DB4B009A401C /* FileProviderItem.swift */; };
 		247AF7111F80DB4B009A401C /* FileProviderEnumerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF7101F80DB4B009A401C /* FileProviderEnumerator.swift */; };
@@ -139,6 +142,7 @@
 		245138C41F850928006B4AA6 /* settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = settings.plist; sourceTree = "<group>"; };
 		245138C61F8509B0006B4AA6 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		245F7B8F1F87A67E0040229D /* UserDefaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultService.swift; sourceTree = "<group>"; };
+		245F7B921F889E2C0040229D /* GitHubAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAuthentication.swift; sourceTree = "<group>"; };
 		247AF70A1F80DB4B009A401C /* GistFileExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GistFileExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		247AF70C1F80DB4B009A401C /* FileProviderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProviderExtension.swift; sourceTree = "<group>"; };
 		247AF70E1F80DB4B009A401C /* FileProviderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProviderItem.swift; sourceTree = "<group>"; };
@@ -396,6 +400,7 @@
 				245138C61F8509B0006B4AA6 /* Settings.swift */,
 				24951D9F1F87A082006F566E /* KeychainService.swift */,
 				245F7B8F1F87A67E0040229D /* UserDefaultService.swift */,
+				245F7B921F889E2C0040229D /* GitHubAuthentication.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -670,6 +675,7 @@
 				247AF72F1F80E015009A401C /* GistFile.swift in Sources */,
 				247AF7301F80E015009A401C /* GitHubAPIError.swift in Sources */,
 				24951DA21F87A2A3006F566E /* KeychainService.swift in Sources */,
+				245F7B941F889E980040229D /* GitHubAuthentication.swift in Sources */,
 				247AF70D1F80DB4B009A401C /* FileProviderExtension.swift in Sources */,
 				247AF70F1F80DB4B009A401C /* FileProviderItem.swift in Sources */,
 				247AF7111F80DB4B009A401C /* FileProviderEnumerator.swift in Sources */,
@@ -680,6 +686,7 @@
 				247AF7371F80E046009A401C /* JSONDecodeError.swift in Sources */,
 				247AF7351F80E02B009A401C /* Result.swift in Sources */,
 				247AF72E1F80E015009A401C /* User.swift in Sources */,
+				245F7B951F88A0470040229D /* Settings.swift in Sources */,
 				247AF7311F80E015009A401C /* GitHubClientError.swift in Sources */,
 				247AF7321F80E015009A401C /* GitHubRequest.swift in Sources */,
 				247AF7361F80E02B009A401C /* HTTPMethod.swift in Sources */,
@@ -722,6 +729,7 @@
 				24A0C1901F7F6E02005F0FEC /* User.swift in Sources */,
 				245138C71F8509B0006B4AA6 /* Settings.swift in Sources */,
 				24A0C10B1F7F640F005F0FEC /* FirstViewController.swift in Sources */,
+				245F7B931F889E2D0040229D /* GitHubAuthentication.swift in Sources */,
 				243839301F80C62E00621D85 /* FollowingsGistsTableTableViewController.swift in Sources */,
 				24A0C18C1F7F6DF9005F0FEC /* Result.swift in Sources */,
 				24A0C18B1F7F6DF5005F0FEC /* JSONDecodeError.swift in Sources */,

@@ -8,7 +8,6 @@
 
 import UIKit
 import SafariServices
-import Nuke
 
 class MyGistsTableViewController: UITableViewController {
 
