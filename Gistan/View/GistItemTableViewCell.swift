@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Nuke
 
 class GistItemTableViewCell: UITableViewCell {
 
@@ -16,12 +17,16 @@ class GistItemTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
 
-        // Configure the view for the selected state
+    func setItem(item: GistItem) {
+        self.titleLabel?.text = "\(item.owner.login) / \(item.getFirstFileName())"
+        self.descriptionLabel?.text = "\(item.getCreatedAtText()) \(item.description ?? "")"
+        self.iconImageView?.image = nil
+        Nuke.loadImage(with: URL(string: item.owner.avatarUrl)!, into: self.iconImageView!)
     }
 }

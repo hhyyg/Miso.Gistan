@@ -61,12 +61,8 @@ class MyGistsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! GistItemTableViewCell
 
-        //TODO:value set
         let gistItem = gistItems[indexPath.row]
-        cell.titleLabel?.text = gistItem.getFirstFileName()
-        cell.descriptionLabel?.text = "\(gistItem.getCreatedAtText()) \(gistItem.description)"
-        cell.iconImageView?.image = nil
-        Nuke.loadImage(with: URL(string: gistItem.owner.avatarUrl)!, into: cell.iconImageView!)
+        cell.setItem(item: gistItem)
 
         return cell
     }
