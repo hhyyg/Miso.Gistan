@@ -16,7 +16,7 @@ class FileProviderExtension: NSFileProviderExtension {
         super.init()
 
         let token = KeychainService.get(forKey: .oauthToken)
-        print(token)
+        print(token ?? "token is null")
     }
 
     func item(for identifier: NSFileProviderItemIdentifier) throws -> NSFileProviderItem? {

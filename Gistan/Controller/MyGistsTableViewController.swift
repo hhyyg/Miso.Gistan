@@ -36,7 +36,7 @@ class MyGistsTableViewController: UITableViewController {
     }
 
     func load() {
-        let userName = UserDefaults.standard.string(forKey: UserDefaultKey.userName.rawValue)!
+        let userName = KeychainService.get(forKey: .userName)!
 
         let client = GitHubClient()
         let request = GitHubAPI.GetUsersGists(userName: userName)

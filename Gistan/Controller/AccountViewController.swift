@@ -49,7 +49,7 @@ class AccountViewController: UIViewController {
             switch result {
             case let .success(userInfo):
                 //user名を保存
-                UserDefaults.standard.set(userInfo.login, forKey: UserDefaultKey.userName.rawValue)
+                KeychainService.set(forKey: .userName, value: userInfo.login)
 
                 DispatchQueue.main.async {
                     self.delegate.accountViewControllerDidDismiss(accountViewController: self)
