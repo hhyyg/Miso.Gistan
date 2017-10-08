@@ -13,12 +13,18 @@ class FileProviderItem: NSObject, NSFileProviderItem {
     // TODO: implement an initializer to create an item from your extension's backing model
     // TODO: implement the accessors to return the values from your extension's backing model
 
+    let identifier: NSFileProviderItemIdentifier
+
+    init(identifier: NSFileProviderItemIdentifier) {
+        self.identifier = identifier
+    }
+
     var itemIdentifier: NSFileProviderItemIdentifier {
-        return NSFileProviderItemIdentifier("")
+        return self.identifier
     }
 
     var parentItemIdentifier: NSFileProviderItemIdentifier {
-        return NSFileProviderItemIdentifier("")
+        return NSFileProviderItemIdentifier.rootContainer
     }
 
     var capabilities: NSFileProviderItemCapabilities {
@@ -26,11 +32,11 @@ class FileProviderItem: NSObject, NSFileProviderItem {
     }
 
     var filename: String {
-        return ""
+        return "aaa"
     }
 
     var typeIdentifier: String {
-        return ""
+        return "public.folder"
     }
 
 }

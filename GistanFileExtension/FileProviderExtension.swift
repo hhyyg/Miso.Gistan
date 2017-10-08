@@ -20,7 +20,7 @@ class FileProviderExtension: NSFileProviderExtension {
         // resolve the given identifier to a record in the model
 
         // TODO: implement the actual lookup
-        return nil
+        return FileProviderItem(identifier: identifier)
     }
 
     override func urlForItem(withPersistentIdentifier identifier: NSFileProviderItemIdentifier) -> URL? {
@@ -127,6 +127,7 @@ class FileProviderExtension: NSFileProviderExtension {
         let maybeEnumerator: NSFileProviderEnumerator? = nil
         if (containerItemIdentifier == NSFileProviderItemIdentifier.rootContainer) {
             // TODO: instantiate an enumerator for the container root
+            return FileProviderEnumerator(enumeratedItemIdentifier: containerItemIdentifier)
         } else if (containerItemIdentifier == NSFileProviderItemIdentifier.workingSet) {
             // TODO: instantiate an enumerator for the working set
         } else {

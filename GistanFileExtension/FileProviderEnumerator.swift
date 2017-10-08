@@ -22,6 +22,14 @@ class FileProviderEnumerator: NSObject, NSFileProviderEnumerator {
     }
 
     func enumerateItems(for observer: NSFileProviderEnumerationObserver, startingAt page: NSFileProviderPage) {
+
+        let item = FileProviderItem(identifier: NSFileProviderItemIdentifier("aaa"))
+
+        let items: [NSFileProviderItemProtocol] = [
+            item
+        ]
+        observer.didEnumerate(items)
+        observer.finishEnumerating(upTo: nil)
         /* TODO:
          - inspect the page to determine whether this is an initial or a follow-up request
          
