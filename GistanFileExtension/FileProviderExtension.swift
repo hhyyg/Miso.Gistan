@@ -14,6 +14,9 @@ class FileProviderExtension: NSFileProviderExtension {
 
     override init() {
         super.init()
+
+        let token = KeychainService.get(forKey: .oauthToken)
+        print(token)
     }
 
     func item(for identifier: NSFileProviderItemIdentifier) throws -> NSFileProviderItem? {

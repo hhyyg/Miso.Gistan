@@ -21,11 +21,20 @@
 		</dict>
 		<key>GistanFileExtension.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>GistanFileExtension2.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>GistanFileExtensionUI.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
@@ -53,6 +62,16 @@
 			<true/>
 		</dict>
 		<key>24A0C1251F7F640F005F0FEC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>24A445D11F89E475009452E3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>24A445DF1F89E476009452E3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

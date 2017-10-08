@@ -14,7 +14,10 @@ class KeychainService {
         case oauthToken
     }
 
-    private static var keychain = Keychain(service: Bundle.main.bundleIdentifier!)
+    private static var keychain = Keychain(
+        service: "com.miso.Gistan",
+        accessGroup: Bundle.main.object(forInfoDictionaryKey: "AppIdentifierPrefix") as! String + "com.miso.Gistan")
+    .accessibility(.always)
 
     static func get(forKey key: Key) -> String? {
         return keychain[key.rawValue]

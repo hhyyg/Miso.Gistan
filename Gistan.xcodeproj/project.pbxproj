@@ -56,6 +56,10 @@
 		24A445E61F89E476009452E3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A445E41F89E476009452E3 /* MainInterface.storyboard */; };
 		24A445EA1F89E476009452E3 /* GistanFileExtensionUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 24A445E01F89E476009452E3 /* GistanFileExtensionUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		24A445ED1F89E476009452E3 /* GistanFileExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 24A445D21F89E475009452E3 /* GistanFileExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		24A445F51F8A0092009452E3 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24951D9F1F87A082006F566E /* KeychainService.swift */; };
+		24A445F81F8A00C0009452E3 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24951D9D1F879F1B006F566E /* KeychainAccess.framework */; };
+		24A445FA1F8A0F88009452E3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A445F91F8A0F87009452E3 /* Security.framework */; };
+		24A445FB1F8A0F9E009452E3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A445F91F8A0F87009452E3 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +181,9 @@
 		24A445E21F89E476009452E3 /* DocumentActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentActionViewController.swift; sourceTree = "<group>"; };
 		24A445E51F89E476009452E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		24A445E71F89E476009452E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24A445F41F89F7A1009452E3 /* Gistan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gistan.entitlements; sourceTree = "<group>"; };
+		24A445F61F8A00B0009452E3 /* KeychainAccess.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = KeychainAccess.framework.dSYM; path = Carthage/Build/iOS/KeychainAccess.framework.dSYM; sourceTree = "<group>"; };
+		24A445F91F8A0F87009452E3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24A445FA1F8A0F88009452E3 /* Security.framework in Frameworks */,
 				24951D9E1F879F1B006F566E /* KeychainAccess.framework in Frameworks */,
 				247AF7471F8271F9009A401C /* Nuke.framework in Frameworks */,
 				245138C11F8501C8006B4AA6 /* OAuthSwift.framework in Frameworks */,
@@ -208,6 +216,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24A445FB1F8A0F9E009452E3 /* Security.framework in Frameworks */,
+				24A445F81F8A00C0009452E3 /* KeychainAccess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +251,8 @@
 		247AF73E1F827035009A401C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24A445F91F8A0F87009452E3 /* Security.framework */,
+				24A445F61F8A00B0009452E3 /* KeychainAccess.framework.dSYM */,
 				24951D9D1F879F1B006F566E /* KeychainAccess.framework */,
 				245138BF1F84FBD3006B4AA6 /* OAuthSwift.framework */,
 				247AF7431F82705C009A401C /* Nuke.framework */,
@@ -280,6 +292,7 @@
 		24A0C1071F7F640F005F0FEC /* Gistan */ = {
 			isa = PBXGroup;
 			children = (
+				24A445F41F89F7A1009452E3 /* Gistan.entitlements */,
 				245138C81F85101D006B4AA6 /* Secret */,
 				247AF7391F824F9A009A401C /* View */,
 				24A0C1811F7F6D4D005F0FEC /* Core */,
@@ -532,6 +545,14 @@
 					24A0C1041F7F640F005F0FEC = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					24A0C11A1F7F640F005F0FEC = {
 						CreatedOnToolsVersion = 9.0;
@@ -546,6 +567,14 @@
 					24A445D11F89E475009452E3 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					24A445DF1F89E476009452E3 = {
 						CreatedOnToolsVersion = 9.0;
@@ -709,6 +738,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24A445D51F89E476009452E3 /* FileProviderExtension.swift in Sources */,
+				24A445F51F8A0092009452E3 /* KeychainService.swift in Sources */,
 				24A445D71F89E476009452E3 /* FileProviderItem.swift in Sources */,
 				24A445D91F89E476009452E3 /* FileProviderEnumerator.swift in Sources */,
 			);
@@ -887,6 +917,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Gistan/Gistan.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2X2UZ7AEE;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -907,6 +938,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Gistan/Gistan.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2X2UZ7AEE;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1020,6 +1052,10 @@
 				CODE_SIGN_ENTITLEMENTS = GistanFileExtension/GistanFileExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2X2UZ7AEE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GistanFileExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miso.Gistan.GistanFileExtension;
@@ -1036,6 +1072,10 @@
 				CODE_SIGN_ENTITLEMENTS = GistanFileExtension/GistanFileExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2X2UZ7AEE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = GistanFileExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.miso.Gistan.GistanFileExtension;
