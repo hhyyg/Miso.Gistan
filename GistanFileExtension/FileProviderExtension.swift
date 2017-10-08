@@ -1,8 +1,8 @@
 //
 //  FileProviderExtension.swift
-//  GistFileExtension
+//  GistanFileExtension
 //
-//  Created by Hiroka Yago on 2017/10/01.
+//  Created by Hiroka Yago on 2017/10/08.
 //  Copyright © 2017 miso. All rights reserved.
 //
 
@@ -11,34 +11,13 @@ import FileProvider
 class FileProviderExtension: NSFileProviderExtension {
 
     var fileManager = FileManager()
-    private var gistItems: [GistItem] = []
 
     override init() {
         super.init()
-
-        load(userName: "hhyyg")
-    }
-
-    func load(userName: String) {
-        let client = GitHubClient()
-        let request = GitHubAPI.GetUsersGists(userName: userName)
-
-        client.send(request: request) { result in
-            switch result {
-            case let .success(response):
-                self.gistItems = response
-            case .failure(_):
-                assertionFailure()
-            }
-        }
     }
 
     func item(for identifier: NSFileProviderItemIdentifier) throws -> NSFileProviderItem? {
         // resolve the given identifier to a record in the model
-        if identifier == NSFileProviderItemIdentifier.rootContainer {
-            //let item = FileProviderItem()
-            //return item
-        }
 
         // TODO: implement the actual lookup
         return nil

@@ -1,8 +1,8 @@
 //
 //  DocumentActionViewController.swift
-//  GistFileExtensionUI
+//  GistanFileExtensionUI
 //
-//  Created by Hiroka Yago on 2017/10/01.
+//  Created by Hiroka Yago on 2017/10/08.
 //  Copyright © 2017 miso. All rights reserved.
 //
 

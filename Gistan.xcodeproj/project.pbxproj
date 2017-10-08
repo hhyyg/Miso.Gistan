@@ -15,46 +15,17 @@
 		245138C51F850929006B4AA6 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 245138C41F850928006B4AA6 /* settings.plist */; };
 		245138C71F8509B0006B4AA6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245138C61F8509B0006B4AA6 /* Settings.swift */; };
 		245F7B901F87A67E0040229D /* UserDefaultKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F7B8F1F87A67E0040229D /* UserDefaultKey.swift */; };
-		245F7B911F87A67E0040229D /* UserDefaultKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F7B8F1F87A67E0040229D /* UserDefaultKey.swift */; };
 		245F7B931F889E2D0040229D /* GitHubAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F7B921F889E2C0040229D /* GitHubAuthentication.swift */; };
-		245F7B941F889E980040229D /* GitHubAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F7B921F889E2C0040229D /* GitHubAuthentication.swift */; };
-		245F7B951F88A0470040229D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245138C61F8509B0006B4AA6 /* Settings.swift */; };
 		245F7B971F88B0CB0040229D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F7B961F88B0CB0040229D /* UserService.swift */; };
-		245F7B981F88B0CB0040229D /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F7B961F88B0CB0040229D /* UserService.swift */; };
 		245F7BCC1F88C1A90040229D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F7BCB1F88C1A90040229D /* SearchViewController.swift */; };
-		245F7BCD1F88C1A90040229D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F7BCB1F88C1A90040229D /* SearchViewController.swift */; };
-		247AF70D1F80DB4B009A401C /* FileProviderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF70C1F80DB4B009A401C /* FileProviderExtension.swift */; };
-		247AF70F1F80DB4B009A401C /* FileProviderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF70E1F80DB4B009A401C /* FileProviderItem.swift */; };
-		247AF7111F80DB4B009A401C /* FileProviderEnumerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF7101F80DB4B009A401C /* FileProviderEnumerator.swift */; };
-		247AF71B1F80DB4C009A401C /* DocumentActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF71A1F80DB4C009A401C /* DocumentActionViewController.swift */; };
-		247AF71E1F80DB4C009A401C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 247AF71C1F80DB4C009A401C /* MainInterface.storyboard */; };
-		247AF7231F80DB4C009A401C /* GistFileExtensionUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 247AF7181F80DB4C009A401C /* GistFileExtensionUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		247AF7261F80DB4C009A401C /* GistFileExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 247AF70A1F80DB4B009A401C /* GistFileExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		247AF72D1F80DFF5009A401C /* GistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1991F7F6FD7005F0FEC /* GistItem.swift */; };
-		247AF72E1F80E015009A401C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1891F7F6DA3005F0FEC /* User.swift */; };
-		247AF72F1F80E015009A401C /* GistFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C19B1F7F7081005F0FEC /* GistFile.swift */; };
-		247AF7301F80E015009A401C /* GitHubAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1951F7F6E34005F0FEC /* GitHubAPIError.swift */; };
-		247AF7311F80E015009A401C /* GitHubClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1801F7F6D21005F0FEC /* GitHubClientError.swift */; };
-		247AF7321F80E015009A401C /* GitHubRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C17E1F7F6D00005F0FEC /* GitHubRequest.swift */; };
-		247AF7331F80E015009A401C /* GitHubClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C17C1F7F6CEA005F0FEC /* GitHubClient.swift */; };
-		247AF7341F80E015009A401C /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438392B1F80890300621D85 /* GitHubAPI.swift */; };
-		247AF7351F80E02B009A401C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C17F1F7F6D0D005F0FEC /* Result.swift */; };
-		247AF7361F80E02B009A401C /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C17D1F7F6CF8005F0FEC /* HTTPMethod.swift */; };
-		247AF7371F80E046009A401C /* JSONDecodeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1831F7F6D64005F0FEC /* JSONDecodeError.swift */; };
-		247AF7381F80E046009A401C /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1CA1F7F7CC0005F0FEC /* JSON.swift */; };
 		247AF73B1F825057009A401C /* GistItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 247AF73A1F825057009A401C /* GistItemCell.xib */; };
 		247AF73D1F825189009A401C /* GistItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF73C1F825189009A401C /* GistItemTableViewCell.swift */; };
-		247AF7441F82705C009A401C /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247AF7431F82705C009A401C /* Nuke.framework */; };
 		247AF7471F8271F9009A401C /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 247AF7431F82705C009A401C /* Nuke.framework */; };
 		247AF7491F827997009A401C /* DateFormatter.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF7481F827997009A401C /* DateFormatter.extension.swift */; };
-		247AF74A1F8279CF009A401C /* DateFormatter.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF7481F827997009A401C /* DateFormatter.extension.swift */; };
 		247AF74E1F83B8A9009A401C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF74D1F83B8A9009A401C /* AccountViewController.swift */; };
 		247AF7501F83D1D4009A401C /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF74F1F83D1D4009A401C /* Log.swift */; };
 		24951D9E1F879F1B006F566E /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24951D9D1F879F1B006F566E /* KeychainAccess.framework */; };
 		24951DA01F87A082006F566E /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24951D9F1F87A082006F566E /* KeychainService.swift */; };
-		24951DA11F87A12A006F566E /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24951D9D1F879F1B006F566E /* KeychainAccess.framework */; };
-		24951DA21F87A2A3006F566E /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24951D9F1F87A082006F566E /* KeychainService.swift */; };
-		24951DA31F87A304006F566E /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24951D9D1F879F1B006F566E /* KeychainAccess.framework */; };
 		24951DA41F87A304006F566E /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24951D9D1F879F1B006F566E /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		24A0C1091F7F640F005F0FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1081F7F640F005F0FEC /* AppDelegate.swift */; };
 		24A0C10B1F7F640F005F0FEC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C10A1F7F640F005F0FEC /* FirstViewController.swift */; };
@@ -78,23 +49,16 @@
 		24A0C19C1F7F7081005F0FEC /* GistFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C19B1F7F7081005F0FEC /* GistFile.swift */; };
 		24A0C1CB1F7F7CC0005F0FEC /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1CA1F7F7CC0005F0FEC /* JSON.swift */; };
 		24A0C1D01F7F811D005F0FEC /* GistFileTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1CF1F7F811D005F0FEC /* GistFileTest.swift */; };
+		24A445D51F89E476009452E3 /* FileProviderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A445D41F89E476009452E3 /* FileProviderExtension.swift */; };
+		24A445D71F89E476009452E3 /* FileProviderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A445D61F89E476009452E3 /* FileProviderItem.swift */; };
+		24A445D91F89E476009452E3 /* FileProviderEnumerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A445D81F89E476009452E3 /* FileProviderEnumerator.swift */; };
+		24A445E31F89E476009452E3 /* DocumentActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A445E21F89E476009452E3 /* DocumentActionViewController.swift */; };
+		24A445E61F89E476009452E3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A445E41F89E476009452E3 /* MainInterface.storyboard */; };
+		24A445EA1F89E476009452E3 /* GistanFileExtensionUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 24A445E01F89E476009452E3 /* GistanFileExtensionUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		24A445ED1F89E476009452E3 /* GistanFileExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 24A445D21F89E475009452E3 /* GistanFileExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		247AF7201F80DB4C009A401C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24A0C0FD1F7F640F005F0FEC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 247AF7171F80DB4C009A401C;
-			remoteInfo = GistFileExtensionUI;
-		};
-		247AF7241F80DB4C009A401C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24A0C0FD1F7F640F005F0FEC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 247AF7091F80DB4B009A401C;
-			remoteInfo = GistFileExtension;
-		};
 		24A0C11C1F7F640F005F0FEC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 24A0C0FD1F7F640F005F0FEC /* Project object */;
@@ -108,6 +72,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 24A0C1041F7F640F005F0FEC;
 			remoteInfo = Gistan;
+		};
+		24A445E81F89E476009452E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24A0C0FD1F7F640F005F0FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24A445DF1F89E476009452E3;
+			remoteInfo = GistanFileExtensionUI;
+		};
+		24A445EB1F89E476009452E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 24A0C0FD1F7F640F005F0FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24A445D11F89E475009452E3;
+			remoteInfo = GistanFileExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -130,8 +108,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				247AF7231F80DB4C009A401C /* GistFileExtensionUI.appex in Embed App Extensions */,
-				247AF7261F80DB4C009A401C /* GistFileExtension.appex in Embed App Extensions */,
+				24A445ED1F89E476009452E3 /* GistanFileExtension.appex in Embed App Extensions */,
+				24A445EA1F89E476009452E3 /* GistanFileExtensionUI.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,16 +127,6 @@
 		245F7B921F889E2C0040229D /* GitHubAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAuthentication.swift; sourceTree = "<group>"; };
 		245F7B961F88B0CB0040229D /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		245F7BCB1F88C1A90040229D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		247AF70A1F80DB4B009A401C /* GistFileExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GistFileExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		247AF70C1F80DB4B009A401C /* FileProviderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProviderExtension.swift; sourceTree = "<group>"; };
-		247AF70E1F80DB4B009A401C /* FileProviderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProviderItem.swift; sourceTree = "<group>"; };
-		247AF7101F80DB4B009A401C /* FileProviderEnumerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProviderEnumerator.swift; sourceTree = "<group>"; };
-		247AF7121F80DB4B009A401C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		247AF7131F80DB4C009A401C /* GistFileExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GistFileExtension.entitlements; sourceTree = "<group>"; };
-		247AF7181F80DB4C009A401C /* GistFileExtensionUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GistFileExtensionUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		247AF71A1F80DB4C009A401C /* DocumentActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentActionViewController.swift; sourceTree = "<group>"; };
-		247AF71D1F80DB4C009A401C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		247AF71F1F80DB4C009A401C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		247AF73A1F825057009A401C /* GistItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GistItemCell.xib; sourceTree = "<group>"; };
 		247AF73C1F825189009A401C /* GistItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistItemTableViewCell.swift; sourceTree = "<group>"; };
 		247AF73F1F827036009A401C /* Checkouts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Checkouts; path = Carthage/Checkouts; sourceTree = "<group>"; };
@@ -199,32 +167,25 @@
 		24A0C19B1F7F7081005F0FEC /* GistFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistFile.swift; sourceTree = "<group>"; };
 		24A0C1CA1F7F7CC0005F0FEC /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		24A0C1CF1F7F811D005F0FEC /* GistFileTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistFileTest.swift; sourceTree = "<group>"; };
+		24A445D21F89E475009452E3 /* GistanFileExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GistanFileExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		24A445D41F89E476009452E3 /* FileProviderExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProviderExtension.swift; sourceTree = "<group>"; };
+		24A445D61F89E476009452E3 /* FileProviderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProviderItem.swift; sourceTree = "<group>"; };
+		24A445D81F89E476009452E3 /* FileProviderEnumerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProviderEnumerator.swift; sourceTree = "<group>"; };
+		24A445DA1F89E476009452E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24A445DB1F89E476009452E3 /* GistanFileExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GistanFileExtension.entitlements; sourceTree = "<group>"; };
+		24A445E01F89E476009452E3 /* GistanFileExtensionUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GistanFileExtensionUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		24A445E21F89E476009452E3 /* DocumentActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentActionViewController.swift; sourceTree = "<group>"; };
+		24A445E51F89E476009452E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		24A445E71F89E476009452E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		247AF7071F80DB4B009A401C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				24951DA11F87A12A006F566E /* KeychainAccess.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		247AF7151F80DB4C009A401C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				247AF7441F82705C009A401C /* Nuke.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		24A0C1021F7F640F005F0FEC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				24951D9E1F879F1B006F566E /* KeychainAccess.framework in Frameworks */,
 				247AF7471F8271F9009A401C /* Nuke.framework in Frameworks */,
-				24951DA31F87A304006F566E /* KeychainAccess.framework in Frameworks */,
 				245138C11F8501C8006B4AA6 /* OAuthSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +204,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		24A445CF1F89E475009452E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24A445DD1F89E476009452E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -252,28 +227,6 @@
 				245138C41F850928006B4AA6 /* settings.plist */,
 			);
 			path = Secret;
-			sourceTree = "<group>";
-		};
-		247AF70B1F80DB4B009A401C /* GistFileExtension */ = {
-			isa = PBXGroup;
-			children = (
-				247AF70C1F80DB4B009A401C /* FileProviderExtension.swift */,
-				247AF70E1F80DB4B009A401C /* FileProviderItem.swift */,
-				247AF7101F80DB4B009A401C /* FileProviderEnumerator.swift */,
-				247AF7121F80DB4B009A401C /* Info.plist */,
-				247AF7131F80DB4C009A401C /* GistFileExtension.entitlements */,
-			);
-			path = GistFileExtension;
-			sourceTree = "<group>";
-		};
-		247AF7191F80DB4C009A401C /* GistFileExtensionUI */ = {
-			isa = PBXGroup;
-			children = (
-				247AF71A1F80DB4C009A401C /* DocumentActionViewController.swift */,
-				247AF71C1F80DB4C009A401C /* MainInterface.storyboard */,
-				247AF71F1F80DB4C009A401C /* Info.plist */,
-			);
-			path = GistFileExtensionUI;
 			sourceTree = "<group>";
 		};
 		247AF7391F824F9A009A401C /* View */ = {
@@ -305,8 +258,8 @@
 				24A0C1071F7F640F005F0FEC /* Gistan */,
 				24A0C11E1F7F640F005F0FEC /* GistanTests */,
 				24A0C1291F7F640F005F0FEC /* GistanUITests */,
-				247AF70B1F80DB4B009A401C /* GistFileExtension */,
-				247AF7191F80DB4C009A401C /* GistFileExtensionUI */,
+				24A445D31F89E476009452E3 /* GistanFileExtension */,
+				24A445E11F89E476009452E3 /* GistanFileExtensionUI */,
 				24A0C1061F7F640F005F0FEC /* Products */,
 				247AF73E1F827035009A401C /* Frameworks */,
 			);
@@ -318,8 +271,8 @@
 				24A0C1051F7F640F005F0FEC /* Gistan.app */,
 				24A0C11B1F7F640F005F0FEC /* GistanTests.xctest */,
 				24A0C1261F7F640F005F0FEC /* GistanUITests.xctest */,
-				247AF70A1F80DB4B009A401C /* GistFileExtension.appex */,
-				247AF7181F80DB4C009A401C /* GistFileExtensionUI.appex */,
+				24A445D21F89E475009452E3 /* GistanFileExtension.appex */,
+				24A445E01F89E476009452E3 /* GistanFileExtensionUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -448,43 +401,31 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
+		24A445D31F89E476009452E3 /* GistanFileExtension */ = {
+			isa = PBXGroup;
+			children = (
+				24A445D41F89E476009452E3 /* FileProviderExtension.swift */,
+				24A445D61F89E476009452E3 /* FileProviderItem.swift */,
+				24A445D81F89E476009452E3 /* FileProviderEnumerator.swift */,
+				24A445DA1F89E476009452E3 /* Info.plist */,
+				24A445DB1F89E476009452E3 /* GistanFileExtension.entitlements */,
+			);
+			path = GistanFileExtension;
+			sourceTree = "<group>";
+		};
+		24A445E11F89E476009452E3 /* GistanFileExtensionUI */ = {
+			isa = PBXGroup;
+			children = (
+				24A445E21F89E476009452E3 /* DocumentActionViewController.swift */,
+				24A445E41F89E476009452E3 /* MainInterface.storyboard */,
+				24A445E71F89E476009452E3 /* Info.plist */,
+			);
+			path = GistanFileExtensionUI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		247AF7091F80DB4B009A401C /* GistFileExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 247AF72C1F80DB4C009A401C /* Build configuration list for PBXNativeTarget "GistFileExtension" */;
-			buildPhases = (
-				247AF7061F80DB4B009A401C /* Sources */,
-				247AF7071F80DB4B009A401C /* Frameworks */,
-				247AF7081F80DB4B009A401C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = GistFileExtension;
-			productName = GistFileExtension;
-			productReference = 247AF70A1F80DB4B009A401C /* GistFileExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
-		247AF7171F80DB4C009A401C /* GistFileExtensionUI */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 247AF72B1F80DB4C009A401C /* Build configuration list for PBXNativeTarget "GistFileExtensionUI" */;
-			buildPhases = (
-				247AF7141F80DB4C009A401C /* Sources */,
-				247AF7151F80DB4C009A401C /* Frameworks */,
-				247AF7161F80DB4C009A401C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = GistFileExtensionUI;
-			productName = GistFileExtensionUI;
-			productReference = 247AF7181F80DB4C009A401C /* GistFileExtensionUI.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		24A0C1041F7F640F005F0FEC /* Gistan */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24A0C12F1F7F640F005F0FEC /* Build configuration list for PBXNativeTarget "Gistan" */;
@@ -500,8 +441,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				247AF7211F80DB4C009A401C /* PBXTargetDependency */,
-				247AF7251F80DB4C009A401C /* PBXTargetDependency */,
+				24A445E91F89E476009452E3 /* PBXTargetDependency */,
+				24A445EC1F89E476009452E3 /* PBXTargetDependency */,
 			);
 			name = Gistan;
 			productName = Gistan;
@@ -544,6 +485,40 @@
 			productReference = 24A0C1261F7F640F005F0FEC /* GistanUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		24A445D11F89E475009452E3 /* GistanFileExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24A445F11F89E476009452E3 /* Build configuration list for PBXNativeTarget "GistanFileExtension" */;
+			buildPhases = (
+				24A445CE1F89E475009452E3 /* Sources */,
+				24A445CF1F89E475009452E3 /* Frameworks */,
+				24A445D01F89E475009452E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GistanFileExtension;
+			productName = GistanFileExtension;
+			productReference = 24A445D21F89E475009452E3 /* GistanFileExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		24A445DF1F89E476009452E3 /* GistanFileExtensionUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24A445EE1F89E476009452E3 /* Build configuration list for PBXNativeTarget "GistanFileExtensionUI" */;
+			buildPhases = (
+				24A445DC1F89E476009452E3 /* Sources */,
+				24A445DD1F89E476009452E3 /* Frameworks */,
+				24A445DE1F89E476009452E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GistanFileExtensionUI;
+			productName = GistanFileExtensionUI;
+			productReference = 24A445E01F89E476009452E3 /* GistanFileExtensionUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -554,14 +529,6 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = miso;
 				TargetAttributes = {
-					247AF7091F80DB4B009A401C = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-					};
-					247AF7171F80DB4C009A401C = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-					};
 					24A0C1041F7F640F005F0FEC = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -575,6 +542,14 @@
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 24A0C1041F7F640F005F0FEC;
+					};
+					24A445D11F89E475009452E3 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					24A445DF1F89E476009452E3 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -594,28 +569,13 @@
 				24A0C1041F7F640F005F0FEC /* Gistan */,
 				24A0C11A1F7F640F005F0FEC /* GistanTests */,
 				24A0C1251F7F640F005F0FEC /* GistanUITests */,
-				247AF7091F80DB4B009A401C /* GistFileExtension */,
-				247AF7171F80DB4C009A401C /* GistFileExtensionUI */,
+				24A445D11F89E475009452E3 /* GistanFileExtension */,
+				24A445DF1F89E476009452E3 /* GistanFileExtensionUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		247AF7081F80DB4B009A401C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		247AF7161F80DB4C009A401C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				247AF71E1F80DB4C009A401C /* MainInterface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		24A0C1031F7F640F005F0FEC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -639,6 +599,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24A445D01F89E475009452E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24A445DE1F89E476009452E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24A445E61F89E476009452E3 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,43 +651,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		247AF7061F80DB4B009A401C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				247AF72F1F80E015009A401C /* GistFile.swift in Sources */,
-				247AF7301F80E015009A401C /* GitHubAPIError.swift in Sources */,
-				24951DA21F87A2A3006F566E /* KeychainService.swift in Sources */,
-				245F7B941F889E980040229D /* GitHubAuthentication.swift in Sources */,
-				247AF70D1F80DB4B009A401C /* FileProviderExtension.swift in Sources */,
-				247AF70F1F80DB4B009A401C /* FileProviderItem.swift in Sources */,
-				247AF7111F80DB4B009A401C /* FileProviderEnumerator.swift in Sources */,
-				247AF74A1F8279CF009A401C /* DateFormatter.extension.swift in Sources */,
-				245F7B911F87A67E0040229D /* UserDefaultKey.swift in Sources */,
-				247AF7331F80E015009A401C /* GitHubClient.swift in Sources */,
-				247AF7381F80E046009A401C /* JSON.swift in Sources */,
-				247AF7371F80E046009A401C /* JSONDecodeError.swift in Sources */,
-				245F7BCD1F88C1A90040229D /* SearchViewController.swift in Sources */,
-				247AF7351F80E02B009A401C /* Result.swift in Sources */,
-				247AF72E1F80E015009A401C /* User.swift in Sources */,
-				245F7B981F88B0CB0040229D /* UserService.swift in Sources */,
-				245F7B951F88A0470040229D /* Settings.swift in Sources */,
-				247AF7311F80E015009A401C /* GitHubClientError.swift in Sources */,
-				247AF7321F80E015009A401C /* GitHubRequest.swift in Sources */,
-				247AF7361F80E02B009A401C /* HTTPMethod.swift in Sources */,
-				247AF7341F80E015009A401C /* GitHubAPI.swift in Sources */,
-				247AF72D1F80DFF5009A401C /* GistItem.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		247AF7141F80DB4C009A401C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				247AF71B1F80DB4C009A401C /* DocumentActionViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		24A0C1011F7F640F005F0FEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -766,19 +704,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		24A445CE1F89E475009452E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24A445D51F89E476009452E3 /* FileProviderExtension.swift in Sources */,
+				24A445D71F89E476009452E3 /* FileProviderItem.swift in Sources */,
+				24A445D91F89E476009452E3 /* FileProviderEnumerator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24A445DC1F89E476009452E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24A445E31F89E476009452E3 /* DocumentActionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		247AF7211F80DB4C009A401C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 247AF7171F80DB4C009A401C /* GistFileExtensionUI */;
-			targetProxy = 247AF7201F80DB4C009A401C /* PBXContainerItemProxy */;
-		};
-		247AF7251F80DB4C009A401C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 247AF7091F80DB4B009A401C /* GistFileExtension */;
-			targetProxy = 247AF7241F80DB4C009A401C /* PBXContainerItemProxy */;
-		};
 		24A0C11D1F7F640F005F0FEC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 24A0C1041F7F640F005F0FEC /* Gistan */;
@@ -789,17 +735,19 @@
 			target = 24A0C1041F7F640F005F0FEC /* Gistan */;
 			targetProxy = 24A0C1271F7F640F005F0FEC /* PBXContainerItemProxy */;
 		};
+		24A445E91F89E476009452E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24A445DF1F89E476009452E3 /* GistanFileExtensionUI */;
+			targetProxy = 24A445E81F89E476009452E3 /* PBXContainerItemProxy */;
+		};
+		24A445EC1F89E476009452E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24A445D11F89E475009452E3 /* GistanFileExtension */;
+			targetProxy = 24A445EB1F89E476009452E3 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		247AF71C1F80DB4C009A401C /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				247AF71D1F80DB4C009A401C /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
 		24A0C10E1F7F640F005F0FEC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -816,87 +764,17 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		24A445E41F89E476009452E3 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				24A445E51F89E476009452E3 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		247AF7271F80DB4C009A401C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = GistFileExtension/GistFileExtension.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A2X2UZ7AEE;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = GistFileExtension/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.miso.Gistan.GistFileExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		247AF7281F80DB4C009A401C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = GistFileExtension/GistFileExtension.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A2X2UZ7AEE;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = GistFileExtension/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.miso.Gistan.GistFileExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		247AF7291F80DB4C009A401C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A2X2UZ7AEE;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = GistFileExtensionUI/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.miso.Gistan.GistFileExtensionUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		247AF72A1F80DB4C009A401C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A2X2UZ7AEE;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = GistFileExtensionUI/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.miso.Gistan.GistFileExtensionUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		24A0C12D1F7F640F005F0FEC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1106,27 +984,71 @@
 			};
 			name = Release;
 		};
+		24A445EF1F89E476009452E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A2X2UZ7AEE;
+				INFOPLIST_FILE = GistanFileExtensionUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miso.Gistan.GistanFileExtensionUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		24A445F01F89E476009452E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A2X2UZ7AEE;
+				INFOPLIST_FILE = GistanFileExtensionUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miso.Gistan.GistanFileExtensionUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		24A445F21F89E476009452E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GistanFileExtension/GistanFileExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A2X2UZ7AEE;
+				INFOPLIST_FILE = GistanFileExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miso.Gistan.GistanFileExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		24A445F31F89E476009452E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GistanFileExtension/GistanFileExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A2X2UZ7AEE;
+				INFOPLIST_FILE = GistanFileExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.miso.Gistan.GistanFileExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		247AF72B1F80DB4C009A401C /* Build configuration list for PBXNativeTarget "GistFileExtensionUI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				247AF7291F80DB4C009A401C /* Debug */,
-				247AF72A1F80DB4C009A401C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		247AF72C1F80DB4C009A401C /* Build configuration list for PBXNativeTarget "GistFileExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				247AF7271F80DB4C009A401C /* Debug */,
-				247AF7281F80DB4C009A401C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		24A0C1001F7F640F005F0FEC /* Build configuration list for PBXProject "Gistan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1159,6 +1081,24 @@
 			buildConfigurations = (
 				24A0C1361F7F640F005F0FEC /* Debug */,
 				24A0C1371F7F640F005F0FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24A445EE1F89E476009452E3 /* Build configuration list for PBXNativeTarget "GistanFileExtensionUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24A445EF1F89E476009452E3 /* Debug */,
+				24A445F01F89E476009452E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24A445F11F89E476009452E3 /* Build configuration list for PBXNativeTarget "GistanFileExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24A445F21F89E476009452E3 /* Debug */,
+				24A445F31F89E476009452E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
