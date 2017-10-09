@@ -8,6 +8,7 @@
 import Foundation
 
 struct GistItem: Codable {
+    let id: String
     let files: [String: GistFile]
     let htmlUrl: String
     let description: String?
@@ -16,6 +17,7 @@ struct GistItem: Codable {
 
     private enum CodingKeys: String, CodingKey {
         case
+        id,
         files,
         htmlUrl = "html_url",
         description,

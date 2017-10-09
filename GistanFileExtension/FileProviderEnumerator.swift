@@ -8,12 +8,42 @@
 
 import FileProvider
 
+class GistItemFileProviderEnumerator: NSObject, NSFileProviderEnumerator {
+
+    private let parentItem: GistItem
+    private let parentItemIdentifier: NSFileProviderItemIdentifier
+
+    init(
+        parentItem: GistItem,
+        parentItemIdentifier: NSFileProviderItemIdentifier) {
+        self.parentItem = parentItem
+        self.parentItemIdentifier = parentItemIdentifier
+
+        super.init()
+    }
+
+    func enumerateItems(for observer: NSFileProviderEnumerationObserver, startingAt page: NSFileProviderPage) {
+
+        let items: [NSFileProviderItemProtocol]
+        items = parentItem.files.map {
+            GistFileFileProviderItem(parentItemIdentifier: self.parentItemIdentifier,
+                                     gistItem: self.parentItem,
+                                     gistFile: $0.value)
+        }
+        observer.didEnumerate(items)
+        observer.finishEnumerating(upTo: nil)
+    }
+
+    func invalidate() {
+    }
+}
+
 class FileProviderEnumerator: NSObject, NSFileProviderEnumerator {
 
-    var enumeratedItemIdentifier: NSFileProviderItemIdentifier
+    private let items: [NSFileProviderItemProtocol]
 
-    init(enumeratedItemIdentifier: NSFileProviderItemIdentifier) {
-        self.enumeratedItemIdentifier = enumeratedItemIdentifier
+    init(items: [NSFileProviderItemProtocol]) {
+        self.items = items
         super.init()
     }
 
@@ -21,13 +51,10 @@ class FileProviderEnumerator: NSObject, NSFileProviderEnumerator {
         // TODO: perform invalidation of server connection if necessary
     }
 
-    func enumerateItems(for observer: NSFileProviderEnumerationObserver, startingAt page: NSFileProviderPage) {
+    func enumerateItems(
+        for observer: NSFileProviderEnumerationObserver,
+        startingAt page: NSFileProviderPage) {
 
-        let item = FileProviderItem(identifier: NSFileProviderItemIdentifier("aaa"))
-
-        let items: [NSFileProviderItemProtocol] = [
-            item
-        ]
         observer.didEnumerate(items)
         observer.finishEnumerating(upTo: nil)
         /* TODO:

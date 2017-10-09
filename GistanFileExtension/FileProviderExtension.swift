@@ -7,16 +7,41 @@
 //
 
 import FileProvider
+import Foundation
 
 class FileProviderExtension: NSFileProviderExtension {
 
-    var fileManager = FileManager()
+    private var fileManager = FileManager()
+    private var gistItems: [GistItem] = []
 
     override init() {
         super.init()
 
-        let token = KeychainService.get(forKey: .oauthToken)
-        print(token ?? "token is null")
+        let token: String? = KeychainService.get(forKey: .oauthToken)
+        logger.debug(token ?? "token is null")
+
+        //TODO: if token is null
+        if token != nil {
+            self.load()
+        }
+        //TODO: no sleep
+        Thread.sleep(forTimeInterval: 1)
+    }
+
+    func load() {
+        let userName = KeychainService.get(forKey: .userName)!
+
+        let client = GitHubClient()
+        let request = GitHubAPI.GetUsersGists(userName: userName)
+
+        client.send(request: request) { result in
+            switch result {
+            case let .success(response):
+                self.gistItems = response
+            case .failure(_):
+                assertionFailure()
+            }
+        }
     }
 
     func item(for identifier: NSFileProviderItemIdentifier) throws -> NSFileProviderItem? {
@@ -129,19 +154,44 @@ class FileProviderExtension: NSFileProviderExtension {
     override func enumerator(for containerItemIdentifier: NSFileProviderItemIdentifier) throws -> NSFileProviderEnumerator {
         let maybeEnumerator: NSFileProviderEnumerator? = nil
         if (containerItemIdentifier == NSFileProviderItemIdentifier.rootContainer) {
-            // TODO: instantiate an enumerator for the container root
-            return FileProviderEnumerator(enumeratedItemIdentifier: containerItemIdentifier)
+            // instantiate an enumerator for the container root
+            logger.debug("item length is\(gistItems.count)")
+            return FileProviderSerivce.getRootFileProviderEnumerator(items: self.gistItems)
         } else if (containerItemIdentifier == NSFileProviderItemIdentifier.workingSet) {
             // TODO: instantiate an enumerator for the working set
+            logger.debug("workingSet")
         } else {
+            logger.debug("item for directory")
             // TODO: determine if the item is a directory or a file
             // - for a directory, instantiate an enumerator of its subitems
             // - for a file, instantiate an enumerator that observes changes to the file
+            return FileProviderSerivce.getChildlen(items: self.gistItems, identifier: containerItemIdentifier)
         }
         guard let enumerator = maybeEnumerator else {
             throw NSError(domain: NSCocoaErrorDomain, code: NSFeatureUnsupportedError, userInfo:[:])
         }
         return enumerator
+    }
+
+}
+
+class FileProviderSerivce {
+
+    static func getRootFileProviderEnumerator(items: [GistItem]) -> NSFileProviderEnumerator {
+        let providerItems = items.map { return GistFileProviderItem(item: $0) }
+        return FileProviderEnumerator(items: providerItems)
+    }
+
+    static func getChildlen(items: [GistItem], identifier: NSFileProviderItemIdentifier) -> NSFileProviderEnumerator {
+        let gistItem = getGistItem(items: items, identifier: identifier)
+        return GistItemFileProviderEnumerator(parentItem: gistItem, parentItemIdentifier: identifier)
+    }
+
+    static func getGistItem(items: [GistItem], identifier: NSFileProviderItemIdentifier) -> GistItem {
+        let identifierComponents = identifier.rawValue.components(separatedBy: ".")
+        let gistId = identifierComponents.last!
+        let foundItem = items.filter { return $0.id == gistId }.first!
+        return foundItem
     }
 
 }
