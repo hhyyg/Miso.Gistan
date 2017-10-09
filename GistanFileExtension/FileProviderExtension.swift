@@ -52,6 +52,8 @@ class FileProviderExtension: NSFileProviderExtension {
     }
 
     override func urlForItem(withPersistentIdentifier identifier: NSFileProviderItemIdentifier) -> URL? {
+        logger.debug("urlForItem: \(identifier.rawValue)")
+
         // resolve the given identifier to a file on disk
         guard let item = try? item(for: identifier) else {
             return nil
@@ -73,6 +75,10 @@ class FileProviderExtension: NSFileProviderExtension {
         assert(pathComponents.count > 2)
 
         return NSFileProviderItemIdentifier(pathComponents[pathComponents.count - 2])
+    }
+
+    override func providePlaceholder(at url: URL, completionHandler: @escaping (Error?) -> Void) {
+        logger.debug(url)
     }
 
     override func startProvidingItem(at url: URL, completionHandler: ((_ error: Error?) -> Void)?) {
@@ -157,6 +163,7 @@ class FileProviderExtension: NSFileProviderExtension {
             // instantiate an enumerator for the container root
             logger.debug("item length is\(gistItems.count)")
             return FileProviderSerivce.getRootFileProviderEnumerator(items: self.gistItems)
+
         } else if (containerItemIdentifier == NSFileProviderItemIdentifier.workingSet) {
             // TODO: instantiate an enumerator for the working set
             logger.debug("workingSet")

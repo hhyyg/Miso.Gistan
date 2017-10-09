@@ -17,7 +17,7 @@ class GistFileProviderItem: NSObject, NSFileProviderItem {
     init(item: GistItem) {
         self.gistId = item.id
         self.gistName = item.getFirstFileName()
-        self.ownerName = item.owner.login
+        self.ownerName = item.owner.login.removing(".")
     }
 
     var itemIdentifier: NSFileProviderItemIdentifier {

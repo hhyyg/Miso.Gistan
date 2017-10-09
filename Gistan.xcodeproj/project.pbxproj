@@ -82,6 +82,9 @@
 		24A446111F8B2E79009452E3 /* GistFileProviderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A445FD1F8B28FA009452E3 /* GistFileProviderItem.swift */; };
 		24A446131F8B3A6F009452E3 /* GistFileFileProviderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A446121F8B3A6F009452E3 /* GistFileFileProviderItem.swift */; };
 		24A446141F8B3A6F009452E3 /* GistFileFileProviderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A446121F8B3A6F009452E3 /* GistFileFileProviderItem.swift */; };
+		24CC65541F8B5AB800605284 /* String.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC65531F8B5AB800605284 /* String.extension.swift */; };
+		24CC65571F8B5BD200605284 /* StringExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC65561F8B5BD200605284 /* StringExtensionTest.swift */; };
+		24CC65581F8B5C2800605284 /* String.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC65531F8B5AB800605284 /* String.extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +211,8 @@
 		24A445F91F8A0F87009452E3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		24A445FD1F8B28FA009452E3 /* GistFileProviderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistFileProviderItem.swift; sourceTree = "<group>"; };
 		24A446121F8B3A6F009452E3 /* GistFileFileProviderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistFileFileProviderItem.swift; sourceTree = "<group>"; };
+		24CC65531F8B5AB800605284 /* String.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.extension.swift; sourceTree = "<group>"; };
+		24CC65561F8B5BD200605284 /* StringExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +342,7 @@
 		24A0C11E1F7F640F005F0FEC /* GistanTests */ = {
 			isa = PBXGroup;
 			children = (
+				24CC65551F8B5BB500605284 /* Core */,
 				24A0C11F1F7F640F005F0FEC /* GistanTests.swift */,
 				24A0C1CC1F7F80D7005F0FEC /* APIClient */,
 				24A0C1211F7F640F005F0FEC /* Info.plist */,
@@ -400,6 +406,7 @@
 				245F7B8F1F87A67E0040229D /* UserDefaultKey.swift */,
 				245F7B921F889E2C0040229D /* GitHubAuthentication.swift */,
 				245F7B961F88B0CB0040229D /* UserService.swift */,
+				24CC65531F8B5AB800605284 /* String.extension.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -468,6 +475,14 @@
 				24A446121F8B3A6F009452E3 /* GistFileFileProviderItem.swift */,
 			);
 			path = FileProvider;
+			sourceTree = "<group>";
+		};
+		24CC65551F8B5BB500605284 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				24CC65561F8B5BD200605284 /* StringExtensionTest.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -727,6 +742,7 @@
 				24A0C1931F7F6E0B005F0FEC /* GitHubClient.swift in Sources */,
 				24951DA01F87A082006F566E /* KeychainService.swift in Sources */,
 				24A0C13A1F7F66C8005F0FEC /* MyGistsTableViewController.swift in Sources */,
+				24CC65541F8B5AB800605284 /* String.extension.swift in Sources */,
 				24A0C10D1F7F640F005F0FEC /* SecondViewController.swift in Sources */,
 				24A0C1091F7F640F005F0FEC /* AppDelegate.swift in Sources */,
 				2438392C1F80890300621D85 /* GitHubAPI.swift in Sources */,
@@ -755,6 +771,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24CC65571F8B5BD200605284 /* StringExtensionTest.swift in Sources */,
 				2438392E1F808A8F00621D85 /* GitHubClientTest.swift in Sources */,
 				24A0C1D01F7F811D005F0FEC /* GistFileTest.swift in Sources */,
 				24A0C1201F7F640F005F0FEC /* GistanTests.swift in Sources */,
@@ -780,6 +797,7 @@
 				24A445F51F8A0092009452E3 /* KeychainService.swift in Sources */,
 				24A446041F8B2C0F009452E3 /* DateFormatter.extension.swift in Sources */,
 				24A4460E1F8B2C0F009452E3 /* GitHubAPIError.swift in Sources */,
+				24CC65581F8B5C2800605284 /* String.extension.swift in Sources */,
 				24A446061F8B2C0F009452E3 /* UserDefaultKey.swift in Sources */,
 				24A446091F8B2C0F009452E3 /* Result.swift in Sources */,
 				24A4460B1F8B2C0F009452E3 /* User.swift in Sources */,
