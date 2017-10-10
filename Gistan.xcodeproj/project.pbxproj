@@ -85,6 +85,7 @@
 		24CC65541F8B5AB800605284 /* String.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC65531F8B5AB800605284 /* String.extension.swift */; };
 		24CC65571F8B5BD200605284 /* StringExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC65561F8B5BD200605284 /* StringExtensionTest.swift */; };
 		24CC65581F8B5C2800605284 /* String.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC65531F8B5AB800605284 /* String.extension.swift */; };
+		24CC655A1F8CE1F900605284 /* GistService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC65591F8CE1F900605284 /* GistService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -213,6 +214,7 @@
 		24A446121F8B3A6F009452E3 /* GistFileFileProviderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistFileFileProviderItem.swift; sourceTree = "<group>"; };
 		24CC65531F8B5AB800605284 /* String.extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.extension.swift; sourceTree = "<group>"; };
 		24CC65561F8B5BD200605284 /* StringExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTest.swift; sourceTree = "<group>"; };
+		24CC65591F8CE1F900605284 /* GistService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -454,6 +456,7 @@
 				24A445D81F89E476009452E3 /* FileProviderEnumerator.swift */,
 				24A445DA1F89E476009452E3 /* Info.plist */,
 				24A445DB1F89E476009452E3 /* GistanFileExtension.entitlements */,
+				24CC65591F8CE1F900605284 /* GistService.swift */,
 			);
 			path = GistanFileExtension;
 			sourceTree = "<group>";
@@ -790,6 +793,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24CC655A1F8CE1F900605284 /* GistService.swift in Sources */,
 				24A4460D1F8B2C0F009452E3 /* GistFile.swift in Sources */,
 				24A446081F8B2C0F009452E3 /* UserService.swift in Sources */,
 				24A446021F8B2C0F009452E3 /* JSONDecodeError.swift in Sources */,

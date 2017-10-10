@@ -23,7 +23,6 @@ class GistItemFileProviderEnumerator: NSObject, NSFileProviderEnumerator {
     }
 
     func enumerateItems(for observer: NSFileProviderEnumerationObserver, startingAt page: NSFileProviderPage) {
-
         let items: [NSFileProviderItemProtocol]
         items = parentItem.files.map {
             GistFileFileProviderItem(parentItemIdentifier: self.parentItemIdentifier,
@@ -40,13 +39,6 @@ class GistItemFileProviderEnumerator: NSObject, NSFileProviderEnumerator {
 
 class FileProviderEnumerator: NSObject, NSFileProviderEnumerator {
 
-    private let items: [NSFileProviderItemProtocol]
-
-    init(items: [NSFileProviderItemProtocol]) {
-        self.items = items
-        super.init()
-    }
-
     func invalidate() {
         // TODO: perform invalidation of server connection if necessary
     }
@@ -55,8 +47,12 @@ class FileProviderEnumerator: NSObject, NSFileProviderEnumerator {
         for observer: NSFileProviderEnumerationObserver,
         startingAt page: NSFileProviderPage) {
 
-        observer.didEnumerate(items)
-        observer.finishEnumerating(upTo: nil)
+        GistService.load {
+            let providerItems = GistService.gistItems.map { return GistFileProviderItem(item: $0) }
+            observer.didEnumerate(providerItems)
+            observer.finishEnumerating(upTo: nil)
+        }
+
         /* TODO:
          - inspect the page to determine whether this is an initial or a follow-up request
          
