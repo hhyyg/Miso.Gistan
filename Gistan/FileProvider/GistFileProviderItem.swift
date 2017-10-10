@@ -21,7 +21,7 @@ class GistFileProviderItem: NSObject, NSFileProviderItem {
     }
 
     var itemIdentifier: NSFileProviderItemIdentifier {
-        return NSFileProviderItemIdentifier("gists.\(self.ownerName).\(self.gistId)")
+        return NSFileProviderItemIdentifier("gists.\(self.ownerName.urlEncoding()).\(self.gistId)")
     }
 
     var parentItemIdentifier: NSFileProviderItemIdentifier {

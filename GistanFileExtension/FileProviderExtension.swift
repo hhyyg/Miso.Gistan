@@ -28,8 +28,22 @@ class FileProviderExtension: NSFileProviderExtension {
     func item(for identifier: NSFileProviderItemIdentifier) throws -> NSFileProviderItem? {
         // resolve the given identifier to a record in the model
 
+        let type = FileProviderSerivce.getIdentifierType(identifier: identifier)
+        switch type {
+        case .root:
+            fatalError("invalid")
+        case .gistItem:
+            let item = FileProviderSerivce.getGistItem(identifier: identifier)
+            return GistFileProviderItem(item: item)
+        case .gistFile:
+            _ = FileProviderSerivce.getGistItem(identifier: identifier)
+
+            //TODO: identifierから、parentItemIdentifier, gistItemを取得する
+            fatalError("not implementation")
+        }
+        _ = FileProviderSerivce.getGistItem(identifier: identifier)
         // TODO: implement the actual lookup
-        return FileProviderItem(identifier: identifier)
+        return nil
     }
 
     override func urlForItem(withPersistentIdentifier identifier: NSFileProviderItemIdentifier) -> URL? {
@@ -167,6 +181,7 @@ class FileProviderSerivce {
         return GistItemFileProviderEnumerator(parentItem: gistItem, parentItemIdentifier: identifier)
     }
 
+    //GistItemのIdentifierからGistItemを返す（TODO:identifierがItem限定）
     static func getGistItem(identifier: NSFileProviderItemIdentifier) -> GistItem {
         let identifierComponents = identifier.rawValue.components(separatedBy: ".")
         let gistId = identifierComponents.last!
@@ -174,4 +189,27 @@ class FileProviderSerivce {
         return foundItem
     }
 
+    //identifiierから、それがGistItemかGistFileかを返す
+    static func getIdentifierType(identifier: NSFileProviderItemIdentifier) -> IdentifierType {
+
+        if identifier == NSFileProviderItemIdentifier.rootContainer {
+            return .root
+        }
+
+        switch identifier.rawValue.components(separatedBy: ".").count {
+        case 3:
+            return .gistItem
+        case 4:
+            return .gistFile
+        default:
+            fatalError()//TODO:fatalError
+        }
+    }
+
+}
+
+enum IdentifierType {
+    case root
+    case gistItem
+    case gistFile
 }

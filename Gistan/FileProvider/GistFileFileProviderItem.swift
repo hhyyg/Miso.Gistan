@@ -9,8 +9,7 @@
 import Foundation
 import FileProvider
 
-// TODO: 移動, リネーム
-let delimiter = "."
+//TODO: identifierDelimiter = "."
 
 class GistFileFileProviderItem: NSObject, NSFileProviderItem {
 
@@ -26,7 +25,7 @@ class GistFileFileProviderItem: NSObject, NSFileProviderItem {
         self.parentItemIdentifier = parentItemIdentifier
 
         //TDOO: .をremoveせずエスケープへ
-        self.itemIdentifier = NSFileProviderItemIdentifier("gists.\(gistItem.owner.login.removing(".")).\(gistItem.id).\(gistFile.filename.removing("."))")
+        self.itemIdentifier = NSFileProviderItemIdentifier("gists.\(gistItem.owner.login.urlEncoding()).\(gistItem.id).\(gistFile.filename.urlEncoding())")
         self.filename = gistFile.filename
     }
 

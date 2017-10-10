@@ -18,4 +18,12 @@ extension String {
         return replacingOccurrences(of: text, with: "")
     }
 
+    func urlEncoding() -> String {
+        return self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+    }
+
+    func urlDecoding() -> String {
+        return self.removingPercentEncoding ?? ""
+    }
+
 }
