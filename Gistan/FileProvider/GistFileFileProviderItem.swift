@@ -34,6 +34,7 @@ class GistFileFileProviderItem: NSObject, NSFileProviderItem {
     }
 
     var typeIdentifier: String {
-        return "public.text"
+        //TODO:return typeIdentifier
+        return "public.plain-text"
     }
 }

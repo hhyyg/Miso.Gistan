@@ -47,7 +47,7 @@ class FileProviderExtension: NSFileProviderExtension {
     }
 
     override func urlForItem(withPersistentIdentifier identifier: NSFileProviderItemIdentifier) -> URL? {
-        logger.debug("urlForItem: \(identifier.rawValue)")
+        //logger.debug("urlForItem: \(identifier.rawValue)")
 
         if (identifier == NSFileProviderItemIdentifier.rootContainer) {
             return nil
@@ -77,9 +77,23 @@ class FileProviderExtension: NSFileProviderExtension {
 
     override func providePlaceholder(at url: URL, completionHandler: @escaping (Error?) -> Void) {
         logger.debug(url)
+
+        do {
+            try fileManager.createDirectory(at: url.deletingLastPathComponent(),
+                                            withIntermediateDirectories: true,
+                                            attributes: nil)
+            fileManager.createFile(atPath: url.path, contents: nil, attributes: nil)
+            completionHandler(nil)
+        } catch let e {
+            completionHandler(e)
+        }
     }
 
     override func startProvidingItem(at url: URL, completionHandler: ((_ error: Error?) -> Void)?) {
+        logger.debug(url)
+
+        // Type Identifierによってタイミングが違う
+
         // Should ensure that the actual file is in the position returned by URLForItemWithIdentifier:, then call the completion handler
 
         /* TODO:
