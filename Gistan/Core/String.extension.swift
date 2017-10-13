@@ -19,7 +19,8 @@ extension String {
     }
 
     func urlEncoding() -> String {
-        return self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        return self.addingPercentEncoding(withAllowedCharacters: .alphanumerics) ?? ""
+
     }
 
     func urlDecoding() -> String {

@@ -25,32 +25,35 @@ class FileProviderExtension: NSFileProviderExtension {
         }
     }
 
-    func item(for identifier: NSFileProviderItemIdentifier) throws -> NSFileProviderItem? {
-        // resolve the given identifier to a record in the model
-
+    private func getItem(for identifier: NSFileProviderItemIdentifier) throws -> NSFileProviderItem {
         let type = FileProviderSerivce.getIdentifierType(identifier: identifier)
         switch type {
         case .root:
-            fatalError("invalid")
+            fatalError()
         case .gistItem:
             let item = FileProviderSerivce.getGistItem(identifier: identifier)
             return GistFileProviderItem(item: item)
         case .gistFile:
-            _ = FileProviderSerivce.getGistItem(identifier: identifier)
+            let parentIdentifier = FileProviderSerivce.getParentIdentifier(identifier: identifier)
+            let parentGistItem = FileProviderSerivce.getGistItem(identifier: parentIdentifier)
 
-            //TODO: identifierから、parentItemIdentifier, gistItemを取得する
-            fatalError("not implementation")
+            let fileNameEncoded = identifier.rawValue.components(separatedBy: ".").last!.urlDecoding()
+            let gistFile = parentGistItem.files.filter { key, _ in
+                return key == fileNameEncoded
+                }.first!.value
+
+            return GistFileFileProviderItem(parentItemIdentifier: parentIdentifier, gistItem: parentGistItem, gistFile: gistFile)
         }
-        _ = FileProviderSerivce.getGistItem(identifier: identifier)
-        // TODO: implement the actual lookup
-        return nil
     }
 
     override func urlForItem(withPersistentIdentifier identifier: NSFileProviderItemIdentifier) -> URL? {
         logger.debug("urlForItem: \(identifier.rawValue)")
 
+        if (identifier == NSFileProviderItemIdentifier.rootContainer) {
+            return nil
+        }
         // resolve the given identifier to a file on disk
-        guard let item = try? item(for: identifier) else {
+        guard let item = try? getItem(for: identifier) else {
             return nil
         }
 
@@ -189,6 +192,17 @@ class FileProviderSerivce {
         return foundItem
     }
 
+    //identifierから、その親のIdentifierを取得する
+    static func getParentIdentifier(identifier: NSFileProviderItemIdentifier) ->
+        NSFileProviderItemIdentifier {
+        let identifierRaw = identifier.rawValue
+        var components = identifierRaw.components(separatedBy: ".")
+        assert(components.count == 4)
+        components.removeLast()
+        let parentIdentifierRaw = components.joined(separator: ".")
+        return NSFileProviderItemIdentifier(parentIdentifierRaw)
+    }
+
     //identifiierから、それがGistItemかGistFileかを返す
     static func getIdentifierType(identifier: NSFileProviderItemIdentifier) -> IdentifierType {
 
@@ -202,7 +216,7 @@ class FileProviderSerivce {
         case 4:
             return .gistFile
         default:
-            fatalError()//TODO:fatalError
+            fatalError("invalid")
         }
     }
 

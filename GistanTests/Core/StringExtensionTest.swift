@@ -36,5 +36,14 @@ class StringExtensionTest: XCTestCase {
         let text = "ab.c.d"
         XCTAssertEqual(text.removing("."), "abcd")
     }
+
+    func test_urlEncoding() {
+        let text = "ab.cd"
+        XCTAssertEqual(text.urlEncoding(), "ab%2Ecd")
+    }
+
+    func test_urlDecoding() {
+        XCTAssertEqual("ab%2Ecd".urlDecoding(), "ab.cd")
+    }
 }
 
