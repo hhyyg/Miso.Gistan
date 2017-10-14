@@ -27,7 +27,9 @@ class FollowingsGistsTableTableViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 30
         self.tableView.rowHeight = UITableViewAutomaticDimension
 
-        load(userName: UserDefaults.standard.string(forKey: UserDefaultKey.userName.rawValue)!)
+        if let userName = KeychainService.get(forKey: .userName) {
+            load(userName: userName)
+        }
     }
 
     // UserのFollowsのGistを読み込む

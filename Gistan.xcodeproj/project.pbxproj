@@ -52,9 +52,6 @@
 		24A445D51F89E476009452E3 /* FileProviderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A445D41F89E476009452E3 /* FileProviderExtension.swift */; };
 		24A445D71F89E476009452E3 /* FileProviderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A445D61F89E476009452E3 /* FileProviderItem.swift */; };
 		24A445D91F89E476009452E3 /* FileProviderEnumerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A445D81F89E476009452E3 /* FileProviderEnumerator.swift */; };
-		24A445E31F89E476009452E3 /* DocumentActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A445E21F89E476009452E3 /* DocumentActionViewController.swift */; };
-		24A445E61F89E476009452E3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A445E41F89E476009452E3 /* MainInterface.storyboard */; };
-		24A445EA1F89E476009452E3 /* GistanFileExtensionUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 24A445E01F89E476009452E3 /* GistanFileExtensionUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		24A445ED1F89E476009452E3 /* GistanFileExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 24A445D21F89E475009452E3 /* GistanFileExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		24A445F51F8A0092009452E3 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24951D9F1F87A082006F566E /* KeychainService.swift */; };
 		24A445F81F8A00C0009452E3 /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24951D9D1F879F1B006F566E /* KeychainAccess.framework */; };
@@ -90,6 +87,8 @@
 		24CC655D1F91ED8100605284 /* UTIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CC655B1F91ED6D00605284 /* UTIKit.framework */; };
 		24CC655E1F91EE8900605284 /* UTIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CC655B1F91ED6D00605284 /* UTIKit.framework */; };
 		24CC655F1F91EE8900605284 /* UTIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24CC655B1F91ED6D00605284 /* UTIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		24CC65611F91F1F600605284 /* IdentifierType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC65601F91F1F600605284 /* IdentifierType.swift */; };
+		24CC65631F91F21A00605284 /* FileProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC65621F91F21A00605284 /* FileProviderService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,13 +105,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 24A0C1041F7F640F005F0FEC;
 			remoteInfo = Gistan;
-		};
-		24A445E81F89E476009452E3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 24A0C0FD1F7F640F005F0FEC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 24A445DF1F89E476009452E3;
-			remoteInfo = GistanFileExtensionUI;
 		};
 		24A445EB1F89E476009452E3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -144,7 +136,6 @@
 			dstSubfolderSpec = 13;
 			files = (
 				24A445ED1F89E476009452E3 /* GistanFileExtension.appex in Embed App Extensions */,
-				24A445EA1F89E476009452E3 /* GistanFileExtensionUI.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,10 +199,6 @@
 		24A445D81F89E476009452E3 /* FileProviderEnumerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProviderEnumerator.swift; sourceTree = "<group>"; };
 		24A445DA1F89E476009452E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24A445DB1F89E476009452E3 /* GistanFileExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GistanFileExtension.entitlements; sourceTree = "<group>"; };
-		24A445E01F89E476009452E3 /* GistanFileExtensionUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GistanFileExtensionUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		24A445E21F89E476009452E3 /* DocumentActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentActionViewController.swift; sourceTree = "<group>"; };
-		24A445E51F89E476009452E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		24A445E71F89E476009452E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24A445F41F89F7A1009452E3 /* Gistan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gistan.entitlements; sourceTree = "<group>"; };
 		24A445F61F8A00B0009452E3 /* KeychainAccess.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = KeychainAccess.framework.dSYM; path = Carthage/Build/iOS/KeychainAccess.framework.dSYM; sourceTree = "<group>"; };
 		24A445F91F8A0F87009452E3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -221,6 +208,8 @@
 		24CC65561F8B5BD200605284 /* StringExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTest.swift; sourceTree = "<group>"; };
 		24CC65591F8CE1F900605284 /* GistService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistService.swift; sourceTree = "<group>"; };
 		24CC655B1F91ED6D00605284 /* UTIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UTIKit.framework; path = Carthage/Build/iOS/UTIKit.framework; sourceTree = "<group>"; };
+		24CC65601F91F1F600605284 /* IdentifierType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierType.swift; sourceTree = "<group>"; };
+		24CC65621F91F21A00605284 /* FileProviderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProviderService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,13 +247,6 @@
 				24CC655D1F91ED8100605284 /* UTIKit.framework in Frameworks */,
 				24A445FB1F8A0F9E009452E3 /* Security.framework in Frameworks */,
 				24A445F81F8A00C0009452E3 /* KeychainAccess.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		24A445DD1F89E476009452E3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +294,6 @@
 				24A0C11E1F7F640F005F0FEC /* GistanTests */,
 				24A0C1291F7F640F005F0FEC /* GistanUITests */,
 				24A445D31F89E476009452E3 /* GistanFileExtension */,
-				24A445E11F89E476009452E3 /* GistanFileExtensionUI */,
 				24A0C1061F7F640F005F0FEC /* Products */,
 				247AF73E1F827035009A401C /* Frameworks */,
 			);
@@ -325,7 +306,6 @@
 				24A0C11B1F7F640F005F0FEC /* GistanTests.xctest */,
 				24A0C1261F7F640F005F0FEC /* GistanUITests.xctest */,
 				24A445D21F89E475009452E3 /* GistanFileExtension.appex */,
-				24A445E01F89E476009452E3 /* GistanFileExtensionUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -461,24 +441,16 @@
 		24A445D31F89E476009452E3 /* GistanFileExtension */ = {
 			isa = PBXGroup;
 			children = (
+				24A445DA1F89E476009452E3 /* Info.plist */,
+				24A445DB1F89E476009452E3 /* GistanFileExtension.entitlements */,
 				24A445D41F89E476009452E3 /* FileProviderExtension.swift */,
 				24A445D61F89E476009452E3 /* FileProviderItem.swift */,
 				24A445D81F89E476009452E3 /* FileProviderEnumerator.swift */,
-				24A445DA1F89E476009452E3 /* Info.plist */,
-				24A445DB1F89E476009452E3 /* GistanFileExtension.entitlements */,
 				24CC65591F8CE1F900605284 /* GistService.swift */,
+				24CC65601F91F1F600605284 /* IdentifierType.swift */,
+				24CC65621F91F21A00605284 /* FileProviderService.swift */,
 			);
 			path = GistanFileExtension;
-			sourceTree = "<group>";
-		};
-		24A445E11F89E476009452E3 /* GistanFileExtensionUI */ = {
-			isa = PBXGroup;
-			children = (
-				24A445E21F89E476009452E3 /* DocumentActionViewController.swift */,
-				24A445E41F89E476009452E3 /* MainInterface.storyboard */,
-				24A445E71F89E476009452E3 /* Info.plist */,
-			);
-			path = GistanFileExtensionUI;
 			sourceTree = "<group>";
 		};
 		24A445FC1F8B28AF009452E3 /* FileProvider */ = {
@@ -516,7 +488,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				24A445E91F89E476009452E3 /* PBXTargetDependency */,
 				24A445EC1F89E476009452E3 /* PBXTargetDependency */,
 			);
 			name = Gistan;
@@ -577,23 +548,6 @@
 			productReference = 24A445D21F89E475009452E3 /* GistanFileExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		24A445DF1F89E476009452E3 /* GistanFileExtensionUI */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 24A445EE1F89E476009452E3 /* Build configuration list for PBXNativeTarget "GistanFileExtensionUI" */;
-			buildPhases = (
-				24A445DC1F89E476009452E3 /* Sources */,
-				24A445DD1F89E476009452E3 /* Frameworks */,
-				24A445DE1F89E476009452E3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = GistanFileExtensionUI;
-			productName = GistanFileExtensionUI;
-			productReference = 24A445E01F89E476009452E3 /* GistanFileExtensionUI.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -638,10 +592,6 @@
 							};
 						};
 					};
-					24A445DF1F89E476009452E3 = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = 24A0C1001F7F640F005F0FEC /* Build configuration list for PBXProject "Gistan" */;
@@ -661,7 +611,6 @@
 				24A0C11A1F7F640F005F0FEC /* GistanTests */,
 				24A0C1251F7F640F005F0FEC /* GistanUITests */,
 				24A445D11F89E475009452E3 /* GistanFileExtension */,
-				24A445DF1F89E476009452E3 /* GistanFileExtensionUI */,
 			);
 		};
 /* End PBXProject section */
@@ -697,14 +646,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		24A445DE1F89E476009452E3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				24A445E61F89E476009452E3 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,6 +744,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24CC65631F91F21A00605284 /* FileProviderService.swift in Sources */,
 				24CC655A1F8CE1F900605284 /* GistService.swift in Sources */,
 				24A4460D1F8B2C0F009452E3 /* GistFile.swift in Sources */,
 				24A446081F8B2C0F009452E3 /* UserService.swift in Sources */,
@@ -810,6 +752,7 @@
 				24A445D51F89E476009452E3 /* FileProviderExtension.swift in Sources */,
 				24A445F51F8A0092009452E3 /* KeychainService.swift in Sources */,
 				24A446041F8B2C0F009452E3 /* DateFormatter.extension.swift in Sources */,
+				24CC65611F91F1F600605284 /* IdentifierType.swift in Sources */,
 				24A4460E1F8B2C0F009452E3 /* GitHubAPIError.swift in Sources */,
 				24CC65581F8B5C2800605284 /* String.extension.swift in Sources */,
 				24A446061F8B2C0F009452E3 /* UserDefaultKey.swift in Sources */,
@@ -832,14 +775,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		24A445DC1F89E476009452E3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				24A445E31F89E476009452E3 /* DocumentActionViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -852,11 +787,6 @@
 			isa = PBXTargetDependency;
 			target = 24A0C1041F7F640F005F0FEC /* Gistan */;
 			targetProxy = 24A0C1271F7F640F005F0FEC /* PBXContainerItemProxy */;
-		};
-		24A445E91F89E476009452E3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 24A445DF1F89E476009452E3 /* GistanFileExtensionUI */;
-			targetProxy = 24A445E81F89E476009452E3 /* PBXContainerItemProxy */;
 		};
 		24A445EC1F89E476009452E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -880,14 +810,6 @@
 				24A0C1141F7F640F005F0FEC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		24A445E41F89E476009452E3 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				24A445E51F89E476009452E3 /* Base */,
-			);
-			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1104,36 +1026,6 @@
 			};
 			name = Release;
 		};
-		24A445EF1F89E476009452E3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A2X2UZ7AEE;
-				INFOPLIST_FILE = GistanFileExtensionUI/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.miso.Gistan.GistanFileExtensionUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		24A445F01F89E476009452E3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A2X2UZ7AEE;
-				INFOPLIST_FILE = GistanFileExtensionUI/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.miso.Gistan.GistanFileExtensionUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		24A445F21F89E476009452E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1209,15 +1101,6 @@
 			buildConfigurations = (
 				24A0C1361F7F640F005F0FEC /* Debug */,
 				24A0C1371F7F640F005F0FEC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		24A445EE1F89E476009452E3 /* Build configuration list for PBXNativeTarget "GistanFileExtensionUI" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				24A445EF1F89E476009452E3 /* Debug */,
-				24A445F01F89E476009452E3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
