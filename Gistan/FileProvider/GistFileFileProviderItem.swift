@@ -8,6 +8,7 @@
 
 import Foundation
 import FileProvider
+import UTIKit
 
 //TODO: identifierDelimiter = "."
 
@@ -27,11 +28,8 @@ class GistFileFileProviderItem: NSObject, NSFileProviderItem {
         self.itemIdentifier = NSFileProviderItemIdentifier("gists.\(gistItem.owner.login.urlEncoding()).\(gistItem.id).\(gistFile.filename.urlEncoding())")
         self.filename = gistFile.filename
 
-        if gistFile.type.starts(with: "text/") {
-            self.typeIdentifier = "public.plain-text"
-        } else {
-            self.typeIdentifier = "public.item"
-        }
+        let uti = UTI(mimeType: gistFile.type)
+        self.typeIdentifier = uti?.utiString ?? "public.item"
     }
 
     var capabilities: NSFileProviderItemCapabilities {
