@@ -17,6 +17,27 @@ class GitHubClient {
         return session
     }()
 
+    func getData(
+        url: URL,
+        completion: @escaping (Data) -> Void ) {
+
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = HTTPMethod.get.rawValue
+        let token = KeychainService.get(forKey: .oauthToken)!
+        urlRequest.addValue("token \(token)", forHTTPHeaderField: "Authorization")
+
+        let task = session.dataTask(with: urlRequest) { data, response, error in
+            switch (data, response, error) {
+            case (let data?, _, _):
+                completion(data)
+            default:
+                assertionFailure()
+            }
+        }
+
+        task.resume()
+    }
+
     func send<Request: GitHubRequest>(
         request: Request,
         completion: @escaping (Result<Request.Response, GitHubClientError>) -> Void) {

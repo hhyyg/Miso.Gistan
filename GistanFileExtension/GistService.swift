@@ -28,4 +28,12 @@ class GistService {
             }
         }
     }
+
+    static func getData(
+        url: URL,
+        completion: @escaping (Data) -> Void ) {
+
+        let client = GitHubClient()
+        client.getData(url: url, completion: completion)
+    }
 }

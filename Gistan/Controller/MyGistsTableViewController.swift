@@ -50,7 +50,8 @@ class MyGistsTableViewController: UITableViewController {
                     self.tableView.reloadData()
                 }
 
-            case .failure(_):
+            case let .failure(error):
+                logger.error(error)
                 assertionFailure()
             }
         }

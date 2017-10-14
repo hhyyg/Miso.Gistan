@@ -36,11 +36,7 @@ class FileProviderExtension: NSFileProviderExtension {
         case .gistFile:
             let parentIdentifier = FileProviderSerivce.getParentIdentifier(identifier: identifier)
             let parentGistItem = FileProviderSerivce.getGistItem(identifier: parentIdentifier)
-
-            let fileNameEncoded = identifier.rawValue.components(separatedBy: ".").last!.urlDecoding()
-            let gistFile = parentGistItem.files.filter { key, _ in
-                return key == fileNameEncoded
-                }.first!.value
+            let gistFile = FileProviderSerivce.getGileFile(gistFileIdentifier: identifier)!
 
             return GistFileFileProviderItem(parentItemIdentifier: parentIdentifier, gistItem: parentGistItem, gistFile: gistFile)
         }
@@ -92,6 +88,19 @@ class FileProviderExtension: NSFileProviderExtension {
     override func startProvidingItem(at url: URL, completionHandler: ((_ error: Error?) -> Void)?) {
         logger.debug(url)
 
+        guard let identifier = persistentIdentifierForItem(at: url),
+        let gistFile = FileProviderSerivce.getGileFile(gistFileIdentifier: identifier) else {
+            completionHandler?(NSError(domain: NSCocoaErrorDomain, code: NSFeatureUnsupportedError, userInfo:[:]))
+            return
+        }
+        GistService.getData(url: URL(string: gistFile.rawUrl)!) { data in
+            do {
+                try data.write(to: url)
+                completionHandler?(nil)
+            } catch let e {
+                completionHandler?(e)
+            }
+        }
         // Type Identifierによってタイミングが違う
 
         // Should ensure that the actual file is in the position returned by URLForItemWithIdentifier:, then call the completion handler
@@ -120,7 +129,7 @@ class FileProviderExtension: NSFileProviderExtension {
          }
          */
 
-        completionHandler?(NSError(domain: NSCocoaErrorDomain, code: NSFeatureUnsupportedError, userInfo:[:]))
+        //completionHandler?(NSError(domain: NSCocoaErrorDomain, code: NSFeatureUnsupportedError, userInfo:[:]))
     }
 
     override func itemChanged(at url: URL) {
@@ -215,6 +224,17 @@ class FileProviderSerivce {
         components.removeLast()
         let parentIdentifierRaw = components.joined(separator: ".")
         return NSFileProviderItemIdentifier(parentIdentifierRaw)
+    }
+
+    static func getGileFile(gistFileIdentifier: NSFileProviderItemIdentifier) -> GistFile? {
+        let parentIdentifier = FileProviderSerivce.getParentIdentifier(identifier: gistFileIdentifier)
+        let parentGistItem = FileProviderSerivce.getGistItem(identifier: parentIdentifier)
+
+        let fileNameEncoded = gistFileIdentifier.rawValue.components(separatedBy: ".").last!.urlDecoding()
+        let gistFile = parentGistItem.files.filter { key, _ in
+            return key == fileNameEncoded
+            }.first?.value
+        return gistFile
     }
 
     //identifiierから、それがGistItemかGistFileかを返す

@@ -16,6 +16,7 @@ class GistFileFileProviderItem: NSObject, NSFileProviderItem {
     let parentItemIdentifier: NSFileProviderItemIdentifier
     let itemIdentifier: NSFileProviderItemIdentifier
     let filename: String
+    let typeIdentifier: String
 
     init(
         parentItemIdentifier: NSFileProviderItemIdentifier,
@@ -23,18 +24,17 @@ class GistFileFileProviderItem: NSObject, NSFileProviderItem {
         gistFile: GistFile
         ) {
         self.parentItemIdentifier = parentItemIdentifier
-
-        //TDOO: .をremoveせずエスケープへ
         self.itemIdentifier = NSFileProviderItemIdentifier("gists.\(gistItem.owner.login.urlEncoding()).\(gistItem.id).\(gistFile.filename.urlEncoding())")
         self.filename = gistFile.filename
+
+        if gistFile.type.starts(with: "text/") {
+            self.typeIdentifier = "public.plain-text"
+        } else {
+            self.typeIdentifier = "public.item"
+        }
     }
 
     var capabilities: NSFileProviderItemCapabilities {
         return .allowsAll
-    }
-
-    var typeIdentifier: String {
-        //TODO:return typeIdentifier
-        return "public.plain-text"
     }
 }
