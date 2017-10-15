@@ -7,64 +7,81 @@
 //
 
 import UIKit
+import SafariServices
 
 class SearchViewController: UITableViewController, UISearchResultsUpdating {
 
-    var searchController = UISearchController(searchResultsController: nil)
+    private var searchController = UISearchController(searchResultsController: nil)
+    private var gistItems: [GistItem] = []
 
-    var searchResults = [String]()
-
-    let dataList = ["月刊コロコロコミック（小学館）",
-                    "コロコロイチバン！（小学館）",
-                    "最強ジャンプ（集英社）",
-                    "Vジャンプ（集英社）",
-                    "週刊少年サンデー（小学館）",
-                    "週刊少年マガジン（講談社）",
-                    "週刊少年ジャンプ（集英社）",
-                    "週刊少年チャンピオン（秋田書店）",
-                    "月刊少年マガジン（講談社）",
-                    "月刊少年チャンピオン（秋田書店）",
-                    "月刊少年ガンガン（スクウェア）",
-                    "月刊少年エース（KADOKAWA）",
-                    "月刊少年シリウス（講談社）",
-                    "週刊ヤングジャンプ（集英社）",
-                    "ビッグコミックスピリッツ（小学館）",
-                    "週刊ヤングマガジン（講談社）"]
+    override func viewWillAppear(_ animated: Bool) {
+        logger.debug("appear")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationController!.navigationBar.prefersLargeTitles = true
+        //CustomCellの設定
+        let nib = UINib(nibName: "GistItemCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "ItemCell")
 
+        self.definesPresentationContext = true
+        navigationController!.navigationBar.prefersLargeTitles = true
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search user"
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TestCell", for: indexPath)
-        if( searchController.searchBar.text != "" ) {
-            cell.textLabel!.text = searchResults[indexPath.row]
-        } else {
-            cell.textLabel!.text = dataList[indexPath.row]
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! GistItemTableViewCell
+
+        let gistItem = gistItems[indexPath.row]
+        cell.setItem(item: gistItem)
+
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let gistItem = gistItems[indexPath.row]
+
+        let safariViewController = SFSafariViewController(url: URL(string: gistItem.htmlUrl)!)
+        self.showDetailViewController(safariViewController, sender: nil)
+    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if( searchController.searchBar.text != "" ) {
-            return searchResults.count
-        } else {
-            return dataList.count
+        return self.gistItems.count
+    }
+
+    func searchUserGists(userName: String) {
+
+        let client = GitHubClient()
+        let request = GitHubAPI.GetUsersGists(userName: userName)
+
+        client.send(request: request) { result in
+            switch result {
+            case let .success(response):
+                self.gistItems = response
+
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+
+            case .failure:
+                ()
+            }
         }
     }
 
     func updateSearchResults(for searchController: UISearchController) {
-        searchResults = dataList.filter { data in
-            return data.contains(searchController.searchBar.text!)
-        }
 
-        tableView.reloadData()
+        guard let inputText = searchController.searchBar.text,
+            !inputText.isEmpty else {
+            return
+        }
+        logger.debug("search")
+
+        self.searchUserGists(userName: inputText)
     }
 }

@@ -79,5 +79,12 @@ final class GitHubAPI {
             return nil
         }
     }
+/*
+    struct SearchUsers: GitHubRequest {
+        typealias Response = [User]
+
+        var method: HTTPMethod
+
+    }*/
 
 }
