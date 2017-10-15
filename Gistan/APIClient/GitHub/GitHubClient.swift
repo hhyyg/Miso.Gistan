@@ -53,6 +53,7 @@ class GitHubClient {
                     let response = try request.response(from: data, urlResponse: response)
                     completion(Result(value: response))
                 } catch let error as GitHubAPIError {
+                    //TODO:修正
                     completion(Result(error: .apiError(error)))
                 } catch {
                     completion(Result(error: .responseParseError(error)))
