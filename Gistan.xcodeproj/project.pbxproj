@@ -10,6 +10,7 @@
 		2438392C1F80890300621D85 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438392B1F80890300621D85 /* GitHubAPI.swift */; };
 		2438392E1F808A8F00621D85 /* GitHubClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438392D1F808A8F00621D85 /* GitHubClientTest.swift */; };
 		243839301F80C62E00621D85 /* FollowingsGistsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438392F1F80C62E00621D85 /* FollowingsGistsTableTableViewController.swift */; };
+		244E79D21F962AE300FCDCD0 /* PreferencesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244E79D11F962AE300FCDCD0 /* PreferencesTableViewController.swift */; };
 		245138C11F8501C8006B4AA6 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245138BF1F84FBD3006B4AA6 /* OAuthSwift.framework */; };
 		245138C21F8501C8006B4AA6 /* OAuthSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 245138BF1F84FBD3006B4AA6 /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		245138C51F850929006B4AA6 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 245138C41F850928006B4AA6 /* settings.plist */; };
@@ -144,6 +145,7 @@
 		2438392B1F80890300621D85 /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
 		2438392D1F808A8F00621D85 /* GitHubClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubClientTest.swift; sourceTree = "<group>"; };
 		2438392F1F80C62E00621D85 /* FollowingsGistsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingsGistsTableTableViewController.swift; sourceTree = "<group>"; };
+		244E79D11F962AE300FCDCD0 /* PreferencesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTableViewController.swift; sourceTree = "<group>"; };
 		245138BF1F84FBD3006B4AA6 /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthSwift.framework; path = Carthage/Build/iOS/OAuthSwift.framework; sourceTree = "<group>"; };
 		245138C41F850928006B4AA6 /* settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = settings.plist; sourceTree = "<group>"; };
 		245138C61F8509B0006B4AA6 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 				2438392F1F80C62E00621D85 /* FollowingsGistsTableTableViewController.swift */,
 				247AF74D1F83B8A9009A401C /* AccountViewController.swift */,
 				245F7BCB1F88C1A90040229D /* SearchViewController.swift */,
+				244E79D11F962AE300FCDCD0 /* PreferencesTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -703,6 +706,7 @@
 				247AF7491F827997009A401C /* DateFormatter.extension.swift in Sources */,
 				24A0C18D1F7F6DFB005F0FEC /* HTTPMethod.swift in Sources */,
 				24A0C1901F7F6E02005F0FEC /* User.swift in Sources */,
+				244E79D21F962AE300FCDCD0 /* PreferencesTableViewController.swift in Sources */,
 				245138C71F8509B0006B4AA6 /* Settings.swift in Sources */,
 				245F7BCC1F88C1A90040229D /* SearchViewController.swift in Sources */,
 				245F7B931F889E2D0040229D /* GitHubAuthentication.swift in Sources */,

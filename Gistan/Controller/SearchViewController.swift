@@ -58,14 +58,12 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating {
         client.send(request: request) { result in
             switch result {
             case let .success(response):
-                self.gistItems = response
-
                 DispatchQueue.main.async {
+                    self.gistItems = response
                     self.tableView.reloadData()
                 }
-
             case .failure:
-                ()
+                break
             }
         }
     }

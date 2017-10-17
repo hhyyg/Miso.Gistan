@@ -22,11 +22,6 @@ class MyGistsTableViewController: UITableViewController {
         let nib = UINib(nibName: "GistItemCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "ItemCell")
 
-        let settingButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit,
-                                                             target: self,
-                                                             action: #selector(settingButtonDidTap(_:)))
-        self.navigationItem.setRightBarButton(settingButton, animated: true)
-
         //アカウント設定に遷移
         if UserService.loggedIn() {
             load()
@@ -55,11 +50,6 @@ class MyGistsTableViewController: UITableViewController {
                 assertionFailure()
             }
         }
-    }
-
-    @objc
-    private func settingButtonDidTap(_ sender: UIBarButtonItem) {
-        goAccountViewController(modalTransitionStyle: .coverVertical)
     }
 
     func goAccountViewController(modalTransitionStyle: UIModalTransitionStyle) {
