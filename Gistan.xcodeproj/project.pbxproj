@@ -82,7 +82,6 @@
 		24CC65571F8B5BD200605284 /* StringExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC65561F8B5BD200605284 /* StringExtensionTest.swift */; };
 		24CC65581F8B5C2800605284 /* String.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC65531F8B5AB800605284 /* String.extension.swift */; };
 		24CC655A1F8CE1F900605284 /* GistService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC65591F8CE1F900605284 /* GistService.swift */; };
-		24CC655C1F91ED6D00605284 /* UTIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CC655B1F91ED6D00605284 /* UTIKit.framework */; };
 		24CC655D1F91ED8100605284 /* UTIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CC655B1F91ED6D00605284 /* UTIKit.framework */; };
 		24CC655E1F91EE8900605284 /* UTIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CC655B1F91ED6D00605284 /* UTIKit.framework */; };
 		24CC655F1F91EE8900605284 /* UTIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24CC655B1F91ED6D00605284 /* UTIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -216,7 +215,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				24CC655E1F91EE8900605284 /* UTIKit.framework in Frameworks */,
-				24CC655C1F91ED6D00605284 /* UTIKit.framework in Frameworks */,
 				24A445FA1F8A0F88009452E3 /* Security.framework in Frameworks */,
 				24951D9E1F879F1B006F566E /* KeychainAccess.framework in Frameworks */,
 				247AF7471F8271F9009A401C /* Nuke.framework in Frameworks */,

@@ -13,7 +13,7 @@ class PreferencesTableViewController: UITableViewController {
 
     enum Row: Int {
         case
-        logOut,
+        logout,
         github
     }
 
@@ -26,8 +26,8 @@ class PreferencesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         switch Row(rawValue: indexPath.row)! {
-        case .logOut:
-            logOut()
+        case .logout:
+            logout()
         case .github:
             goGitHub()
         }
@@ -38,7 +38,7 @@ class PreferencesTableViewController: UITableViewController {
         self.showDetailViewController(safariViewController, sender: nil)
     }
 
-    func logOut() {
+    func logout() {
         KeychainService.set(forKey: .oauthToken, value: "")
         KeychainService.set(forKey: .userName, value: "")
 
@@ -47,11 +47,11 @@ class PreferencesTableViewController: UITableViewController {
 
     func goAccountViewController(modalTransitionStyle: UIModalTransitionStyle) {
         let accountVC = self.storyboard!.instantiateViewController(withIdentifier: "AccountPage") as! AccountViewController
-        accountVC.delegate = (self.tabBarController!.viewControllers![0] as! UINavigationController).viewControllers[0] as! MyGistsTableViewController
+        accountVC.delegate = (tabBarController!.viewControllers![0] as! UINavigationController).topViewController as! AccountViewControllerDelegate
         accountVC.modalTransitionStyle = modalTransitionStyle
-        present(accountVC, animated: true, completion: nil)
-
-        self.tabBarController!.selectedIndex = 0
+        present(accountVC, animated: true) {
+            self.tabBarController!.selectedIndex = 0
+        }
     }
 
 }
