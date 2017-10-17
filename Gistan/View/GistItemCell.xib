@@ -21,9 +21,8 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hhyyg" translatesAutoresizingMaskIntoConstraints="NO" id="ZWF-MW-1Mb">
                         <rect key="frame" x="8" y="8" width="50" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="50" id="V3X-Bi-uBf"/>
-                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="fdn-eA-cto"/>
-                            <constraint firstAttribute="width" constant="50" id="fiH-eW-O3V"/>
+                            <constraint firstAttribute="height" constant="50" id="3xW-sB-A86"/>
+                            <constraint firstAttribute="width" constant="50" id="emr-EP-TBp"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
@@ -53,9 +52,9 @@
                     <constraint firstItem="OaE-46-jyr" firstAttribute="top" secondItem="Pcv-BC-TaD" secondAttribute="bottom" constant="8" id="D5v-ya-yD0"/>
                     <constraint firstItem="ZWF-MW-1Mb" firstAttribute="leading" secondItem="Tvc-1V-v9d" secondAttribute="leadingMargin" id="IwB-Ws-rHg"/>
                     <constraint firstItem="OaE-46-jyr" firstAttribute="trailing" secondItem="Tvc-1V-v9d" secondAttribute="trailingMargin" id="JEW-RQ-uk7"/>
-                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="ZWF-MW-1Mb" secondAttribute="bottom" id="PPf-zk-8Qn"/>
                     <constraint firstItem="Pcv-BC-TaD" firstAttribute="leading" secondItem="ZWF-MW-1Mb" secondAttribute="trailing" constant="8" id="PYR-S2-ZM6"/>
                     <constraint firstItem="OaE-46-jyr" firstAttribute="leading" secondItem="ZWF-MW-1Mb" secondAttribute="trailing" constant="8" id="Q7y-pl-Rtu"/>
+                    <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="ZWF-MW-1Mb" secondAttribute="bottom" priority="999" constant="8" id="ySl-PC-otl"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

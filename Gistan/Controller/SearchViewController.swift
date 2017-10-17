@@ -14,10 +14,6 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating {
     private var searchController = UISearchController(searchResultsController: nil)
     private var gistItems: [GistItem] = []
 
-    override func viewWillAppear(_ animated: Bool) {
-        logger.debug("appear")
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +25,7 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating {
         navigationController!.navigationBar.prefersLargeTitles = true
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search user"
+        searchController.searchBar.placeholder = "user name"
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
     }
@@ -80,7 +76,6 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating {
             !inputText.isEmpty else {
             return
         }
-        logger.debug("search")
 
         self.searchUserGists(userName: inputText)
     }

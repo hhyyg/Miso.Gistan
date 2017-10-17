@@ -28,8 +28,6 @@
 		24951DA01F87A082006F566E /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24951D9F1F87A082006F566E /* KeychainService.swift */; };
 		24951DA41F87A304006F566E /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24951D9D1F879F1B006F566E /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		24A0C1091F7F640F005F0FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1081F7F640F005F0FEC /* AppDelegate.swift */; };
-		24A0C10B1F7F640F005F0FEC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C10A1F7F640F005F0FEC /* FirstViewController.swift */; };
-		24A0C10D1F7F640F005F0FEC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C10C1F7F640F005F0FEC /* SecondViewController.swift */; };
 		24A0C1101F7F640F005F0FEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A0C10E1F7F640F005F0FEC /* Main.storyboard */; };
 		24A0C1121F7F640F005F0FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A0C1111F7F640F005F0FEC /* Assets.xcassets */; };
 		24A0C1151F7F640F005F0FEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A0C1131F7F640F005F0FEC /* LaunchScreen.storyboard */; };
@@ -167,8 +165,6 @@
 		24951D9F1F87A082006F566E /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		24A0C1051F7F640F005F0FEC /* Gistan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gistan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A0C1081F7F640F005F0FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		24A0C10A1F7F640F005F0FEC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		24A0C10C1F7F640F005F0FEC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		24A0C10F1F7F640F005F0FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24A0C1111F7F640F005F0FEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24A0C1141F7F640F005F0FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -321,8 +317,6 @@
 				24A0C17B1F7F6CB9005F0FEC /* APIClient */,
 				24A0C1381F7F668F005F0FEC /* Controller */,
 				24A0C1081F7F640F005F0FEC /* AppDelegate.swift */,
-				24A0C10A1F7F640F005F0FEC /* FirstViewController.swift */,
-				24A0C10C1F7F640F005F0FEC /* SecondViewController.swift */,
 				24A0C10E1F7F640F005F0FEC /* Main.storyboard */,
 				24A0C1111F7F640F005F0FEC /* Assets.xcassets */,
 				24A0C1131F7F640F005F0FEC /* LaunchScreen.storyboard */,
@@ -697,7 +691,6 @@
 				24951DA01F87A082006F566E /* KeychainService.swift in Sources */,
 				24A0C13A1F7F66C8005F0FEC /* MyGistsTableViewController.swift in Sources */,
 				24CC65541F8B5AB800605284 /* String.extension.swift in Sources */,
-				24A0C10D1F7F640F005F0FEC /* SecondViewController.swift in Sources */,
 				24A0C1091F7F640F005F0FEC /* AppDelegate.swift in Sources */,
 				2438392C1F80890300621D85 /* GitHubAPI.swift in Sources */,
 				24A446131F8B3A6F009452E3 /* GistFileFileProviderItem.swift in Sources */,
@@ -712,7 +705,6 @@
 				24A0C1901F7F6E02005F0FEC /* User.swift in Sources */,
 				245138C71F8509B0006B4AA6 /* Settings.swift in Sources */,
 				245F7BCC1F88C1A90040229D /* SearchViewController.swift in Sources */,
-				24A0C10B1F7F640F005F0FEC /* FirstViewController.swift in Sources */,
 				245F7B931F889E2D0040229D /* GitHubAuthentication.swift in Sources */,
 				243839301F80C62E00621D85 /* FollowingsGistsTableTableViewController.swift in Sources */,
 				24A0C18C1F7F6DF9005F0FEC /* Result.swift in Sources */,
