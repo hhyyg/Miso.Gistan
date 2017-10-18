@@ -19,7 +19,7 @@
         <scene sceneID="N55-ei-TBb">
             <objects>
                 <navigationController id="JHM-Us-BYr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Followings'" image="second" id="3A3-tX-ccm"/>
+                    <tabBarItem key="tabBarItem" title="Followings'" image="gift" id="3A3-tX-ccm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ig1-mq-prt">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -86,11 +86,11 @@
             </objects>
             <point key="canvasLocation" x="22" y="1159"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Search-->
         <scene sceneID="xXV-aD-XPu">
             <objects>
                 <navigationController id="Saz-qc-dM7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="search" id="RZV-WW-Ltr"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="search" id="RZV-WW-Ltr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pBg-1P-neY">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -149,7 +149,7 @@
         <scene sceneID="zmV-ai-RKn">
             <objects>
                 <navigationController id="Trg-LP-XpT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="Nho-AE-xKi"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="Nho-AE-xKi"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fLN-Yr-8ND">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -244,7 +244,7 @@
         <scene sceneID="xVf-JO-c0E">
             <objects>
                 <navigationController id="qXf-B4-aON" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Yours" image="first" id="8cL-k9-f5L"/>
+                    <tabBarItem key="tabBarItem" title="Yours" image="ic_face" id="8cL-k9-f5L"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VUb-zz-hE7">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -290,7 +290,10 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="gift" width="18" height="18"/>
+        <image name="ic_face" width="24" height="24"/>
         <image name="icon" width="512" height="512"/>
-        <image name="second" width="30" height="30"/>
+        <image name="search" width="18" height="18"/>
+        <image name="settings" width="18" height="18"/>
     </resources>
 </document>
