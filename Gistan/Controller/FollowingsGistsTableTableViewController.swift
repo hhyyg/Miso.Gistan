@@ -23,6 +23,9 @@ class FollowingsGistsTableTableViewController: UITableViewController {
         let nib = UINib(nibName: "GistItemCell", bundle: nil)
         self.tableView?.register(nib, forCellReuseIdentifier: "ItemCell")
 
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+
         //セルの高さを自動調整にする
         self.tableView.estimatedRowHeight = 30
         self.tableView.rowHeight = UITableViewAutomaticDimension
@@ -30,6 +33,16 @@ class FollowingsGistsTableTableViewController: UITableViewController {
         if let userName = KeychainService.get(forKey: .userName) {
             load(userName: userName)
         }
+    }
+
+    @objc func refresh(sender: UIRefreshControl) {
+        //TODO:refactor
+        self.gistItems = []
+        self.followingUsers = []
+        if let userName = KeychainService.get(forKey: .userName) {
+            load(userName: userName)
+        }
+        self.refreshControl!.endRefreshing()
     }
 
     // UserのFollowsのGistを読み込む
@@ -61,8 +74,8 @@ class FollowingsGistsTableTableViewController: UITableViewController {
                     loadedUserCount += 1
 
                     if loadedUserCount == self.followingUsers.count {
-                        self.gistItems.sort(by: { $0.createdAt > $1.createdAt })
                         DispatchQueue.main.async {
+                            self.gistItems.sort(by: { $0.createdAt > $1.createdAt })
                             self.tableView.reloadData()
                         }
                     }
