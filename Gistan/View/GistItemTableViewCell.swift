@@ -23,8 +23,12 @@ class GistItemTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
-    func setItem(item: GistItem) {
-        self.titleLabel?.text = "\(item.owner.login) / \(item.getFirstFileName())"
+    func setItem(item: GistItem, forMe: Bool) {
+        if forMe {
+            self.titleLabel?.text = "\(item.getFirstFileName())"
+        } else {
+            self.titleLabel?.text = "\(item.owner.login) / \(item.getFirstFileName())"
+        }
         self.descriptionLabel?.text = "\(item.getCreatedAtText()) \(item.description ?? "")"
         self.iconImageView?.image = nil
         Nuke.loadImage(with: URL(string: item.owner.avatarUrl)!, into: self.iconImageView!)

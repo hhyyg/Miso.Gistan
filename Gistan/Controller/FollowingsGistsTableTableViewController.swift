@@ -86,7 +86,7 @@ class FollowingsGistsTableTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! GistItemTableViewCell
 
         let gistItem = gistItems[indexPath.row]
-        cell.setItem(item: gistItem)
+        cell.setItem(item: gistItem, forMe: false)
 
         return cell
     }
