@@ -13,8 +13,7 @@ class PreferencesTableViewController: UITableViewController {
 
     enum Row: Int {
         case
-        logout,
-        github
+        logout
     }
 
     override func viewDidLoad() {
@@ -28,14 +27,7 @@ class PreferencesTableViewController: UITableViewController {
         switch Row(rawValue: indexPath.row)! {
         case .logout:
             logout()
-        case .github:
-            goGitHub()
         }
-    }
-
-    func goGitHub() {
-        let safariViewController = SFSafariViewController(url: URL(string: "https://github.com/")!) //TODO:GitHub Repository
-        self.showDetailViewController(safariViewController, sender: nil)
     }
 
     func logout() {
