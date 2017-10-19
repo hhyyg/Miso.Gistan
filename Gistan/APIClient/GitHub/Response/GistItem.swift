@@ -8,14 +8,16 @@
 import Foundation
 
 struct GistItem: Codable {
+    let id: String
     let files: [String: GistFile]
     let htmlUrl: String
-    let description: String
+    let description: String?
     let createdAt: Date
     let owner: User
 
     private enum CodingKeys: String, CodingKey {
         case
+        id,
         files,
         htmlUrl = "html_url",
         description,
@@ -30,9 +32,6 @@ struct GistItem: Codable {
 
     /// createdAtのテキストを取得します
     func getCreatedAtText() -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "M/d"
-        formatter.locale = Locale.current
-        return formatter.string(from: self.createdAt)
+        return DateFormatter.createdAt.string(from: createdAt)
     }
 }

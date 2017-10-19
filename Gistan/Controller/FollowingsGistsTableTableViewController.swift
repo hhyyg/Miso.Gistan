@@ -8,6 +8,7 @@
 
 import UIKit
 import SafariServices
+import Nuke
 
 class FollowingsGistsTableTableViewController: UITableViewController {
 
@@ -17,7 +18,31 @@ class FollowingsGistsTableTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        load(userName: "hhyyg")
+        navigationController!.navigationBar.prefersLargeTitles = true
+
+        let nib = UINib(nibName: "GistItemCell", bundle: nil)
+        self.tableView?.register(nib, forCellReuseIdentifier: "ItemCell")
+
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+
+        //セルの高さを自動調整にする
+        self.tableView.estimatedRowHeight = 30
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+
+        if let userName = KeychainService.get(forKey: .userName) {
+            load(userName: userName)
+        }
+    }
+
+    @objc func refresh(sender: UIRefreshControl) {
+        //TODO:refactor
+        self.gistItems = []
+        self.followingUsers = []
+        if let userName = KeychainService.get(forKey: .userName) {
+            load(userName: userName)
+        }
+        self.refreshControl!.endRefreshing()
     }
 
     // UserのFollowsのGistを読み込む
@@ -37,22 +62,25 @@ class FollowingsGistsTableTableViewController: UITableViewController {
     }
     // FollowsのGistsを読み込む
     func loadFollowingUsersGists(client: GitHubClient) {
+
+        var loadedUserCount = 0
+
         for user in followingUsers {
-
             let request = GitHubAPI.GetUsersGists(userName: user.login)
-
             client.send(request: request) { result in
                 switch result {
                 case let .success(response):
                     self.gistItems.append(contentsOf: response)
-                    //TODO: 毎回並び替えしない
-                    self.gistItems.sort(by: { $0.createdAt > $1.createdAt })
+                    loadedUserCount += 1
 
-                    //TODO: 毎回reloadしなくてよいようにする
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
+                    if loadedUserCount == self.followingUsers.count {
+                        DispatchQueue.main.async {
+                            self.gistItems.sort(by: { $0.createdAt > $1.createdAt })
+                            self.tableView.reloadData()
+                        }
                     }
-                case .failure(_):
+                case .failure(let error):
+                    logger.error(error)
                     assertionFailure()
                 }
             }
@@ -60,22 +88,18 @@ class FollowingsGistsTableTableViewController: UITableViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return gistItems.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GistItemCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! GistItemTableViewCell
 
         let gistItem = gistItems[indexPath.row]
-        cell.textLabel?.text = "\(gistItem.owner.login) / \(gistItem.getFirstFileName())"
-        cell.detailTextLabel?.text = "\(gistItem.getCreatedAtText()) \(gistItem.description)"
-        cell.imageView?.image = UIImage(data: try! Data(contentsOf: URL(string: gistItem.owner.avatarUrl)!))
+        cell.setItem(item: gistItem, forMe: false)
 
         return cell
     }

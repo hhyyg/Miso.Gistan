@@ -7,7 +7,6 @@
 //
 
 final class GitHubAPI {
-
     /// Userのgistを取得
     struct GetUsersGists: GitHubRequest {
         typealias Response = [GistItem]
@@ -45,4 +44,47 @@ final class GitHubAPI {
             return nil
         }
     }
+
+    /// get user info
+    struct GetUser: GitHubRequest {
+        typealias Response = User
+
+        let userName: String
+
+        var method: HTTPMethod {
+            return .get
+        }
+
+        var path: String {
+            return "users/\(userName)"
+        }
+
+        var parameters: Any? {
+            return nil
+        }
+    }
+
+    struct GetMe: GitHubRequest {
+        typealias Response = User
+
+        var method: HTTPMethod {
+            return .get
+        }
+
+        var path: String {
+            return "user"
+        }
+
+        var parameters: Any? {
+            return nil
+        }
+    }
+/*
+    struct SearchUsers: GitHubRequest {
+        typealias Response = [User]
+
+        var method: HTTPMethod
+
+    }*/
+
 }

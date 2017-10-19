@@ -16,31 +16,47 @@ class MyGistsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        load(userName: "hhyyg")
+        navigationController!.navigationBar.prefersLargeTitles = true
+
+        //CustomCellの設定
+        let nib = UINib(nibName: "GistItemCell", bundle: nil)
+        self.tableView.register(nib, forCellReuseIdentifier: "ItemCell")
+
+        //アカウント設定に遷移
+        if UserService.loggedIn() {
+            load()
+        } else {
+            goAccountViewController(modalTransitionStyle: .crossDissolve)
+        }
     }
 
-    func load(userName: String) {
+    func load() {
+        let userName = KeychainService.get(forKey: .userName)!
+
         let client = GitHubClient()
         let request = GitHubAPI.GetUsersGists(userName: userName)
 
         client.send(request: request) { result in
             switch result {
             case let .success(response):
-                self.gistItems = response
-
                 DispatchQueue.main.async {
+                    self.gistItems = response
                     self.tableView.reloadData()
                 }
 
-            case .failure(_):
+            case let .failure(error):
+                logger.error(error)
                 assertionFailure()
             }
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func goAccountViewController(modalTransitionStyle: UIModalTransitionStyle) {
+        let accountVC = self.storyboard!.instantiateViewController(withIdentifier: "AccountPage") as! AccountViewController
+        accountVC.delegate = self
+        accountVC.modalTransitionStyle = modalTransitionStyle
+
+        present(accountVC, animated: true, completion: nil)
     }
 
     // MARK: - Table view data source
@@ -54,13 +70,10 @@ class MyGistsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GistItemCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! GistItemTableViewCell
 
         let gistItem = gistItems[indexPath.row]
-        cell.textLabel?.text = gistItem.getFirstFileName()
-        cell.detailTextLabel?.text = "\(gistItem.getCreatedAtText()) \(gistItem.description)"
-        //TODO:画像読み込み最適化
-        cell.imageView?.image = UIImage(data: try! Data(contentsOf: URL(string: gistItem.owner.avatarUrl)!))
+        cell.setItem(item: gistItem, forMe: true)
 
         return cell
     }
@@ -72,47 +85,14 @@ class MyGistsTableViewController: UITableViewController {
         self.showDetailViewController(safariViewController, sender: nil)
     }
 
-    // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
         return false
     }
+}
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+extension MyGistsTableViewController: AccountViewControllerDelegate {
+
+    func accountViewControllerDidDismiss(accountViewController: AccountViewController) {
+        load()
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -1,0 +1,4 @@
+github "OAuthSwift/OAuthSwift" "1.2.0"
+github "cockscomb/UTIKit" "2.0.1"
+github "kean/Nuke" "5.2"
+github "kishikawakatsumi/KeychainAccess" "v3.1.0"

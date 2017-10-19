@@ -1,4 +1,5 @@
 import Foundation
+import KeychainAccess
 
 protocol GitHubRequest {
     associatedtype Response: Codable
@@ -34,6 +35,9 @@ extension GitHubRequest {
         var urlRequest = URLRequest(url: url)
         urlRequest.url = components?.url
         urlRequest.httpMethod = method.rawValue
+
+        let token = KeychainService.get(forKey: .oauthToken)!
+        urlRequest.addValue("token \(token)", forHTTPHeaderField: "Authorization")
 
         return urlRequest
     }
