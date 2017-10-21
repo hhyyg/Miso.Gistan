@@ -10,6 +10,7 @@
 		2438392C1F80890300621D85 /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438392B1F80890300621D85 /* GitHubAPI.swift */; };
 		2438392E1F808A8F00621D85 /* GitHubClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438392D1F808A8F00621D85 /* GitHubClientTest.swift */; };
 		243839301F80C62E00621D85 /* FollowingsGistsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438392F1F80C62E00621D85 /* FollowingsGistsTableTableViewController.swift */; };
+		244121571F9B35970012C5DE /* settings.template.plist in Resources */ = {isa = PBXBuildFile; fileRef = 244121561F9B35970012C5DE /* settings.template.plist */; };
 		244E79D21F962AE300FCDCD0 /* PreferencesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244E79D11F962AE300FCDCD0 /* PreferencesTableViewController.swift */; };
 		245138C11F8501C8006B4AA6 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245138BF1F84FBD3006B4AA6 /* OAuthSwift.framework */; };
 		245138C21F8501C8006B4AA6 /* OAuthSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 245138BF1F84FBD3006B4AA6 /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -144,6 +145,7 @@
 		2438392B1F80890300621D85 /* GitHubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
 		2438392D1F808A8F00621D85 /* GitHubClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubClientTest.swift; sourceTree = "<group>"; };
 		2438392F1F80C62E00621D85 /* FollowingsGistsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingsGistsTableTableViewController.swift; sourceTree = "<group>"; };
+		244121561F9B35970012C5DE /* settings.template.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = settings.template.plist; sourceTree = "<group>"; };
 		244E79D11F962AE300FCDCD0 /* PreferencesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTableViewController.swift; sourceTree = "<group>"; };
 		245138BF1F84FBD3006B4AA6 /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthSwift.framework; path = Carthage/Build/iOS/OAuthSwift.framework; sourceTree = "<group>"; };
 		245138C41F850928006B4AA6 /* settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = settings.plist; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 		245138C81F85101D006B4AA6 /* Secret */ = {
 			isa = PBXGroup;
 			children = (
+				244121561F9B35970012C5DE /* settings.template.plist */,
 				245138C41F850928006B4AA6 /* settings.plist */,
 			);
 			path = Secret;
@@ -617,6 +620,7 @@
 			files = (
 				24A0C1151F7F640F005F0FEC /* LaunchScreen.storyboard in Resources */,
 				245138C51F850929006B4AA6 /* settings.plist in Resources */,
+				244121571F9B35970012C5DE /* settings.template.plist in Resources */,
 				24A0C1121F7F640F005F0FEC /* Assets.xcassets in Resources */,
 				24A0C1101F7F640F005F0FEC /* Main.storyboard in Resources */,
 				247AF73B1F825057009A401C /* GistItemCell.xib in Resources */,
