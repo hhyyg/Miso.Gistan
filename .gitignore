@@ -1,4 +1,5 @@
-Secret/
+Secret/*
+!Secret/*.template.plist
 Carthage/
 xcuserdata/
 codesigndoc_exports
