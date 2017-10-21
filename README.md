@@ -1,5 +1,9 @@
 # Gistan: iOS app for Gist viewer
 
+## Build
+
+- TK:GitHub Client Id, Client Secret  
+
 ## Thanks
 
 - [mzp/OctoEye: Github viewer for Files\.app](https://github.com/mzp/OctoEye)
