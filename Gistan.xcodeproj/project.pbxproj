@@ -11,6 +11,7 @@
 		2438392E1F808A8F00621D85 /* GitHubClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438392D1F808A8F00621D85 /* GitHubClientTest.swift */; };
 		243839301F80C62E00621D85 /* FollowingsGistsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2438392F1F80C62E00621D85 /* FollowingsGistsTableTableViewController.swift */; };
 		244121571F9B35970012C5DE /* settings.template.plist in Resources */ = {isa = PBXBuildFile; fileRef = 244121561F9B35970012C5DE /* settings.template.plist */; };
+		244121591FA0C06B0012C5DE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 244121581FA0C0650012C5DE /* Settings.bundle */; };
 		244E79D21F962AE300FCDCD0 /* PreferencesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244E79D11F962AE300FCDCD0 /* PreferencesTableViewController.swift */; };
 		245138C11F8501C8006B4AA6 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245138BF1F84FBD3006B4AA6 /* OAuthSwift.framework */; };
 		245138C21F8501C8006B4AA6 /* OAuthSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 245138BF1F84FBD3006B4AA6 /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -146,6 +147,7 @@
 		2438392D1F808A8F00621D85 /* GitHubClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubClientTest.swift; sourceTree = "<group>"; };
 		2438392F1F80C62E00621D85 /* FollowingsGistsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingsGistsTableTableViewController.swift; sourceTree = "<group>"; };
 		244121561F9B35970012C5DE /* settings.template.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = settings.template.plist; sourceTree = "<group>"; };
+		244121581FA0C0650012C5DE /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		244E79D11F962AE300FCDCD0 /* PreferencesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTableViewController.swift; sourceTree = "<group>"; };
 		245138BF1F84FBD3006B4AA6 /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthSwift.framework; path = Carthage/Build/iOS/OAuthSwift.framework; sourceTree = "<group>"; };
 		245138C41F850928006B4AA6 /* settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = settings.plist; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 		24A0C1071F7F640F005F0FEC /* Gistan */ = {
 			isa = PBXGroup;
 			children = (
+				244121581FA0C0650012C5DE /* Settings.bundle */,
 				24A445F41F89F7A1009452E3 /* Gistan.entitlements */,
 				24A445FC1F8B28AF009452E3 /* FileProvider */,
 				245138C81F85101D006B4AA6 /* Secret */,
@@ -475,6 +478,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24A0C12F1F7F640F005F0FEC /* Build configuration list for PBXNativeTarget "Gistan" */;
 			buildPhases = (
+				2441215A1FA0C1160012C5DE /* LicensePlist */,
 				244AB1391F7F967F00138DA6 /* SwiftLint */,
 				24A0C1011F7F640F005F0FEC /* Sources */,
 				24A0C1021F7F640F005F0FEC /* Frameworks */,
@@ -624,6 +628,7 @@
 				24A0C1121F7F640F005F0FEC /* Assets.xcassets in Resources */,
 				24A0C1101F7F640F005F0FEC /* Main.storyboard in Resources */,
 				247AF73B1F825057009A401C /* GistItemCell.xib in Resources */,
+				244121591FA0C06B0012C5DE /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +656,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2441215A1FA0C1160012C5DE /* LicensePlist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = LicensePlist;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\n/usr/local/bin/license-plist --output-path $PRODUCT_NAME/Settings.bundle --add-version-numbers\nfi";
+		};
 		244AB1391F7F967F00138DA6 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
