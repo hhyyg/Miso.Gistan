@@ -31,7 +31,9 @@ class FollowingsGistsTableTableViewController: UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
 
         if let userName = KeychainService.get(forKey: .userName) {
-            load(userName: userName)
+            load(userName: userName) {
+
+            }
         }
     }
 
@@ -40,13 +42,17 @@ class FollowingsGistsTableTableViewController: UITableViewController {
         self.gistItems = []
         self.followingUsers = []
         if let userName = KeychainService.get(forKey: .userName) {
-            load(userName: userName)
+            load(userName: userName) {
+                DispatchQueue.main.async {
+                    self.refreshControl!.endRefreshing()
+                }
+            }
         }
-        self.refreshControl!.endRefreshing()
     }
 
     // UserのFollowsのGistを読み込む
-    func load(userName: String) {
+    func load(userName: String,
+              loadComplete: @escaping () -> Void) {
         let client = GitHubClient()
         let request = GitHubAPI.GetUsersFollowing(userName: userName)
 
@@ -55,8 +61,10 @@ class FollowingsGistsTableTableViewController: UITableViewController {
             case let .success(response):
                 self.followingUsers = response
                 self.loadFollowingUsersGists(client: client)
-            case .failure(_):
-                assertionFailure()
+                loadComplete()
+            case .failure(let error):
+                logger.error(error)
+                loadComplete()
             }
         }
     }
@@ -81,7 +89,6 @@ class FollowingsGistsTableTableViewController: UITableViewController {
                     }
                 case .failure(let error):
                     logger.error(error)
-                    assertionFailure()
                 }
             }
         }
