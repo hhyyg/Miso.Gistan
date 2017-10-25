@@ -14,6 +14,7 @@ class FollowingsGistsTableTableViewController: UITableViewController {
 
     private var followingUsers: [User] = []
     private var gistItems: [GistItem] = []
+    private var isFirstAppeared = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,25 +30,31 @@ class FollowingsGistsTableTableViewController: UITableViewController {
         //セルの高さを自動調整にする
         self.tableView.estimatedRowHeight = 30
         self.tableView.rowHeight = UITableViewAutomaticDimension
+    }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if !isFirstAppeared {
+            isFirstAppeared = true
+            self.refreshControl!.beginRefreshing()
+            refreshData()
+        }
+    }
+
+    private func refreshData() {
         if let userName = KeychainService.get(forKey: .userName) {
             load(userName: userName) {
-
+                self.tableView.reloadData()
+                self.refreshControl!.endRefreshing()
             }
         }
     }
 
     @objc func refresh(sender: UIRefreshControl) {
-        //TODO:refactor
         self.gistItems = []
         self.followingUsers = []
-        if let userName = KeychainService.get(forKey: .userName) {
-            load(userName: userName) {
-                DispatchQueue.main.async {
-                    self.refreshControl!.endRefreshing()
-                }
-            }
-        }
+        refreshData()
     }
 
     // UserのFollowsのGistを読み込む
@@ -60,16 +67,18 @@ class FollowingsGistsTableTableViewController: UITableViewController {
             switch result {
             case let .success(response):
                 self.followingUsers = response
-                self.loadFollowingUsersGists(client: client)
-                loadComplete()
+                self.loadFollowingUsersGists(client: client, loadComplete: loadComplete)
             case .failure(let error):
                 logger.error(error)
-                loadComplete()
+                DispatchQueue.main.async {
+                    loadComplete()
+                }
             }
         }
     }
     // FollowsのGistsを読み込む
-    func loadFollowingUsersGists(client: GitHubClient) {
+    func loadFollowingUsersGists(client: GitHubClient,
+                                 loadComplete: @escaping () -> Void) {
 
         var loadedUserCount = 0
 
@@ -84,11 +93,14 @@ class FollowingsGistsTableTableViewController: UITableViewController {
                     if loadedUserCount == self.followingUsers.count {
                         DispatchQueue.main.async {
                             self.gistItems.sort(by: { $0.createdAt > $1.createdAt })
-                            self.tableView.reloadData()
+                            loadComplete()
                         }
                     }
                 case .failure(let error):
                     logger.error(error)
+                    DispatchQueue.main.async {
+                        loadComplete()
+                    }
                 }
             }
         }
@@ -103,6 +115,9 @@ class FollowingsGistsTableTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard gistItems.count > indexPath.row else {
+            return UITableViewCell()
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! GistItemTableViewCell
 
         let gistItem = gistItems[indexPath.row]

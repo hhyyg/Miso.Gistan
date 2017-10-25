@@ -31,6 +31,9 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard gistItems.count > indexPath.row else {
+            return UITableViewCell()
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! GistItemTableViewCell
 
         let gistItem = gistItems[indexPath.row]
@@ -40,6 +43,9 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard gistItems.count > indexPath.row else {
+            return
+        }
         let gistItem = gistItems[indexPath.row]
 
         let safariViewController = SFSafariViewController(url: URL(string: gistItem.htmlUrl)!)
