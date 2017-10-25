@@ -42,11 +42,13 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbu-mT-bQ8">
                                 <rect key="frame" x="80" y="276" width="215" height="38"/>
-                                <color key="backgroundColor" red="0.68627450980392157" green="0.41568627450980389" blue="0.41176470588235292" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
-                                <state key="normal" title="GitHub Authorization"/>
+                                <state key="normal" title="GitHub Authorization">
+                                    <color key="titleColor" red="0.78487664459999995" green="0.42276406290000001" blue="0.42541226739999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="8"/>
@@ -57,24 +59,24 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="xYK-Td-HwU">
-                                <rect key="frame" x="112" y="64" width="150" height="150"/>
+                                <rect key="frame" x="112.5" y="50" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="GvB-ad-sls"/>
                                     <constraint firstAttribute="width" secondItem="xYK-Td-HwU" secondAttribute="height" multiplier="1:1" id="f0u-sK-iH7"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gistan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlG-GU-Q12">
-                                <rect key="frame" x="140.5" y="194" width="95.5" height="50"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="35"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gistan: Gist viewer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlG-GU-Q12">
+                                <rect key="frame" x="86" y="210" width="203.5" height="34"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.78487664461135864" green="0.42276406288146973" blue="0.42541226744651794" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xYK-Td-HwU" firstAttribute="centerX" secondItem="qiz-IH-05T" secondAttribute="centerX" id="GQ7-RW-1rT"/>
-                            <constraint firstItem="dlG-GU-Q12" firstAttribute="top" secondItem="xYK-Td-HwU" secondAttribute="bottom" constant="-20" id="doH-0N-VBR"/>
-                            <constraint firstItem="xYK-Td-HwU" firstAttribute="top" secondItem="9Yo-1X-Js8" secondAttribute="top" constant="44" id="eur-T4-mTO"/>
+                            <constraint firstItem="dlG-GU-Q12" firstAttribute="top" secondItem="xYK-Td-HwU" secondAttribute="bottom" constant="10" id="doH-0N-VBR"/>
+                            <constraint firstItem="xYK-Td-HwU" firstAttribute="top" secondItem="9Yo-1X-Js8" secondAttribute="top" constant="30" id="eur-T4-mTO"/>
                             <constraint firstItem="vbu-mT-bQ8" firstAttribute="centerX" secondItem="qiz-IH-05T" secondAttribute="centerX" id="hPP-CV-Ncx"/>
                             <constraint firstItem="vbu-mT-bQ8" firstAttribute="top" secondItem="dlG-GU-Q12" secondAttribute="bottom" constant="32" id="r73-H0-glV"/>
                             <constraint firstItem="dlG-GU-Q12" firstAttribute="centerX" secondItem="qiz-IH-05T" secondAttribute="centerX" id="yzL-Ms-fhe"/>
