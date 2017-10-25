@@ -35,7 +35,6 @@ class PreferencesTableViewController: UITableViewController {
         KeychainService.set(forKey: .userName, value: "")
 
         goAccountViewController(modalTransitionStyle: .coverVertical)
-        //TODO:followings reset
     }
 
     func goAccountViewController(modalTransitionStyle: UIModalTransitionStyle) {

@@ -56,7 +56,6 @@ class AccountViewController: UIViewController {
                     self.dismiss(animated: true, completion: nil)
                 }
             case let .failure(error):
-                //TODO: 見つからない場合
                 logger.error("not found(error: \(error)")
                 assertionFailure()
             }
