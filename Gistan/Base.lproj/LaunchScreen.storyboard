@@ -24,23 +24,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="CMq-2E-QMT">
-                                <rect key="frame" x="112" y="64" width="150" height="150"/>
+                                <rect key="frame" x="112" y="50" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="OVp-eT-1wp"/>
                                     <constraint firstAttribute="width" secondItem="CMq-2E-QMT" secondAttribute="height" multiplier="1:1" id="Z8V-sr-OxM"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gistan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUT-9y-nqw">
-                                <rect key="frame" x="140" y="194" width="95.5" height="50"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="35"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gistan: Gist viewer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUT-9y-nqw">
+                                <rect key="frame" x="86" y="210" width="203.5" height="34"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.78487664459999995" green="0.42276406290000001" blue="0.42541226739999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="CMq-2E-QMT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="1lc-ID-hcR"/>
-                            <constraint firstItem="PUT-9y-nqw" firstAttribute="top" secondItem="CMq-2E-QMT" secondAttribute="bottom" constant="-20" id="IPn-y3-zHi"/>
+                            <constraint firstItem="CMq-2E-QMT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="1lc-ID-hcR"/>
+                            <constraint firstItem="PUT-9y-nqw" firstAttribute="top" secondItem="CMq-2E-QMT" secondAttribute="bottom" constant="10" id="IPn-y3-zHi"/>
                             <constraint firstItem="CMq-2E-QMT" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="U7K-kl-iMo"/>
                             <constraint firstItem="PUT-9y-nqw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="WYS-hW-TQZ"/>
                         </constraints>
