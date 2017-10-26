@@ -80,6 +80,11 @@ class FollowingsGistsTableTableViewController: UITableViewController {
     func loadFollowingUsersGists(client: GitHubClient,
                                  loadComplete: @escaping () -> Void) {
 
+        if followingUsers.count == 0 {
+            loadComplete()
+            return
+        }
+
         var loadedUserCount = 0
 
         for user in followingUsers {
