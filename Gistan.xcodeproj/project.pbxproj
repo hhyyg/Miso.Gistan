@@ -30,6 +30,7 @@
 		24951D9E1F879F1B006F566E /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24951D9D1F879F1B006F566E /* KeychainAccess.framework */; };
 		24951DA01F87A082006F566E /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24951D9F1F87A082006F566E /* KeychainService.swift */; };
 		24951DA41F87A304006F566E /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24951D9D1F879F1B006F566E /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		249BB9751FA202D40046B6D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 249BB9731FA202C40046B6D6 /* GoogleService-Info.plist */; };
 		24A0C1091F7F640F005F0FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1081F7F640F005F0FEC /* AppDelegate.swift */; };
 		24A0C1101F7F640F005F0FEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A0C10E1F7F640F005F0FEC /* Main.storyboard */; };
 		24A0C1121F7F640F005F0FEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A0C1111F7F640F005F0FEC /* Assets.xcassets */; };
@@ -89,6 +90,10 @@
 		24CC655F1F91EE8900605284 /* UTIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24CC655B1F91ED6D00605284 /* UTIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		24CC65611F91F1F600605284 /* IdentifierType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC65601F91F1F600605284 /* IdentifierType.swift */; };
 		24CC65631F91F21A00605284 /* FileProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC65621F91F21A00605284 /* FileProviderService.swift */; };
+		4502840EB89ACFC56E354CF6 /* Pods_Gistan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721B01CADF0817264C6DCD3A /* Pods_Gistan.framework */; };
+		A4C95C807867CB39AFB6DB67 /* Pods_GistanFileExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337911298063403CDBAE835A /* Pods_GistanFileExtension.framework */; };
+		A63148836A9750779C335E2D /* Pods_GistanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5AB92B2C45C65AE350F154 /* Pods_GistanTests.framework */; };
+		DCF1C0092C9BE16ABDB8A96F /* Pods_GistanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDF4379D545FF485A286956 /* Pods_GistanUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +173,7 @@
 		24951D9C1F879E0A006F566E /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		24951D9D1F879F1B006F566E /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 		24951D9F1F87A082006F566E /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		249BB9731FA202C40046B6D6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		24A0C1051F7F640F005F0FEC /* Gistan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gistan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A0C1081F7F640F005F0FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24A0C10F1F7F640F005F0FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -211,6 +217,18 @@
 		24CC655B1F91ED6D00605284 /* UTIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UTIKit.framework; path = Carthage/Build/iOS/UTIKit.framework; sourceTree = "<group>"; };
 		24CC65601F91F1F600605284 /* IdentifierType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifierType.swift; sourceTree = "<group>"; };
 		24CC65621F91F21A00605284 /* FileProviderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProviderService.swift; sourceTree = "<group>"; };
+		337911298063403CDBAE835A /* Pods_GistanFileExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GistanFileExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B5165FB7E301575E67DA0BE /* Pods-Gistan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gistan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gistan/Pods-Gistan.debug.xcconfig"; sourceTree = "<group>"; };
+		3B6A85CFE0CC273E3120C6DF /* Pods-GistanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GistanTests/Pods-GistanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4642FC34B6349D342DA4380A /* Pods-GistanFileExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistanFileExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-GistanFileExtension/Pods-GistanFileExtension.release.xcconfig"; sourceTree = "<group>"; };
+		596134D901916F998C4099A2 /* Pods-GistanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistanUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GistanUITests/Pods-GistanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6CD6F6ED71E2F687A6969B45 /* Pods-GistanFileExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistanFileExtension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GistanFileExtension/Pods-GistanFileExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		721B01CADF0817264C6DCD3A /* Pods_Gistan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gistan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A57BABE2865E266B1838548 /* Pods-GistanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistanUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GistanUITests/Pods-GistanUITests.release.xcconfig"; sourceTree = "<group>"; };
+		83B120C323365C18F514ED05 /* Pods-GistanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GistanTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GistanTests/Pods-GistanTests.release.xcconfig"; sourceTree = "<group>"; };
+		AB38B6E596962C14E601D58D /* Pods-Gistan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gistan.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gistan/Pods-Gistan.release.xcconfig"; sourceTree = "<group>"; };
+		BDDF4379D545FF485A286956 /* Pods_GistanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GistanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD5AB92B2C45C65AE350F154 /* Pods_GistanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GistanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +241,7 @@
 				24951D9E1F879F1B006F566E /* KeychainAccess.framework in Frameworks */,
 				247AF7471F8271F9009A401C /* Nuke.framework in Frameworks */,
 				245138C11F8501C8006B4AA6 /* OAuthSwift.framework in Frameworks */,
+				4502840EB89ACFC56E354CF6 /* Pods_Gistan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +249,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A63148836A9750779C335E2D /* Pods_GistanTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +257,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCF1C0092C9BE16ABDB8A96F /* Pods_GistanUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +268,7 @@
 				24CC655D1F91ED8100605284 /* UTIKit.framework in Frameworks */,
 				24A445FB1F8A0F9E009452E3 /* Security.framework in Frameworks */,
 				24A445F81F8A00C0009452E3 /* KeychainAccess.framework in Frameworks */,
+				A4C95C807867CB39AFB6DB67 /* Pods_GistanFileExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +304,10 @@
 				247AF7431F82705C009A401C /* Nuke.framework */,
 				247AF7411F827040009A401C /* Carthage */,
 				247AF73F1F827036009A401C /* Checkouts */,
+				721B01CADF0817264C6DCD3A /* Pods_Gistan.framework */,
+				337911298063403CDBAE835A /* Pods_GistanFileExtension.framework */,
+				CD5AB92B2C45C65AE350F154 /* Pods_GistanTests.framework */,
+				BDDF4379D545FF485A286956 /* Pods_GistanUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -297,6 +323,7 @@
 				24A445D31F89E476009452E3 /* GistanFileExtension */,
 				24A0C1061F7F640F005F0FEC /* Products */,
 				247AF73E1F827035009A401C /* Frameworks */,
+				36100F2543191DD0C8E4BF4D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -314,6 +341,7 @@
 		24A0C1071F7F640F005F0FEC /* Gistan */ = {
 			isa = PBXGroup;
 			children = (
+				249BB9731FA202C40046B6D6 /* GoogleService-Info.plist */,
 				244121581FA0C0650012C5DE /* Settings.bundle */,
 				24A445F41F89F7A1009452E3 /* Gistan.entitlements */,
 				24A445FC1F8B28AF009452E3 /* FileProvider */,
@@ -471,6 +499,21 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		36100F2543191DD0C8E4BF4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B5165FB7E301575E67DA0BE /* Pods-Gistan.debug.xcconfig */,
+				AB38B6E596962C14E601D58D /* Pods-Gistan.release.xcconfig */,
+				6CD6F6ED71E2F687A6969B45 /* Pods-GistanFileExtension.debug.xcconfig */,
+				4642FC34B6349D342DA4380A /* Pods-GistanFileExtension.release.xcconfig */,
+				3B6A85CFE0CC273E3120C6DF /* Pods-GistanTests.debug.xcconfig */,
+				83B120C323365C18F514ED05 /* Pods-GistanTests.release.xcconfig */,
+				596134D901916F998C4099A2 /* Pods-GistanUITests.debug.xcconfig */,
+				7A57BABE2865E266B1838548 /* Pods-GistanUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -478,6 +521,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24A0C12F1F7F640F005F0FEC /* Build configuration list for PBXNativeTarget "Gistan" */;
 			buildPhases = (
+				7283C73EF0ADE9CEECC0A123 /* [CP] Check Pods Manifest.lock */,
 				2441215A1FA0C1160012C5DE /* LicensePlist */,
 				244AB1391F7F967F00138DA6 /* SwiftLint */,
 				24A0C1011F7F640F005F0FEC /* Sources */,
@@ -486,6 +530,8 @@
 				247AF7221F80DB4C009A401C /* Embed App Extensions */,
 				247AF7461F82707B009A401C /* ShellScript */,
 				245138C31F8501C8006B4AA6 /* Embed Frameworks */,
+				F5F54F08A6D1F75A9F975B2D /* [CP] Embed Pods Frameworks */,
+				734680AF838D3AED13832BC5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -501,9 +547,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24A0C1321F7F640F005F0FEC /* Build configuration list for PBXNativeTarget "GistanTests" */;
 			buildPhases = (
+				576ABE668DBC232DDBE02CA6 /* [CP] Check Pods Manifest.lock */,
 				24A0C1171F7F640F005F0FEC /* Sources */,
 				24A0C1181F7F640F005F0FEC /* Frameworks */,
 				24A0C1191F7F640F005F0FEC /* Resources */,
+				E6320E91192DA07FBA636D94 /* [CP] Embed Pods Frameworks */,
+				663AFF7CC0C3BBFF886C503E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -519,9 +568,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24A0C1351F7F640F005F0FEC /* Build configuration list for PBXNativeTarget "GistanUITests" */;
 			buildPhases = (
+				46EDA264FDD4848F924F9D55 /* [CP] Check Pods Manifest.lock */,
 				24A0C1221F7F640F005F0FEC /* Sources */,
 				24A0C1231F7F640F005F0FEC /* Frameworks */,
 				24A0C1241F7F640F005F0FEC /* Resources */,
+				A4EE8BAC426A0586563EA71C /* [CP] Embed Pods Frameworks */,
+				ABF38A24FE2AAA9A3262E28A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -537,9 +589,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24A445F11F89E476009452E3 /* Build configuration list for PBXNativeTarget "GistanFileExtension" */;
 			buildPhases = (
+				52F4B716D703D3D999DD3FED /* [CP] Check Pods Manifest.lock */,
 				24A445CE1F89E475009452E3 /* Sources */,
 				24A445CF1F89E475009452E3 /* Frameworks */,
 				24A445D01F89E475009452E3 /* Resources */,
+				C12C97DC8A11A192CF1ADF16 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -623,6 +677,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24A0C1151F7F640F005F0FEC /* LaunchScreen.storyboard in Resources */,
+				249BB9751FA202D40046B6D6 /* GoogleService-Info.plist in Resources */,
 				245138C51F850929006B4AA6 /* settings.plist in Resources */,
 				244121571F9B35970012C5DE /* settings.template.plist in Resources */,
 				24A0C1121F7F640F005F0FEC /* Assets.xcassets in Resources */,
@@ -697,6 +752,171 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		46EDA264FDD4848F924F9D55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		52F4B716D703D3D999DD3FED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		576ABE668DBC232DDBE02CA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		663AFF7CC0C3BBFF886C503E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GistanTests/Pods-GistanTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7283C73EF0ADE9CEECC0A123 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		734680AF838D3AED13832BC5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gistan/Pods-Gistan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4EE8BAC426A0586563EA71C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GistanUITests/Pods-GistanUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABF38A24FE2AAA9A3262E28A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GistanUITests/Pods-GistanUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C12C97DC8A11A192CF1ADF16 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GistanFileExtension/Pods-GistanFileExtension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6320E91192DA07FBA636D94 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GistanTests/Pods-GistanTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5F54F08A6D1F75A9F975B2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gistan/Pods-Gistan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -941,6 +1161,7 @@
 		};
 		24A0C1301F7F640F005F0FEC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B5165FB7E301575E67DA0BE /* Pods-Gistan.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -962,6 +1183,7 @@
 		};
 		24A0C1311F7F640F005F0FEC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB38B6E596962C14E601D58D /* Pods-Gistan.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -983,6 +1205,7 @@
 		};
 		24A0C1331F7F640F005F0FEC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B6A85CFE0CC273E3120C6DF /* Pods-GistanTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -999,6 +1222,7 @@
 		};
 		24A0C1341F7F640F005F0FEC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83B120C323365C18F514ED05 /* Pods-GistanTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1015,6 +1239,7 @@
 		};
 		24A0C1361F7F640F005F0FEC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 596134D901916F998C4099A2 /* Pods-GistanUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1030,6 +1255,7 @@
 		};
 		24A0C1371F7F640F005F0FEC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A57BABE2865E266B1838548 /* Pods-GistanUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1045,6 +1271,7 @@
 		};
 		24A445F21F89E476009452E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CD6F6ED71E2F687A6969B45 /* Pods-GistanFileExtension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = GistanFileExtension/GistanFileExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -1065,6 +1292,7 @@
 		};
 		24A445F31F89E476009452E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4642FC34B6349D342DA4380A /* Pods-GistanFileExtension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = GistanFileExtension/GistanFileExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;

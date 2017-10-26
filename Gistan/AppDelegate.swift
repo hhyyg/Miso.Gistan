@@ -8,6 +8,7 @@
 
 import UIKit
 import OAuthSwift
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // when test do nothing
             return true
         }
+
+        FirebaseApp.configure()
 
         try! loadSettings()
         return true

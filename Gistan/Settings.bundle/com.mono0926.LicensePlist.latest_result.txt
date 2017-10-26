@@ -1,3 +1,19 @@
+name: Firebase, nameSpecified: 
+body: Copyright 2017 Googl…
+
+name: FirebaseAnalytics, nameSpecified: 
+body: Copyright 2017 Googl…
+
+name: FirebaseCore, nameSpecified: 
+body: Copyright 2017 Googl…
+
+name: FirebaseInstanceID, nameSpecified: 
+body: Copyright 2017 Googl…
+
+name: GoogleToolboxForMac, nameSpecified: 
+body: 
+                   …
+
 name: LicensePlist, nameSpecified: , owner: mono0926, version: 
 
 name: OctoEye, nameSpecified: , owner: mzp, version: 

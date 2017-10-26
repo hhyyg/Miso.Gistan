@@ -1,0 +1,6 @@
+framework module Pods_GistanUITests {
+  umbrella header "Pods-GistanUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
