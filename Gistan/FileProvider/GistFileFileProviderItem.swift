@@ -26,7 +26,7 @@ class GistFileFileProviderItem: NSObject, NSFileProviderItem {
         ) {
         self.parentItemIdentifier = parentItemIdentifier
         self.itemIdentifier = NSFileProviderItemIdentifier("gists.\(gistItem.owner.login.urlEncoding()).\(gistItem.id).\(gistFile.filename.urlEncoding())")
-        self.filename = gistFile.filename
+        self.filename = "\(gistFile.filename).show-extension"
 
         let uti = UTI(mimeType: gistFile.type)
         self.typeIdentifier = uti?.utiString ?? "public.item"
