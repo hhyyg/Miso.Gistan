@@ -13,8 +13,6 @@
 		244121571F9B35970012C5DE /* settings.template.plist in Resources */ = {isa = PBXBuildFile; fileRef = 244121561F9B35970012C5DE /* settings.template.plist */; };
 		244121591FA0C06B0012C5DE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 244121581FA0C0650012C5DE /* Settings.bundle */; };
 		244E79D21F962AE300FCDCD0 /* PreferencesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244E79D11F962AE300FCDCD0 /* PreferencesTableViewController.swift */; };
-		245138C11F8501C8006B4AA6 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245138BF1F84FBD3006B4AA6 /* OAuthSwift.framework */; };
-		245138C21F8501C8006B4AA6 /* OAuthSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 245138BF1F84FBD3006B4AA6 /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		245138C51F850929006B4AA6 /* settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 245138C41F850928006B4AA6 /* settings.plist */; };
 		245138C71F8509B0006B4AA6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245138C61F8509B0006B4AA6 /* Settings.swift */; };
 		245F7B901F87A67E0040229D /* UserDefaultKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F7B8F1F87A67E0040229D /* UserDefaultKey.swift */; };
@@ -27,9 +25,7 @@
 		247AF7491F827997009A401C /* DateFormatter.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF7481F827997009A401C /* DateFormatter.extension.swift */; };
 		247AF74E1F83B8A9009A401C /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF74D1F83B8A9009A401C /* AccountViewController.swift */; };
 		247AF7501F83D1D4009A401C /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247AF74F1F83D1D4009A401C /* Log.swift */; };
-		24951D9E1F879F1B006F566E /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24951D9D1F879F1B006F566E /* KeychainAccess.framework */; };
 		24951DA01F87A082006F566E /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24951D9F1F87A082006F566E /* KeychainService.swift */; };
-		24951DA41F87A304006F566E /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24951D9D1F879F1B006F566E /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		249BB9751FA202D40046B6D6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 249BB9731FA202C40046B6D6 /* GoogleService-Info.plist */; };
 		24A0C1091F7F640F005F0FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A0C1081F7F640F005F0FEC /* AppDelegate.swift */; };
 		24A0C1101F7F640F005F0FEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24A0C10E1F7F640F005F0FEC /* Main.storyboard */; };
@@ -86,8 +82,6 @@
 		24CC65581F8B5C2800605284 /* String.extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC65531F8B5AB800605284 /* String.extension.swift */; };
 		24CC655A1F8CE1F900605284 /* GistService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC65591F8CE1F900605284 /* GistService.swift */; };
 		24CC655D1F91ED8100605284 /* UTIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CC655B1F91ED6D00605284 /* UTIKit.framework */; };
-		24CC655E1F91EE8900605284 /* UTIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CC655B1F91ED6D00605284 /* UTIKit.framework */; };
-		24CC655F1F91EE8900605284 /* UTIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 24CC655B1F91ED6D00605284 /* UTIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		24CC65611F91F1F600605284 /* IdentifierType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC65601F91F1F600605284 /* IdentifierType.swift */; };
 		24CC65631F91F21A00605284 /* FileProviderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CC65621F91F21A00605284 /* FileProviderService.swift */; };
 		4502840EB89ACFC56E354CF6 /* Pods_Gistan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 721B01CADF0817264C6DCD3A /* Pods_Gistan.framework */; };
@@ -121,19 +115,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		245138C31F8501C8006B4AA6 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				24CC655F1F91EE8900605284 /* UTIKit.framework in Embed Frameworks */,
-				24951DA41F87A304006F566E /* KeychainAccess.framework in Embed Frameworks */,
-				245138C21F8501C8006B4AA6 /* OAuthSwift.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		247AF7221F80DB4C009A401C /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,11 +217,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24CC655E1F91EE8900605284 /* UTIKit.framework in Frameworks */,
 				24A445FA1F8A0F88009452E3 /* Security.framework in Frameworks */,
-				24951D9E1F879F1B006F566E /* KeychainAccess.framework in Frameworks */,
 				247AF7471F8271F9009A401C /* Nuke.framework in Frameworks */,
-				245138C11F8501C8006B4AA6 /* OAuthSwift.framework in Frameworks */,
 				4502840EB89ACFC56E354CF6 /* Pods_Gistan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -528,8 +506,7 @@
 				24A0C1021F7F640F005F0FEC /* Frameworks */,
 				24A0C1031F7F640F005F0FEC /* Resources */,
 				247AF7221F80DB4C009A401C /* Embed App Extensions */,
-				247AF7461F82707B009A401C /* ShellScript */,
-				245138C31F8501C8006B4AA6 /* Embed Frameworks */,
+				247AF7461F82707B009A401C /* Run Script Carthage */,
 				F5F54F08A6D1F75A9F975B2D /* [CP] Embed Pods Frameworks */,
 				734680AF838D3AED13832BC5 /* [CP] Copy Pods Resources */,
 			);
@@ -739,14 +716,18 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		247AF7461F82707B009A401C /* ShellScript */ = {
+		247AF7461F82707B009A401C /* Run Script Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Nuke.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/OAuthSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/UTIKit.framework",
 			);
+			name = "Run Script Carthage";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
