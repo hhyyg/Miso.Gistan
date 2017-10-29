@@ -2,7 +2,7 @@
 
 ## Features
 - View followings’ gists
-- View your gists via app and Files.app
+- View your gists via Gistan and Files.app
 - Search another user’s gists
 
 ![screen](https://user-images.githubusercontent.com/8636660/32131220-60d7a4d6-bbe3-11e7-9a73-426c88e72b6e.png)
