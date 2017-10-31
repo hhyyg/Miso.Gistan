@@ -52,7 +52,7 @@ class GitHubAuthentication {
 
         self.oauthSwift.authorize(
             withCallbackURL: URL(string: "gistan://oauth-callback")!,
-            scope: "public",
+            scope: "public,gist",
             state:"me",
             success: success,
             failure: failure
