@@ -3,3 +3,7 @@ github:
     name: LicensePlist
   - owner: mzp
     name: OctoEye
+  - owner: google
+    name: material-design-icons
+rename:
+  material-design-icons: Material icons
