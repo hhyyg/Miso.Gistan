@@ -14,6 +14,9 @@ name: GoogleToolboxForMac, nameSpecified:
 body: 
                    …
 
+name: nanopb, nameSpecified: 
+body: Copyright (c) 2011 P…
+
 name: LicensePlist, nameSpecified: , owner: mono0926, version: 
 
 name: OctoEye, nameSpecified: , owner: mzp, version: 
