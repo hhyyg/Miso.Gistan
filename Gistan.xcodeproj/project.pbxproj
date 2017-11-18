@@ -134,6 +134,8 @@
 		2438392F1F80C62E00621D85 /* FollowingsGistsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingsGistsTableTableViewController.swift; sourceTree = "<group>"; };
 		244121561F9B35970012C5DE /* settings.template.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = settings.template.plist; sourceTree = "<group>"; };
 		244121581FA0C0650012C5DE /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		244D1BD81FC031F8007E81F7 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		244D1BD91FC031F9007E81F7 /* Podfile.lock */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		244E79D11F962AE300FCDCD0 /* PreferencesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesTableViewController.swift; sourceTree = "<group>"; };
 		245138BF1F84FBD3006B4AA6 /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthSwift.framework; path = Carthage/Build/iOS/OAuthSwift.framework; sourceTree = "<group>"; };
 		245138C41F850928006B4AA6 /* settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = settings.plist; sourceTree = "<group>"; };
@@ -293,6 +295,8 @@
 		24A0C0FC1F7F640F005F0FEC = {
 			isa = PBXGroup;
 			children = (
+				244D1BD81FC031F8007E81F7 /* Podfile */,
+				244D1BD91FC031F9007E81F7 /* Podfile.lock */,
 				24951D9C1F879E0A006F566E /* Cartfile */,
 				24951D9B1F879E0A006F566E /* Cartfile.resolved */,
 				24A0C1071F7F640F005F0FEC /* Gistan */,
