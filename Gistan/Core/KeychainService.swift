@@ -11,8 +11,8 @@ import KeychainAccess
 
 class KeychainService {
     enum Key: String {
-        case oauthToken
-        case userName
+        case oauthToken = "oauthToken2"
+        case userName = "userName2"
     }
 
     private static var keychain = Keychain(
