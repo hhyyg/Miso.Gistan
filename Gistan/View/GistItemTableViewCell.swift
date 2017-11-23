@@ -31,14 +31,14 @@ class GistItemTableViewCell: UITableViewCell {
 
     func setItem(item: GistItem, forMe: Bool) {
         if forMe {
-            self.secretLabel?.isHidden = item.isPublic
-            self.titleLabel?.text = "\(item.getFirstFileName())"
+            self.secretLabel.isHidden = item.isPublic
+            self.titleLabel.text = "\(item.getFirstFileName())"
         } else {
-            self.secretLabel?.isHidden = true
-            self.titleLabel?.text = "\(item.owner.login) / \(item.getFirstFileName())"
+            self.secretLabel.isHidden = true
+            self.titleLabel.text = "\(item.owner.login) / \(item.getFirstFileName())"
         }
-        self.descriptionLabel?.text = "\(item.getCreatedAtText()) \(item.description ?? "")"
-        self.iconImageView?.image = nil
+        self.descriptionLabel.text = "\(item.getCreatedAtText()) \(item.description ?? "")"
+        self.iconImageView.image = nil
         Nuke.loadImage(with: URL(string: item.owner.avatarUrl)!, into: self.iconImageView!)
     }
 }
