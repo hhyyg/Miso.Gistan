@@ -258,6 +258,7 @@
 		245138C81F85101D006B4AA6 /* Secret */ = {
 			isa = PBXGroup;
 			children = (
+				249BB9731FA202C40046B6D6 /* GoogleService-Info.plist */,
 				244121561F9B35970012C5DE /* settings.template.plist */,
 				245138C41F850928006B4AA6 /* settings.plist */,
 			);
@@ -323,7 +324,6 @@
 		24A0C1071F7F640F005F0FEC /* Gistan */ = {
 			isa = PBXGroup;
 			children = (
-				249BB9731FA202C40046B6D6 /* GoogleService-Info.plist */,
 				244121581FA0C0650012C5DE /* Settings.bundle */,
 				24A445F41F89F7A1009452E3 /* Gistan.entitlements */,
 				24A445FC1F8B28AF009452E3 /* FileProvider */,
