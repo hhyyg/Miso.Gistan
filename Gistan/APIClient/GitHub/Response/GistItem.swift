@@ -14,6 +14,7 @@ struct GistItem: Codable {
     let description: String?
     let createdAt: Date
     let owner: User
+    let isPublic: Bool
 
     private enum CodingKeys: String, CodingKey {
         case
@@ -22,7 +23,8 @@ struct GistItem: Codable {
         htmlUrl = "html_url",
         description,
         createdAt = "created_at",
-        owner
+        owner,
+        isPublic = "public"
     }
 
     /// 最初のファイルの名前を取得します

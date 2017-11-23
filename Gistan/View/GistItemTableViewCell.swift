@@ -14,6 +14,7 @@ class GistItemTableViewCell: UITableViewCell {
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var secretLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,8 +31,10 @@ class GistItemTableViewCell: UITableViewCell {
 
     func setItem(item: GistItem, forMe: Bool) {
         if forMe {
+            self.secretLabel?.isHidden = item.isPublic
             self.titleLabel?.text = "\(item.getFirstFileName())"
         } else {
+            self.secretLabel?.isHidden = true
             self.titleLabel?.text = "\(item.owner.login) / \(item.getFirstFileName())"
         }
         self.descriptionLabel?.text = "\(item.getCreatedAtText()) \(item.description ?? "")"

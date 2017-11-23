@@ -10,10 +10,13 @@ import XCTest
 @testable import Gistan
 
 class GistFileTest: XCTestCase {
-    
+
+    private let decoder = JSONDecoder()
+
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
+        decoder.dateDecodingStrategy = .iso8601
     }
     
     override func tearDown() {
@@ -26,7 +29,10 @@ class GistFileTest: XCTestCase {
     func testParseTest() throws {
         let rawJson = """
 {
+    "id": "e6507b4f316a0e59b1588c991b7fdd68",
+    "created_at": "2017-10-31T07:31:17Z",
     "html_url": "https://gist.github.com/9e18f2f16650d89aa37da10b06670d1e",
+    "description": "aiueo",
     "files": {
         "C# 6 exception filter.cs": {
             "filename": "C# 6 exception filter.cs",
@@ -35,22 +41,46 @@ class GistFileTest: XCTestCase {
             "raw_url": "https://gist.githubusercontent.com/hhyyg/9e18f2f16650d89aa37da10b06670d1e/raw/b57deff85fa2f56975a5eb4bf06a9ca2571e97b6/C%23%206%20exception%20filter.cs",
             "size": 917
         }
-    }
+    },
+    "owner": {
+      "login": "hhyyg",
+      "id": 8636660,
+      "avatar_url": "https://avatars0.githubusercontent.com/u/8636660?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/hhyyg",
+      "html_url": "https://github.com/hhyyg",
+      "followers_url": "https://api.github.com/users/hhyyg/followers",
+      "following_url": "https://api.github.com/users/hhyyg/following{/other_user}",
+      "gists_url": "https://api.github.com/users/hhyyg/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/hhyyg/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/hhyyg/subscriptions",
+      "organizations_url": "https://api.github.com/users/hhyyg/orgs",
+      "repos_url": "https://api.github.com/users/hhyyg/repos",
+      "events_url": "https://api.github.com/users/hhyyg/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/hhyyg/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "public" : true
 }
-"""
+""".data(using: .utf8)!
         
         //do
-        let result = try! JSONDecoder().decode(GistItem.self, from: convertToJSON(text: rawJson))
+        let result = try! decoder.decode(GistItem.self, from: rawJson)
         
         //asset
+        XCTAssertEqual(result.id, "e6507b4f316a0e59b1588c991b7fdd68")
+        XCTAssertEqual(result.description, "aiueo")
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        XCTAssertEqual(result.createdAt, dateFormatter.date(from: "2017-10-31T07:31:17Z")!)
         XCTAssertEqual(result.htmlUrl, "https://gist.github.com/9e18f2f16650d89aa37da10b06670d1e")
         XCTAssertEqual(result.files.count, 1)
         XCTAssertNotNil(result.files["C# 6 exception filter.cs"])
+        XCTAssertEqual(result.isPublic, true)
     }
 
-
-
-    /// GistItemのJSONパーステスト
+    /// GistItem[]のJSONパーステスト
     func testParseGistItemsTest() throws {
         let rawJson = """
 [
@@ -156,16 +186,12 @@ class GistFileTest: XCTestCase {
 """.data(using: .utf8)!
 
         //do
-        let result = try! JSONDecoder().decode([GistItem].self, from: rawJson)
+        let result = try! decoder.decode([GistItem].self, from: rawJson)
 
         //asset
         result.forEach{ print($0) }
     }
-    
-    func convertToJSON(text: String) -> Data {
-        return text.data(using: .utf8)!
-    }
-    
+
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
