@@ -70,9 +70,8 @@
                     <constraint firstItem="OaE-46-jyr" firstAttribute="trailing" secondItem="Tvc-1V-v9d" secondAttribute="trailingMargin" id="JEW-RQ-uk7"/>
                     <constraint firstItem="Pcv-BC-TaD" firstAttribute="leading" secondItem="ZWF-MW-1Mb" secondAttribute="trailing" constant="8" id="PYR-S2-ZM6"/>
                     <constraint firstItem="OaE-46-jyr" firstAttribute="leading" secondItem="ZWF-MW-1Mb" secondAttribute="trailing" constant="8" id="Q7y-pl-Rtu"/>
+                    <constraint firstItem="oKy-Xe-32O" firstAttribute="trailing" secondItem="OaE-46-jyr" secondAttribute="trailing" id="bia-Ox-9qo"/>
                     <constraint firstItem="oKy-Xe-32O" firstAttribute="top" secondItem="Tvc-1V-v9d" secondAttribute="topMargin" constant="4" id="h45-au-BDI"/>
-                    <constraint firstItem="oKy-Xe-32O" firstAttribute="trailing" secondItem="Tvc-1V-v9d" secondAttribute="trailingMargin" id="r4x-hT-bWC"/>
-                    <constraint firstItem="OaE-46-jyr" firstAttribute="leading" secondItem="oKy-Xe-32O" secondAttribute="trailing" constant="-285" id="t24-Pt-oLj"/>
                     <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="ZWF-MW-1Mb" secondAttribute="bottom" priority="999" constant="8" id="ySl-PC-otl"/>
                 </constraints>
             </tableViewCellContentView>
