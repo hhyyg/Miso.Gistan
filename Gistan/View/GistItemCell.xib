@@ -79,6 +79,7 @@
             <connections>
                 <outlet property="descriptionLabel" destination="OaE-46-jyr" id="fYd-Vf-iQk"/>
                 <outlet property="iconImageView" destination="ZWF-MW-1Mb" id="oWg-sk-54E"/>
+                <outlet property="secretLabel" destination="oKy-Xe-32O" id="7iC-dy-Q0z"/>
                 <outlet property="titleLabel" destination="Pcv-BC-TaD" id="5l7-zo-PxA"/>
             </connections>
             <point key="canvasLocation" x="-325.5" y="-247"/>
