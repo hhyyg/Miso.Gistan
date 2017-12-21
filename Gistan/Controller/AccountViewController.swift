@@ -10,6 +10,7 @@ import UIKit
 import OAuthSwift
 import KeychainAccess
 import SafariServices
+import RxSwift
 
 class AccountViewController: UIViewController {
 
@@ -45,21 +46,20 @@ class AccountViewController: UIViewController {
         let client = GitHubClient()
         let request = GitHubAPI.GetMe()
 
-        client.send(request: request) { result in
-            switch result {
-            case let .success(userInfo):
-                //user名を保存
-                KeychainService.set(forKey: .userName, value: userInfo.login)
+        _ = client.send(request: request)
+            .observeOn(MainScheduler.instance)
+            .subscribe(
+                onNext: { userInfo in
+                    //user名を保存
+                    KeychainService.set(forKey: .userName, value: userInfo.login)
 
-                DispatchQueue.main.async {
                     self.delegate.accountViewControllerDidDismiss(accountViewController: self)
                     self.dismiss(animated: true, completion: nil)
-                }
-            case let .failure(error):
-                logger.error("not found(error: \(error)")
-                assertionFailure()
-            }
-        }
+            },
+                onError: { error in
+                    logger.error("not found(error: \(error)")
+                    assertionFailure()
+            })
     }
 
     override func viewWillDisappear(_ animated: Bool) {

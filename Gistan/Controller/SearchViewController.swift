@@ -8,6 +8,7 @@
 
 import UIKit
 import SafariServices
+import RxSwift
 
 class SearchViewController: UITableViewController, UISearchResultsUpdating {
 
@@ -60,18 +61,16 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating {
 
         let client = GitHubClient()
         let request = GitHubAPI.GetUsersGists(userName: userName)
-
-        client.send(request: request) { result in
-            switch result {
-            case let .success(response):
-                DispatchQueue.main.async {
+        _ = client.send(request: request)
+            .observeOn(MainScheduler.instance)
+            .subscribe(
+                onNext: { response in
                     self.gistItems = response
                     self.tableView.reloadData()
-                }
-            case .failure:
-                break
-            }
-        }
+            },
+                onError: { error in
+                    ()
+            })
     }
 
     func updateSearchResults(for searchController: UISearchController) {

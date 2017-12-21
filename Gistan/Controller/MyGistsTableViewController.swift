@@ -8,6 +8,8 @@
 
 import UIKit
 import SafariServices
+import Foundation
+import RxSwift
 
 class MyGistsTableViewController: UITableViewController {
 
@@ -36,19 +38,17 @@ class MyGistsTableViewController: UITableViewController {
         let client = GitHubClient()
         let request = GitHubAPI.GetUsersGists(userName: userName)
 
-        client.send(request: request) { result in
-            switch result {
-            case let .success(response):
-                DispatchQueue.main.async {
+        _ = client.send(request: request)
+            .observeOn(MainScheduler.instance)
+            .subscribe(
+                onNext: { response in
                     self.gistItems = response
                     self.tableView.reloadData()
-                }
-
-            case let .failure(error):
-                logger.error(error)
-                assertionFailure()
-            }
-        }
+            },
+                onError: { error in
+                    logger.error(error)
+                    assertionFailure()
+            })
     }
 
     func goAccountViewController(modalTransitionStyle: UIModalTransitionStyle) {

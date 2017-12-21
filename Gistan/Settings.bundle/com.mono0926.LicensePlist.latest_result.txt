@@ -25,6 +25,8 @@ name: material-design-icons, nameSpecified: Material icons, owner: google, versi
 
 name: OAuthSwift, nameSpecified: , owner: OAuthSwift, version: 1.2.0
 
+name: RxSwift, nameSpecified: , owner: ReactiveX, version: 4.0.0
+
 name: UTIKit, nameSpecified: , owner: cockscomb, version: 2.0.1
 
 name: Nuke, nameSpecified: , owner: kean, version: 5.2

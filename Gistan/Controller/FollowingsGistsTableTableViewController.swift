@@ -9,6 +9,7 @@
 import UIKit
 import SafariServices
 import Nuke
+import RxSwift
 
 class FollowingsGistsTableTableViewController: UITableViewController {
 
@@ -60,21 +61,21 @@ class FollowingsGistsTableTableViewController: UITableViewController {
     // UserのFollowsのGistを読み込む
     func load(userName: String,
               loadComplete: @escaping () -> Void) {
+
         let client = GitHubClient()
         let request = GitHubAPI.GetUsersFollowing(userName: userName)
 
-        client.send(request: request) { result in
-            switch result {
-            case let .success(response):
-                self.followingUsers = response
-                self.loadFollowingUsersGists(client: client, loadComplete: loadComplete)
-            case .failure(let error):
-                logger.error(error)
-                DispatchQueue.main.async {
+        _ = client.send(request: request)
+            .observeOn(MainScheduler.instance)
+            .subscribe(
+                onNext: { response in
+                    self.followingUsers = response
+                    self.loadFollowingUsersGists(client: client, loadComplete: loadComplete)
+            },
+                onError: { error in
+                    logger.error(error)
                     loadComplete()
-                }
-            }
-        }
+            })
     }
     // FollowsのGistsを読み込む
     func loadFollowingUsersGists(client: GitHubClient,
@@ -89,25 +90,25 @@ class FollowingsGistsTableTableViewController: UITableViewController {
 
         for user in followingUsers {
             let request = GitHubAPI.GetUsersGists(userName: user.login)
-            client.send(request: request) { result in
-                switch result {
-                case let .success(response):
-                    self.gistItems.append(contentsOf: response)
-                    loadedUserCount += 1
 
-                    if loadedUserCount == self.followingUsers.count {
-                        DispatchQueue.main.async {
-                            self.gistItems.sort(by: { $0.createdAt > $1.createdAt })
-                            loadComplete()
+            _ = client.send(request: request)
+                .observeOn(MainScheduler.instance)
+                .subscribe(
+                    onNext: { response in
+                        self.gistItems.append(contentsOf: response)
+                        loadedUserCount += 1
+
+                        if loadedUserCount == self.followingUsers.count {
+                            DispatchQueue.main.async {
+                                self.gistItems.sort(by: { $0.createdAt > $1.createdAt })
+                                loadComplete()
+                            }
                         }
-                    }
-                case .failure(let error):
-                    logger.error(error)
-                    DispatchQueue.main.async {
+                    },
+                    onError: { error in
+                        logger.error(error)
                         loadComplete()
-                    }
-                }
-            }
+                })
         }
     }
 

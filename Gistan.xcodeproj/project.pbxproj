@@ -88,6 +88,7 @@
 		A4C95C807867CB39AFB6DB67 /* Pods_GistanFileExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337911298063403CDBAE835A /* Pods_GistanFileExtension.framework */; };
 		A63148836A9750779C335E2D /* Pods_GistanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD5AB92B2C45C65AE350F154 /* Pods_GistanTests.framework */; };
 		DCF1C0092C9BE16ABDB8A96F /* Pods_GistanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDF4379D545FF485A286956 /* Pods_GistanUITests.framework */; };
+		EB532E371FEB891D008D431F /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB532E361FEB891C008D431F /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,6 +213,7 @@
 		AB38B6E596962C14E601D58D /* Pods-Gistan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gistan.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gistan/Pods-Gistan.release.xcconfig"; sourceTree = "<group>"; };
 		BDDF4379D545FF485A286956 /* Pods_GistanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GistanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5AB92B2C45C65AE350F154 /* Pods_GistanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GistanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB532E361FEB891C008D431F /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB532E371FEB891D008D431F /* RxSwift.framework in Frameworks */,
 				24A445FA1F8A0F88009452E3 /* Security.framework in Frameworks */,
 				247AF7471F8271F9009A401C /* Nuke.framework in Frameworks */,
 				4502840EB89ACFC56E354CF6 /* Pods_Gistan.framework in Frameworks */,
@@ -277,6 +280,7 @@
 		247AF73E1F827035009A401C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB532E361FEB891C008D431F /* RxSwift.framework */,
 				24CC655B1F91ED6D00605284 /* UTIKit.framework */,
 				24A445F91F8A0F87009452E3 /* Security.framework */,
 				24A445F61F8A00B0009452E3 /* KeychainAccess.framework.dSYM */,
@@ -730,6 +734,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/OAuthSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/UTIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 			);
 			name = "Run Script Carthage";
 			outputPaths = (

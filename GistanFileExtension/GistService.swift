@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 class GistService {
 
@@ -18,15 +19,16 @@ class GistService {
         let client = GitHubClient()
         let request = GitHubAPI.GetUsersGists(userName: userName)
 
-        client.send(request: request) { result in
-            switch result {
-                case let .success(response):
+        _ = client.send(request: request)
+            .observeOn(MainScheduler.instance)
+            .subscribe(
+                onNext: { response in
                     self.gistItems = response
                     onSuccess()
-                case .failure(_):
+            },
+                onError: { error in
                     assertionFailure()
-            }
-        }
+            })
     }
 
     static func getData(
@@ -34,6 +36,8 @@ class GistService {
         completion: @escaping (Data) -> Void ) {
 
         let client = GitHubClient()
-        client.getData(url: url, completion: completion)
+        _ = client.getData(url: url) { data in
+            completion(data)
+        }
     }
 }
